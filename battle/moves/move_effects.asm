@@ -337,7 +337,6 @@ EvasionUp:
 	statupfailtext
 	endmove
 
-NastyPlot:
 SwordsDance:
 AttackUp2:
 	checkobedience

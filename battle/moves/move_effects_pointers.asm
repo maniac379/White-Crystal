@@ -37,7 +37,6 @@
 	dw TriAttack
 	dw NormalHit
 	dw OHKOHit
-	dw NastyPlot
 	dw SuperFang
 	dw StaticDamage
 	dw Bind
