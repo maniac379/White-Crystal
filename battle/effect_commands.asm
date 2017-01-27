@@ -1164,6 +1164,7 @@ BattleCommand_DoTurn: ; 34555
 ; 34602
 
 .continuousmoves ; 34602
+	db EFFECT_RAZOR_WIND
 	db EFFECT_SKY_ATTACK
 	db EFFECT_SKULL_BASH
 	db EFFECT_SOLARBEAM
@@ -2072,6 +2073,8 @@ BattleCommand_LowerSub: ; 34eee
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
+	cp EFFECT_RAZOR_WIND
+	jr z, .charge_turn
 	cp EFFECT_SKY_ATTACK
 	jr z, .charge_turn
 	cp EFFECT_SKULL_BASH
@@ -4515,6 +4518,8 @@ BattleCommand_SleepTalk: ; 35b33
 	pop hl
 
 	cp EFFECT_SKULL_BASH
+	ret z
+	cp EFFECT_RAZOR_WIND
 	ret z
 	cp EFFECT_SKY_ATTACK
 	ret z

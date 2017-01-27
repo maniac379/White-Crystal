@@ -1307,6 +1307,28 @@ Splash:
 	splash
 	endmove
 
+RazorWind:
+	checkcharge
+	checkobedience
+	doturn
+	charge
+	usedmovetext
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	checkdestinybond
+	buildopponentrage
+	kingsrock
+	endmove
+
 Disable:
 	checkobedience
 	usedmovetext
