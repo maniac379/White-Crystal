@@ -231,7 +231,6 @@ MoveGrammar: ; 105e7a
 	db AGILITY
 	db MIMIC
 	db DOUBLE_TEAM
-	db BARRAGE
 	db TRANSFORM
 	db STRUGGLE
 	db SCARY_FACE
@@ -265,7 +264,6 @@ MoveGrammar: ; 105e7a
 	db METRONOME
 	db LICK
 	db CLAMP
-	db CONSTRICT
 	db POISON_GAS
 	db BUBBLE
 	db SLASH

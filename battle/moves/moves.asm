@@ -142,15 +142,15 @@ ENDM
 	move SWIFT,        EFFECT_ALWAYS_HIT,         60, NORMAL,   100, 20,   0
 	move SKULL_BASH,   EFFECT_SKULL_BASH,        100, NORMAL,   100, 15,   0
 	move SPIKE_CANNON, EFFECT_MULTI_HIT,          20, NORMAL,   100, 15,   0
-	move CONSTRICT,    EFFECT_SPEED_DOWN_HIT,     10, NORMAL,   100, 35,  10
+	move LEAF_BLADE,   EFFECT_NORMAL_HIT,         90, GRASS,   100, 15,   0
 	move AMNESIA,      EFFECT_SP_DEF_UP_2,         0, PSYCHIC,  100, 20,   0
-	move KINESIS,      EFFECT_ACCURACY_DOWN,       0, PSYCHIC,   80, 15,   0
+	move AIR_SLASH,    EFFECT_FLINCH_HIT,         75, FLYING,   95, 15,   30
 	move SOFTBOILED,   EFFECT_HEAL,                0, NORMAL,   100, 10,   0
 	move HI_JUMP_KICK, EFFECT_JUMP_KICK,          85, FIGHTING,  90, 20,   0
 	move GLARE,        EFFECT_PARALYZE,            0, NORMAL,    75, 30,   0
 	move DREAM_EATER,  EFFECT_DREAM_EATER,       100, PSYCHIC,  100, 15,   0
 	move POISON_GAS,   EFFECT_POISON,              0, POISON,    55, 40,   0
-	move BARRAGE,      EFFECT_MULTI_HIT,          15, NORMAL,    85, 20,   0
+	move CROSS_POISON, EFFECT_POISON_HIT,         70, POISON,    100, 20,   10
 	move LEECH_LIFE,   EFFECT_LEECH_HIT,          20, BUG,      100, 15,   0
 	move LOVELY_KISS,  EFFECT_SLEEP,               0, NORMAL,    75, 10,   0
 	move SKY_ATTACK,   EFFECT_SKY_ATTACK,        140, FLYING,    90,  5,   0

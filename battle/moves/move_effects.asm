@@ -1012,7 +1012,9 @@ RollingKick:
 Headbutt:
 Bite:
 LowKick:
+ZenHeadbutt:
 BoneClub:
+AirSlash:
 RockSlide:
 HyperFang:
 FlinchHit:

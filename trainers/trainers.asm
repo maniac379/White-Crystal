@@ -6983,7 +6983,7 @@ PsychicGroup:
 
 	db 15, KADABRA
 		db TELEPORT
-		db KINESIS
+		db FLASH
 		db CONFUSION
 		db 0
 

@@ -143,7 +143,6 @@ ButterfreeEvosAttacks:
 	db 15, SLEEP_POWDER
 	db 18, SUPERSONIC
 	db 23, PIN_MISSILE
-	db 28, KINESIS
 	db 34, PSYCHIC
 	db 40, SAFEGUARD
 	db 0 ; no more level-up moves
@@ -767,7 +766,6 @@ KadabraEvosAttacks:
 	db EVOLVE_TRADE, $ff, ALAKAZAM
 	db 0 ; no more evolutions
 	db 1, TELEPORT
-	db 1, KINESIS
 	db 1, CONFUSION
 	db 16, CONFUSION
 	db 18, DISABLE
@@ -781,7 +779,6 @@ KadabraEvosAttacks:
 AlakazamEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TELEPORT
-	db 1, KINESIS
 	db 1, CONFUSION
 	db 16, CONFUSION
 	db 18, DISABLE
@@ -877,7 +874,6 @@ TentacoolEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 6, SUPERSONIC
-	db 12, CONSTRICT
 	db 19, ACID
 	db 25, BUBBLEBEAM
 	db 30, WRAP
@@ -890,9 +886,7 @@ TentacruelEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, POISON_STING
 	db 1, SUPERSONIC
-	db 1, CONSTRICT
 	db 6, SUPERSONIC
-	db 12, CONSTRICT
 	db 19, ACID
 	db 25, BUBBLEBEAM
 	db 30, WRAP
@@ -1296,7 +1290,6 @@ ElectrodeEvosAttacks:
 ExeggcuteEvosAttacks:
 	db EVOLVE_ITEM, LEAF_STONE, EXEGGUTOR
 	db 0 ; no more evolutions
-	db 1, BARRAGE
 	db 1, HYPNOSIS
 	db 7, REFLECT
 	db 13, LEECH_SEED
@@ -1309,7 +1302,6 @@ ExeggcuteEvosAttacks:
 
 ExeggutorEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, BARRAGE
 	db 1, HYPNOSIS
 	db 1, CONFUSION
 	db 19, STOMP
@@ -1455,7 +1447,6 @@ ChanseyEvosAttacks:
 
 TangelaEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
 	db 4, SLEEP_POWDER
 	db 10, ABSORB
 	db 13, POISONPOWDER
@@ -1766,7 +1757,6 @@ PorygonEvosAttacks:
 OmanyteEvosAttacks:
 	db EVOLVE_LEVEL, 40, OMASTAR
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
 	db 1, WITHDRAW
 	db 13, BITE
 	db 19, WATER_GUN
@@ -1778,7 +1768,6 @@ OmanyteEvosAttacks:
 
 OmastarEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
 	db 1, WITHDRAW
 	db 1, BITE
 	db 13, BITE
@@ -1957,6 +1946,8 @@ ChikoritaEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BUG_BUZZ
 	db 1, ZEN_HEADBUTT
+	db 1, LEAF_BLADE
+	db 1, AIR_SLASH
 	db 8, RAZOR_LEAF
 	db 12, REFLECT
 	db 15, POISONPOWDER
@@ -2003,7 +1994,7 @@ MeganiumEvosAttacks:
 CyndaquilEvosAttacks:
 	db EVOLVE_LEVEL, 14, QUILAVA
 	db 0 ; no more evolutions
-	db 1, TACKLE
+	db 1, CROSS_POISON
 	db 1, LEER
 	db 6, SMOKESCREEN
 	db 12, EMBER
@@ -2175,7 +2166,6 @@ SpinarakEvosAttacks:
 	db 1, POISON_STING
 	db 1, STRING_SHOT
 	db 6, SCARY_FACE
-	db 11, CONSTRICT
 	db 17, NIGHT_SHADE
 	db 23, LEECH_LIFE
 	db 30, FURY_SWIPES
@@ -2193,9 +2183,7 @@ AriadosEvosAttacks:
 	db 1, POISON_STING
 	db 1, STRING_SHOT
 	db 1, SCARY_FACE
-	db 1, CONSTRICT
 	db 6, SCARY_FACE
-	db 11, CONSTRICT
 	db 17, NIGHT_SHADE
 	db 25, LEECH_LIFE
 	db 34, FURY_SWIPES
@@ -2759,7 +2747,6 @@ ScizorEvosAttacks:
 
 ShuckleEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, CONSTRICT
 	db 1, WITHDRAW
 	db 9, WRAP
 	db 14, ENCORE
@@ -2905,7 +2892,6 @@ RemoraidEvosAttacks:
 OctilleryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, WATER_GUN
-	db 11, CONSTRICT
 	db 22, PSYBEAM
 	db 22, AURORA_BEAM
 	db 22, BUBBLEBEAM

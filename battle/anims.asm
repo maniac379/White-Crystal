@@ -131,15 +131,15 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Swift
 	dw BattleAnim_SkullBash
 	dw BattleAnim_SpikeCannon
-	dw BattleAnim_Constrict
+	dw BattleAnim_LeafBlade
 	dw BattleAnim_Amnesia
-	dw BattleAnim_Kinesis
+	dw BattleAnim_AirSlash
 	dw BattleAnim_Softboiled
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_Glare
 	dw BattleAnim_DreamEater
 	dw BattleAnim_PoisonGas
-	dw BattleAnim_Barrage
+	dw BattleAnim_CrossPoison
 	dw BattleAnim_LeechLife
 	dw BattleAnim_LovelyKiss
 	dw BattleAnim_SkyAttack
@@ -1918,7 +1918,7 @@ BattleAnim_Confusion: ; ca058
 	anim_ret
 ; ca06c
 
-BattleAnim_Constrict: ; ca06c
+BattleAnim_LeafBlade: ; ca06c
 	anim_1gfx ANIM_GFX_ROPE
 	anim_sound 0, 1, SFX_BIND
 	anim_obj ANIM_OBJ_49, -16, 4,   8, 0, $0
@@ -2522,7 +2522,7 @@ BattleAnim_PetalDance: ; ca564
 	anim_ret
 ; ca580
 
-BattleAnim_Barrage: ; ca580
+BattleAnim_CrossPoison: ; ca580
 	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_EXPLOSION
 	anim_sound 6, 2, SFX_THROW_BALL
 	anim_obj ANIM_OBJ_62,   8, 0,  11, 4, $10
@@ -2626,7 +2626,7 @@ BattleAnim_SkullBash: ; ca63f
 	anim_ret
 ; ca66a
 
-BattleAnim_Kinesis: ; ca66a
+BattleAnim_AirSlash: ; ca66a
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_obj ANIM_OBJ_6B,  10, 0,   9, 4, $0

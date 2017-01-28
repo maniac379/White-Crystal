@@ -130,15 +130,15 @@
 	dw SwiftDescription
 	dw SkullBashDescription
 	dw SpikeCannonDescription
-	dw ConstrictDescription
+	dw LeafBladeDescription
 	dw AmnesiaDescription
-	dw KinesisDescription
+	dw AirSlashDescription
 	dw SoftboiledDescription
 	dw HiJumpKickDescription
 	dw GlareDescription
 	dw DreamEaterDescription
 	dw PoisonGasDescription
-	dw BarrageDescription
+	dw CrossPoisonDescription
 	dw LeechLifeDescription
 	dw LovelyKissDescription
 	dw SkyAttackDescription
@@ -789,7 +789,7 @@ SpikeCannonDescription:
 	db   "Fires spikes to"
 	next "hit 2-5 times.@"
 
-ConstrictDescription:
+LeafBladeDescription:
 	db   "An attack that may"
 	next "lower SPEED.@"
 
@@ -797,7 +797,7 @@ AmnesiaDescription:
 	db   "Sharply raises the"
 	next "user's SPCL.DEF.@"
 
-KinesisDescription:
+AirSlashDescription:
 	db   "Reduces the foe's"
 	next "accuracy.@"
 
@@ -821,7 +821,7 @@ PoisonGasDescription:
 	db   "A move that may"
 	next "poison the foe.@"
 
-BarrageDescription:
+CrossPoisonDescription:
 	db   "Throws orbs to hit"
 	next "2-5 times.@"
 
