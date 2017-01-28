@@ -106,7 +106,7 @@ ENDM
 	move CONFUSION,    EFFECT_CONFUSE_HIT,        50, PSYCHIC,  100, 25,  10
 	move PSYCHIC_M,    EFFECT_SP_DEF_DOWN_HIT,    90, PSYCHIC,  100, 10,  10
 	move HYPNOSIS,     EFFECT_SLEEP,               0, PSYCHIC,   60, 20,   0
-	move MEDITATE,     EFFECT_ATTACK_UP,           0, PSYCHIC,  100, 40,   0
+	move BUG_BUZZ,     EFFECT_SP_DEF_DOWN_HIT,    90, BUG,  100, 10,   10
 	move AGILITY,      EFFECT_SPEED_UP_2,          0, PSYCHIC,  100, 30,   0
 	move QUICK_ATTACK, EFFECT_PRIORITY_HIT,       40, NORMAL,   100, 30,   0
 	move RAGE,         EFFECT_RAGE,               20, NORMAL,   100, 20,   0
@@ -126,7 +126,7 @@ ENDM
 	move LIGHT_SCREEN, EFFECT_LIGHT_SCREEN,        0, PSYCHIC,  100, 30,   0
 	move HAZE,         EFFECT_HAZE,                0, ICE,      100, 30,   0
 	move REFLECT,      EFFECT_REFLECT,             0, PSYCHIC,  100, 20,   0
-	move FOCUS_ENERGY, EFFECT_FOCUS_ENERGY,        0, NORMAL,   100, 30,   0
+	move ZEN_HEADBUTT, EFFECT_FLINCH_HIT,         80, PSYCHIC,   90, 15,   20
 	move BIDE,         EFFECT_BIDE,                0, NORMAL,   100, 10,   0
 	move METRONOME,    EFFECT_METRONOME,           0, NORMAL,   100, 10,   0
 	move MIRROR_MOVE,  EFFECT_MIRROR_MOVE,         0, FLYING,   100, 20,   0

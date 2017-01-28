@@ -96,7 +96,7 @@
 	const CONFUSION    ; $5d
 	const PSYCHIC_M    ; $5e
 	const HYPNOSIS     ; $5f
-	const MEDITATE     ; $60
+	const BUG_BUZZ     ; $60
 	const AGILITY      ; $61
 	const QUICK_ATTACK ; $62
 	const RAGE         ; $63
@@ -116,7 +116,7 @@
 	const LIGHT_SCREEN ; $71
 	const HAZE         ; $72
 	const REFLECT      ; $73
-	const FOCUS_ENERGY ; $74
+	const ZEN_HEADBUTT ; $74
 	const BIDE         ; $75
 	const METRONOME    ; $76
 	const MIRROR_MOVE  ; $77

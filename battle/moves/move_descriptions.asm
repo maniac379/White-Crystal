@@ -94,7 +94,7 @@
 	dw ConfusionDescription
 	dw PsychicMDescription
 	dw HypnosisDescription
-	dw MeditateDescription
+	dw BugBuzzDescription
 	dw AgilityDescription
 	dw QuickAttackDescription
 	dw RageDescription
@@ -114,7 +114,7 @@
 	dw LightScreenDescription
 	dw HazeDescription
 	dw ReflectDescription
-	dw FocusEnergyDescription
+	dw ZenHeadbuttDescription
 	dw BideDescription
 	dw MetronomeDescription
 	dw MirrorMoveDescription
@@ -645,7 +645,7 @@ HypnosisDescription:
 	db   "May put the foe to"
 	next "sleep.@"
 
-MeditateDescription:
+BugBuzzDescription:
 	db   "Raises the user's"
 	next "ATTACK.@"
 
@@ -725,7 +725,7 @@ ReflectDescription:
 	db   "Raises DEFENSE"
 	next "with a barrier.@"
 
-FocusEnergyDescription:
+ZenHeadbuttDescription:
 	db   "Raises the criti-"
 	next "cal hit ratio.@"
 

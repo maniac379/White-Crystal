@@ -95,7 +95,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Confusion
 	dw BattleAnim_PsychicM
 	dw BattleAnim_Hypnosis
-	dw BattleAnim_Meditate
+	dw BattleAnim_BugBuzz
 	dw BattleAnim_Agility
 	dw BattleAnim_QuickAttack
 	dw BattleAnim_Rage
@@ -115,7 +115,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_LightScreen
 	dw BattleAnim_Haze
 	dw BattleAnim_Reflect
-	dw BattleAnim_FocusEnergy
+	dw BattleAnim_ZenHeadbutt
 	dw BattleAnim_Bide
 	dw BattleAnim_Metronome
 	dw BattleAnim_MirrorMove
@@ -1830,7 +1830,7 @@ BattleAnim_Softboiled: ; c9f85
 	anim_ret
 ; c9fb5
 
-BattleAnim_FocusEnergy: ; c9fb5
+BattleAnim_ZenHeadbutt: ; c9fb5
 BattleAnim_NastyPlot_branch_c9fb5: ; c9fb5
 BattleAnim_SkullBash_branch_c9fb5: ; c9fb5
 BattleAnim_SkyAttack_branch_c9fb5: ; c9fb5
@@ -3022,7 +3022,7 @@ BattleAnim_QuickAttack: ; ca99e
 	anim_ret
 ; ca9d8
 
-BattleAnim_Meditate: ; ca9d8
+BattleAnim_BugBuzz: ; ca9d8
 	anim_1gfx ANIM_GFX_HIT
 	anim_call BattleAnim_FollowEnemyFeet_0
 	anim_sound 0, 0, SFX_PSYBEAM

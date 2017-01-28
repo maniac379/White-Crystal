@@ -92,7 +92,6 @@ endc
 NidoranFEggMoves:
 	db SUPERSONIC
 	db DISABLE
-	db FOCUS_ENERGY
 	db CHARM
 	db COUNTER
 	db BEAT_UP
@@ -183,7 +182,6 @@ endc
 MankeyEggMoves:
 	db ROCK_SLIDE
 	db FORESIGHT
-	db MEDITATE
 	db COUNTER
 	db REVERSAL
 	db BEAT_UP
@@ -213,7 +211,6 @@ AbraEggMoves:
 
 MachopEggMoves:
 	db LIGHT_SCREEN
-	db MEDITATE
 	db ROLLING_KICK
 	db ENCORE
 	db $ff
@@ -381,7 +378,6 @@ TangelaEggMoves:
 KangaskhanEggMoves:
 	db STOMP
 	db FORESIGHT
-	db FOCUS_ENERGY
 	db SAFEGUARD
 	db DISABLE
 	db $ff
@@ -508,7 +504,6 @@ SentretEggMoves:
 	db DOUBLE_EDGE
 	db PURSUIT
 	db SLASH
-	db FOCUS_ENERGY
 	db REVERSAL
 	db $ff
 
@@ -719,7 +714,6 @@ SneaselEggMoves:
 TeddiursaEggMoves:
 	db CRUNCH
 	db SEISMIC_TOSS
-	db FOCUS_ENERGY
 	db COUNTER
 if _CRYSTAL
 	db METAL_CLAW
@@ -788,7 +782,6 @@ HoundourEggMoves:
 	db $ff
 
 PhanpyEggMoves:
-	db FOCUS_ENERGY
 	db BODY_SLAM
 	db ANCIENTPOWER
 if _CRYSTAL
@@ -815,14 +808,12 @@ SmoochumEggMoves:
 if !_CRYSTAL
 	db LOVELY_KISS
 endc
-	db MEDITATE
 	db $ff
 
 ElekidEggMoves:
 	db KARATE_CHOP
 	db BARRIER
 	db ROLLING_KICK
-	db MEDITATE
 if _CRYSTAL
 	db CROSS_CHOP
 endc
@@ -848,7 +839,6 @@ LarvitarEggMoves:
 	db PURSUIT
 	db STOMP
 	db OUTRAGE
-	db FOCUS_ENERGY
 	db ANCIENTPOWER
 	db $ff
 

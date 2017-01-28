@@ -4220,7 +4220,7 @@ BugCatcherGroup:
 
 	db 25, BEEDRILL
 		db POISON_STING
-		db FOCUS_ENERGY
+		db TACKLE
 		db TWINEEDLE
 		db RAGE
 
@@ -6635,9 +6635,9 @@ BlackbeltGroup:
 
 	db 27, HITMONLEE
 		db DOUBLE_KICK
-		db MEDITATE
+		db TACKLE
 		db JUMP_KICK
-		db FOCUS_ENERGY
+		db TACKLE
 
 	db $ff ; end
 
@@ -6701,7 +6701,7 @@ BlackbeltGroup:
 
 	db 25, MACHOP
 		db LEER
-		db FOCUS_ENERGY
+		db TACKLE
 		db KARATE_CHOP
 		db SEISMIC_TOSS
 

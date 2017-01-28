@@ -228,7 +228,6 @@ MoveGrammar: ; 105e7a
 	db 0 ; end set
 
 ; 2
-	db MEDITATE
 	db AGILITY
 	db MIMIC
 	db DOUBLE_TEAM
