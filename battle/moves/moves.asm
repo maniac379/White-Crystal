@@ -64,7 +64,7 @@ ENDM
 	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,   100, 30,  10
 	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,     100, 25,  10
 	move FLAMETHROWER, EFFECT_BURN_HIT,           95, FIRE,     100, 15,  10
-	move MIST,         EFFECT_MIST,                0, ICE,      100, 30,   0
+	move WILLOWISP,    EFFECT_BURN_HIT,            0, FIRE,      100, 30,  100
 	move WATER_GUN,    EFFECT_NORMAL_HIT,         40, WATER,    100, 25,   0
 	move HYDRO_PUMP,   EFFECT_NORMAL_HIT,        120, WATER,     80,  5,   0
 	move SURF,         EFFECT_NORMAL_HIT,         95, WATER,    100, 15,   0
@@ -164,7 +164,7 @@ ENDM
 	move ACID_ARMOR,   EFFECT_DEFENSE_UP_2,        0, POISON,   100, 40,   0
 	move CRABHAMMER,   EFFECT_NORMAL_HIT,         90, WATER,     85, 10,   0
 	move EXPLOSION,    EFFECT_EXPLOSION,         250, NORMAL,   100,  5,   0
-	move FURY_SWIPES,  EFFECT_MULTI_HIT,          18, NORMAL,    80, 15,   0
+	move SHADOW_CLAW,  EFFECT_NORMAL_HIT,         70, GHOST,    100, 15,   0
 	move BONEMERANG,   EFFECT_DOUBLE_HIT,         50, GROUND,    90, 10,   0
 	move REST,         EFFECT_HEAL,                0, PSYCHIC,  100, 10,   0
 	move ROCK_SLIDE,   EFFECT_FLINCH_HIT,         75, ROCK,      90, 10,  30
@@ -188,7 +188,7 @@ ENDM
 	move FLAIL,        EFFECT_REVERSAL,            1, NORMAL,   100, 15,   0
 	move CONVERSION2,  EFFECT_CONVERSION2,         0, NORMAL,   100, 30,   0
 	move AEROBLAST,    EFFECT_NORMAL_HIT,        100, FLYING,    95,  5,   0
-	move COTTON_SPORE, EFFECT_SPEED_DOWN_2,        0, GRASS,     85, 40,   0
+	move DRAGON_PULSE, EFFECT_NORMAL_HIT,         85, DRAGON,     100, 10,   0
 	move REVERSAL,     EFFECT_REVERSAL,            1, FIGHTING, 100, 15,   0
 	move SPITE,        EFFECT_SPITE,               0, GHOST,    100, 10,   0
 	move POWDER_SNOW,  EFFECT_FREEZE_HIT,         40, ICE,      100, 25,  10
@@ -203,7 +203,7 @@ ENDM
 	move OCTAZOOKA,    EFFECT_ACCURACY_DOWN_HIT,  65, WATER,     85, 10,  50
 	move SPIKES,       EFFECT_SPIKES,              0, GROUND,   100, 20,   0
 	move ZAP_CANNON,   EFFECT_PARALYZE_HIT,      100, ELECTRIC,  50,  5, 100
-	move FORESIGHT,    EFFECT_FORESIGHT,           0, NORMAL,   100, 40,   0
+	move ICE_SHARD,    EFFECT_PRIORITY_HIT,       40, ICE,   100, 30,   0
 	move DESTINY_BOND, EFFECT_DESTINY_BOND,        0, GHOST,    100,  5,   0
 	move PERISH_SONG,  EFFECT_PERISH_SONG,         0, NORMAL,   100,  5,   0
 	move ICY_WIND,     EFFECT_SPEED_DOWN_HIT,     55, ICE,       95, 15, 100
@@ -240,7 +240,7 @@ ENDM
 	move ENCORE,       EFFECT_ENCORE,              0, NORMAL,   100,  5,   0
 	move PURSUIT,      EFFECT_PURSUIT,            40, DARK,     100, 20,   0
 	move RAPID_SPIN,   EFFECT_RAPID_SPIN,         20, NORMAL,   100, 40,   0
-	move SWEET_SCENT,  EFFECT_EVASION_DOWN,        0, NORMAL,   100, 20,   0
+	move FLASH_CANNON,  EFFECT_SP_DEF_DOWN_HIT,   80, STEEL,   100, 10,   10
 	move IRON_TAIL,    EFFECT_DEFENSE_DOWN_HIT,  100, STEEL,     75, 15,  30
 	move METAL_CLAW,   EFFECT_METAL_CLAW,         50, STEEL,     95, 35,  10
 	move VITAL_THROW,  EFFECT_ALWAYS_HIT,         70, FIGHTING, 100, 10,   0

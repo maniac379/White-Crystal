@@ -70,6 +70,7 @@ DoSleep:
 PoisonSting:
 Smog:
 Sludge:
+CrossPoison:
 SludgeBomb:
 PoisonHit:
 	checkobedience
@@ -377,6 +378,7 @@ SpeedUp2:
 	statupfailtext
 	endmove
 
+NastyPlot:
 SpecialAttackUp2:
 	checkobedience
 	usedmovetext
@@ -721,6 +723,7 @@ SpecialAttackDownHit:
 EarthPower:
 PsychicM:
 Crunch:
+FlashCannon:
 ShadowBall:
 SpecialDefenseDownHit:
 	checkobedience

@@ -54,7 +54,7 @@
 	const ACID         ; $33
 	const EMBER        ; $34
 	const FLAMETHROWER ; $35
-	const MIST         ; $36
+	const WILLOWISP    ; $36
 	const WATER_GUN    ; $37
 	const HYDRO_PUMP   ; $38
 	const SURF         ; $39
@@ -154,7 +154,7 @@
 	const ACID_ARMOR   ; $97
 	const CRABHAMMER   ; $98
 	const EXPLOSION    ; $99
-	const FURY_SWIPES  ; $9a
+	const SHADOW_CLAW  ; $9a
 	const BONEMERANG   ; $9b
 	const REST         ; $9c
 	const ROCK_SLIDE   ; $9d
@@ -178,7 +178,7 @@
 	const FLAIL        ; $af
 	const CONVERSION2  ; $b0
 	const AEROBLAST    ; $b1
-	const COTTON_SPORE ; $b2
+	const DRAGON_PULSE ; $b2
 	const REVERSAL     ; $b3
 	const SPITE        ; $b4
 	const POWDER_SNOW  ; $b5
@@ -193,7 +193,7 @@
 	const OCTAZOOKA    ; $be
 	const SPIKES       ; $bf
 	const ZAP_CANNON   ; $c0
-	const FORESIGHT    ; $c1
+	const ICE_SHARD    ; $c1
 	const DESTINY_BOND ; $c2
 	const PERISH_SONG  ; $c3
 	const ICY_WIND     ; $c4
@@ -230,7 +230,7 @@
 	const ENCORE       ; $e3
 	const PURSUIT      ; $e4
 	const RAPID_SPIN   ; $e5
-	const SWEET_SCENT  ; $e6
+	const FLASH_CANNON ; $e6
 	const IRON_TAIL    ; $e7
 	const METAL_CLAW   ; $e8
 	const VITAL_THROW  ; $e9

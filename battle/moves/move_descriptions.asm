@@ -52,7 +52,7 @@
 	dw AcidDescription
 	dw EmberDescription
 	dw FlamethrowerDescription
-	dw MistDescription
+	dw WillOWispDescription
 	dw WaterGunDescription
 	dw HydroPumpDescription
 	dw SurfDescription
@@ -152,7 +152,7 @@
 	dw AcidArmorDescription
 	dw CrabhammerDescription
 	dw ExplosionDescription
-	dw FurySwipesDescription
+	dw ShadowClawDescription
 	dw BonemerangDescription
 	dw RestDescription
 	dw RockSlideDescription
@@ -176,7 +176,7 @@
 	dw FlailDescription
 	dw Conversion2Description
 	dw AeroblastDescription
-	dw CottonSporeDescription
+	dw DragonPulseDescription
 	dw ReversalDescription
 	dw SpiteDescription
 	dw PowderSnowDescription
@@ -191,7 +191,7 @@
 	dw OctazookaDescription
 	dw SpikesDescription
 	dw ZapCannonDescription
-	dw ForesightDescription
+	dw IceShardDescription
 	dw DestinyBondDescription
 	dw PerishSongDescription
 	dw IcyWindDescription
@@ -228,7 +228,7 @@
 	dw EncoreDescription
 	dw PursuitDescription
 	dw RapidSpinDescription
-	dw SweetScentDescription
+	dw FlashCannonDescription
 	dw IronTailDescription
 	dw MetalClawDescription
 	dw VitalThrowDescription
@@ -477,7 +477,7 @@ FlamethrowerDescription:
 	db   "An attack that may"
 	next "inflict a burn.@"
 
-MistDescription:
+WillOWispDescription:
 	db   "Prevents stat"
 	next "reduction.@"
 
@@ -876,7 +876,7 @@ ExplosionDescription:
 	db   "Very powerful but"
 	next "makes user faint.@"
 
-FurySwipesDescription:
+ShadowClawDescription:
 	db   "Quickly scratches"
 	next "2-5 times.@"
 
@@ -972,7 +972,7 @@ AeroblastDescription:
 	db   "Has a high criti-"
 	next "cal hit ratio.@"
 
-CottonSporeDescription:
+DragonPulseDescription:
 	db   "Sharply reduces"
 	next "the foe's SPEED.@"
 
@@ -1032,7 +1032,7 @@ ZapCannonDescription:
 	db   "An attack that"
 	next "always paralyzes.@"
 
-ForesightDescription:
+IceShardDescription:
 	db   "Negates accuracy"
 	next "reduction moves.@"
 
@@ -1180,7 +1180,7 @@ RapidSpinDescription:
 	db   "A high-speed"
 	next "spinning attack.@"
 
-SweetScentDescription:
+FlashCannonDescription:
 	db   "Reduces the foe's"
 	next "evasiveness.@"
 

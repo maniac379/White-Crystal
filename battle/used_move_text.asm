@@ -270,7 +270,6 @@ MoveGrammar: ; 105e7a
 	db SPIDER_WEB
 	db NIGHTMARE
 	db CURSE
-	db FORESIGHT
 	db CHARM
 	db ATTRACT
 	db ROCK_SMASH

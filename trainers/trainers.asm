@@ -168,7 +168,7 @@ PryceGroup:
 	db 31, PILOSWINE
 		db ICY_WIND
 		db EARTH_POWER
-		db MIST
+		db TACKLE
 		db BLIZZARD
 
 	db $ff ; end
@@ -225,7 +225,7 @@ ChuckGroup:
 		db LEER
 		db RAGE
 		db KARATE_CHOP
-		db FURY_SWIPES
+		db TACKLE
 
 	db 30, POLIWRATH
 		db HYPNOSIS
@@ -834,7 +834,7 @@ BrunoGroup:
 		db SWAGGER
 		db DOUBLE_KICK
 		db HI_JUMP_KICK
-		db FORESIGHT
+		db TACKLE
 
 	db 42, HITMONCHAN
 		db THUNDERPUNCH
@@ -850,7 +850,7 @@ BrunoGroup:
 
 	db 46, MACHAMP
 		db ROCK_SLIDE
-		db FORESIGHT
+		db TACKLE
 		db VITAL_THROW
 		db CROSS_CHOP
 
@@ -1226,7 +1226,7 @@ ErikaGroup:
 	db 41, JUMPLUFF
 		db MEGA_DRAIN
 		db LEECH_SEED
-		db COTTON_SPORE
+		db TACKLE
 		db GIGA_DRAIN
 
 	db 46, VICTREEBEL
@@ -2245,7 +2245,7 @@ LassGroup:
 		db TACKLE
 		db THUNDERSHOCK
 		db THUNDER_WAVE
-		db COTTON_SPORE
+		db LICK
 
 	db $ff ; end
 
@@ -2267,7 +2267,7 @@ LassGroup:
 		db TACKLE
 		db THUNDERPUNCH
 		db THUNDER_WAVE
-		db COTTON_SPORE
+		db LICK
 
 	db $ff ; end
 
@@ -2283,7 +2283,7 @@ LassGroup:
 		db SWIFT
 		db THUNDERPUNCH
 		db THUNDER_WAVE
-		db COTTON_SPORE
+		db LICK
 
 	db 36, GOLDUCK
 		db DISABLE
@@ -2332,7 +2332,7 @@ JanineGroup:
 		db NIGHT_SHADE
 
 	db 39, VENOMOTH
-		db FORESIGHT
+		db TACKLE
 		db DOUBLE_TEAM
 		db GUST
 		db PSYCHIC_M
@@ -2518,7 +2518,7 @@ CooltrainerMGroup:
 		db CONFUSION
 		db SCREECH
 		db PSYCH_UP
-		db FURY_SWIPES
+		db TACKLE
 
 	db $ff ; end
 
@@ -2881,7 +2881,7 @@ CooltrainerFGroup:
 		db BODY_SLAM
 		db SLEEP_POWDER
 		db RAZOR_LEAF
-		db SWEET_SCENT
+		db TACKLE
 
 	db $ff ; end
 
@@ -7414,13 +7414,13 @@ PicnickerGroup:
 		db STUN_SPORE
 		db SUNNY_DAY
 		db LEECH_SEED
-		db COTTON_SPORE
+		db LICK
 
 	db 33, JUMPLUFF
 		db SUNNY_DAY
 		db SLEEP_POWDER
 		db LEECH_SEED
-		db COTTON_SPORE
+		db LICK
 
 	db 38, VENUSAUR
 		db SOLARBEAM
@@ -7768,7 +7768,7 @@ ExecutiveFGroup:
 
 	db 32, VILEPLUME
 		db ABSORB
-		db SWEET_SCENT
+		db TACKLE
 		db SLEEP_POWDER
 		db ACID
 
@@ -7796,7 +7796,7 @@ ExecutiveFGroup:
 
 	db 23, GLOOM
 		db ABSORB
-		db SWEET_SCENT
+		db TACKLE
 		db SLEEP_POWDER
 		db ACID
 
@@ -8785,7 +8785,7 @@ GruntFGroup:
 
 	db 18, GLOOM
 		db ABSORB
-		db SWEET_SCENT
+		db TACKLE
 		db STUN_SPORE
 		db SLEEP_POWDER
 

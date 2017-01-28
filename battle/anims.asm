@@ -53,7 +53,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Acid
 	dw BattleAnim_Ember
 	dw BattleAnim_Flamethrower
-	dw BattleAnim_Mist
+	dw BattleAnim_WillOWisp
 	dw BattleAnim_WaterGun
 	dw BattleAnim_HydroPump
 	dw BattleAnim_Surf
@@ -153,7 +153,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_AcidArmor
 	dw BattleAnim_Crabhammer
 	dw BattleAnim_Explosion
-	dw BattleAnim_FurySwipes
+	dw BattleAnim_ShadowClaw
 	dw BattleAnim_Bonemerang
 	dw BattleAnim_Rest
 	dw BattleAnim_RockSlide
@@ -177,7 +177,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Flail
 	dw BattleAnim_Conversion2
 	dw BattleAnim_Aeroblast
-	dw BattleAnim_CottonSpore
+	dw BattleAnim_DragonPulse
 	dw BattleAnim_Reversal
 	dw BattleAnim_Spite
 	dw BattleAnim_PowderSnow
@@ -192,7 +192,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Octazooka
 	dw BattleAnim_Spikes
 	dw BattleAnim_ZapCannon
-	dw BattleAnim_Foresight
+	dw BattleAnim_IceShard
 	dw BattleAnim_DestinyBond
 	dw BattleAnim_PerishSong
 	dw BattleAnim_IcyWind
@@ -229,7 +229,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Encore
 	dw BattleAnim_Pursuit
 	dw BattleAnim_RapidSpin
-	dw BattleAnim_SweetScent
+	dw BattleAnim_FlashCannon
 	dw BattleAnim_IronTail
 	dw BattleAnim_MetalClaw
 	dw BattleAnim_VitalThrow
@@ -1603,7 +1603,7 @@ BattleAnim_Scratch: ; c9da6
 	anim_ret
 ; c9dbc
 
-BattleAnim_FurySwipes: ; c9dbc
+BattleAnim_ShadowClaw: ; c9dbc
 	anim_1gfx ANIM_GFX_CUT
 	anim_if_param_equal $1, BattleAnim_FurySwipes_branch_c9dd9
 	anim_sound 0, 1, SFX_SCRATCH
@@ -2344,7 +2344,7 @@ BattleAnim_Haze: ; ca3ee
 	anim_ret
 ; ca404
 
-BattleAnim_Mist: ; ca404
+BattleAnim_WillOWisp: ; ca404
 	anim_obp0 $54
 	anim_1gfx ANIM_GFX_HAZE
 	anim_sound 0, 0, SFX_SURF
@@ -3547,7 +3547,7 @@ BattleAnim_Aeroblast: ; cae4b
 	anim_ret
 ; cae84
 
-BattleAnim_CottonSpore: ; cae84
+BattleAnim_DragonPulse: ; cae84
 	anim_obp0 $54
 	anim_1gfx ANIM_GFX_MISC
 	anim_sound 0, 1, SFX_POWDER
@@ -3792,7 +3792,7 @@ BattleAnim_ZapCannon: ; cb0b0
 	anim_ret
 ; cb0d0
 
-BattleAnim_Foresight: ; cb0d0
+BattleAnim_IceShard: ; cb0d0
 	anim_1gfx ANIM_GFX_SHINE
 	anim_call BattleAnim_FollowEnemyFeet_1
 	anim_bgeffect ANIM_BG_07, $0, $0, $0
@@ -4451,7 +4451,7 @@ BattleAnim_RapidSpin: ; cb65e
 	anim_ret
 ; cb68e
 
-BattleAnim_SweetScent: ; cb68e
+BattleAnim_FlashCannon: ; cb68e
 	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
 	anim_sound 0, 0, SFX_SWEET_SCENT
 	anim_obj ANIM_OBJ_FLOWER,   8, 0,  12, 0, $2

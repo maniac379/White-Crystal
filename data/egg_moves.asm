@@ -37,16 +37,13 @@ CharmanderEggMoves:
 SquirtleEggMoves:
 	db MIRROR_COAT
 	db HAZE
-	db MIST
 	db CONFUSION
-	db FORESIGHT
 	db FLAIL
 	db $ff
 
 PidgeyEggMoves:
 	db PURSUIT
 	db FAINT_ATTACK
-	db FORESIGHT
 if !_CRYSTAL
 	db STEEL_WING
 endc
@@ -55,7 +52,6 @@ endc
 RattataEggMoves:
 	db SCREECH
 	db FLAME_WHEEL
-	db FURY_SWIPES
 	db BITE
 	db COUNTER
 	db REVERSAL
@@ -138,9 +134,6 @@ ParasEggMoves:
 	db COUNTER
 	db PSYBEAM
 	db FLAIL
-if !_CRYSTAL
-	db SWEET_SCENT
-endc
 	db LIGHT_SCREEN
 	db PURSUIT
 	db $ff
@@ -170,7 +163,6 @@ PsyduckEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM
-	db FORESIGHT
 	db LIGHT_SCREEN
 	db FUTURE_SIGHT
 	db PSYCHIC_M
@@ -181,7 +173,6 @@ endc
 
 MankeyEggMoves:
 	db ROCK_SLIDE
-	db FORESIGHT
 	db COUNTER
 	db REVERSAL
 	db BEAT_UP
@@ -196,7 +187,6 @@ GrowlitheEggMoves:
 	db $ff
 
 PoliwagEggMoves:
-	db MIST
 	db SPLASH
 	db BUBBLEBEAM
 	db HAZE
@@ -256,7 +246,6 @@ FarfetchDEggMoves:
 if !_CRYSTAL
 	db STEEL_WING
 endc
-	db FORESIGHT
 	db MIRROR_MOVE
 	db GUST
 	db QUICK_ATTACK
@@ -377,7 +366,6 @@ TangelaEggMoves:
 
 KangaskhanEggMoves:
 	db STOMP
-	db FORESIGHT
 	db SAFEGUARD
 	db DISABLE
 	db $ff
@@ -425,7 +413,6 @@ PinsirEggMoves:
 
 LaprasEggMoves:
 	db AURORA_BEAM
-	db FORESIGHT
 	db $ff
 
 EeveeEggMoves:
@@ -452,7 +439,6 @@ KabutoEggMoves:
 AerodactylEggMoves:
 	db WHIRLWIND
 	db PURSUIT
-	db FORESIGHT
 if !_CRYSTAL
 	db STEEL_WING
 endc
@@ -467,7 +453,6 @@ endc
 
 DratiniEggMoves:
 	db LIGHT_SCREEN
-	db MIST
 	db HAZE
 	db SUPERSONIC
 	db $ff
@@ -482,11 +467,9 @@ ChikoritaEggMoves:
 	db $ff
 
 CyndaquilEggMoves:
-	db FURY_SWIPES
 	db QUICK_ATTACK
 	db REVERSAL
 	db THRASH
-	db FORESIGHT
 if _CRYSTAL
 	db SUBMISSION
 endc
@@ -564,7 +547,6 @@ TogepiEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
 	db PECK
-	db FORESIGHT
 	db FUTURE_SIGHT
 	db $ff
 
@@ -592,7 +574,6 @@ MarillEggMoves:
 	db BELLY_DRUM
 	db PERISH_SONG
 	db SUPERSONIC
-	db FORESIGHT
 	db $ff
 
 SudowoodoEggMoves:
@@ -649,7 +630,6 @@ MisdreavusEggMoves:
 
 GirafarigEggMoves:
 	db AMNESIA
-	db FORESIGHT
 	db FUTURE_SIGHT
 	db BEAT_UP
 	db $ff
@@ -694,7 +674,6 @@ QwilfishEggMoves:
 	db $ff
 
 ShuckleEggMoves:
-	db SWEET_SCENT
 	db $ff
 
 HeracrossEggMoves:
@@ -706,7 +685,6 @@ HeracrossEggMoves:
 SneaselEggMoves:
 	db COUNTER
 	db SPITE
-	db FORESIGHT
 	db REFLECT
 	db BITE
 	db $ff
@@ -735,7 +713,6 @@ CorsolaEggMoves:
 	db ROCK_SLIDE
 	db SAFEGUARD
 	db SCREECH
-	db MIST
 	db AMNESIA
 	db $ff
 

@@ -1524,7 +1524,6 @@ AI_Smart_Encore: ; 38c3b
 	db LEER
 	db ROAR
 	db DISABLE
-	db MIST
 	db LEECH_SEED
 	db GROWTH
 	db POISONPOWDER
@@ -1545,7 +1544,6 @@ AI_Smart_Encore: ; 38c3b
 	db MIND_READER
 	db FLAME_WHEEL
 	db AEROBLAST
-	db COTTON_SPORE
 	db POWDER_SNOW
 	db $ff
 ; 38ca4
@@ -3175,7 +3173,6 @@ AI_Opportunist: ; 39315
 	db LEER
 	db GROWL
 	db DISABLE
-	db MIST
 	db COUNTER
 	db LEECH_SEED
 	db GROWTH
@@ -3385,7 +3382,6 @@ AI_Cautious: ; 39418
 	jr .asm_39425
 
 .residualmoves
-	db MIST
 	db LEECH_SEED
 	db POISONPOWDER
 	db STUN_SPORE
