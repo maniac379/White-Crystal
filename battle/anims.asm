@@ -1363,28 +1363,15 @@ BattleAnim_Thunder: ; c9b9a
 ; c9bbd
 
 BattleAnim_NastyPlot: ; c9bbd
-	anim_if_param_equal $1, BattleAnim_NastyPlot_branch_c9fb5
-	anim_1gfx ANIM_GFX_WHIP
-	anim_bgeffect ANIM_BG_06, $0, $1, $0
-.loop
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $2
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_42, -13, 0,   5, 0, $3
-	anim_wait 4
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_42, -15, 0,   7, 0, $3
-	anim_wait 4
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_42, -13, 0,   8, 0, $3
-	anim_wait 4
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_41,  15, 0,   5, 0, $83
-	anim_wait 4
-	anim_sound 0, 1, SFX_RAZOR_WIND
-	anim_obj ANIM_OBJ_41,  15, 0,   8, 0, $83
-	anim_wait 4
-	anim_loop 3, .loop
-	anim_wait 24
+	anim_1gfx ANIM_GFX_STATUS
+	anim_bgp $1b ;black background
+	anim_sound 0, 0, SFX_LICK
+	anim_obj ANIM_OBJ_53,   8, 0,  10, 0, $2
+	anim_wait 16
+	anim_obj ANIM_OBJ_53,   8, 4,  10, 0, $1
+	anim_wait 16
+	anim_obj ANIM_OBJ_53,   9, 0,  10, 0, $0
+	anim_wait 48
 	anim_ret
 ; c9c00
 
@@ -1605,25 +1592,13 @@ BattleAnim_Scratch: ; c9da6
 
 BattleAnim_ShadowClaw: ; c9dbc
 	anim_1gfx ANIM_GFX_CUT
-	anim_if_param_equal $1, BattleAnim_FurySwipes_branch_c9dd9
-	anim_sound 0, 1, SFX_SCRATCH
-	anim_obj ANIM_OBJ_37, -14, 0,   6, 0, $0
-	anim_obj ANIM_OBJ_37, -15, 4,   5, 4, $0
-	anim_obj ANIM_OBJ_37, -15, 0,   5, 0, $0
-	anim_sound 0, 1, SFX_SCRATCH
+	anim_bgp $1b ;black background
+	anim_sound 0, 1, SFX_CUT
+	anim_obj ANIM_OBJ_3A, -13, 0,   5, 0, $0
+	anim_obj ANIM_OBJ_3A, -14, 4,   4, 4, $0
 	anim_wait 32
 	anim_ret
 ; c9dd9
-
-BattleAnim_FurySwipes_branch_c9dd9: ; c9dd9
-	anim_sound 0, 1, SFX_SCRATCH
-	anim_obj ANIM_OBJ_38,  15, 0,   6, 0, $0
-	anim_obj ANIM_OBJ_38,  15, 4,   5, 4, $0
-	anim_obj ANIM_OBJ_38,  16, 0,   5, 0, $0
-	anim_sound 0, 1, SFX_SCRATCH
-	anim_wait 32
-	anim_ret
-; c9df0
 
 BattleAnim_Cut: ; c9df0
 	anim_1gfx ANIM_GFX_CUT
