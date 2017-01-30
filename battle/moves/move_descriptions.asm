@@ -274,8 +274,8 @@ KarateChopDescription:
 	next "cal hit ratio.@"
 
 DarkPulseDescription:
-	db   "Repeatedly slaps"
-	next "2-5 times.@"
+	db   "A dark aura, may"
+	next "cause flinching.@"
 
 CometPunchDescription:
 	db   "Repeatedly punches"
@@ -314,8 +314,8 @@ GuillotineDescription:
 	next "pincer attack.@"
 
 NastyPlotDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+	db   "Sharply increases"
+	next "SP ATK rating.@"
 
 SwordsDanceDescription:
 	db   "A dance that in-"
@@ -386,8 +386,8 @@ HornAttackDescription:
 	next "horn to jab.@"
 
 EarthPowerDescription:
-	db   "Jabs the target"
-	next "2-5 times.@"
+	db   "Erupts the ground,"
+	next "may lower SP DEF.@"
 
 HornDrillDescription:
 	db   "A one-hit KO,"
@@ -406,8 +406,8 @@ WrapDescription:
 	next "for 2-5 turns.@"
 
 BraveBirdDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
+	db   "A low altitude"
+	next "charge, recoil.@"
 
 ThrashDescription:
 	db   "Works 2-3 turns"
@@ -478,8 +478,8 @@ FlamethrowerDescription:
 	next "inflict a burn.@"
 
 WillOWispDescription:
-	db   "Prevents stat"
-	next "reduction.@"
+	db   "Inflicts a burn"
+	next "with intense fire.@"
 
 WaterGunDescription:
 	db   "Squirts water to"
@@ -646,8 +646,8 @@ HypnosisDescription:
 	next "sleep.@"
 
 BugBuzzDescription:
-	db   "Raises the user's"
-	next "ATTACK.@"
+	db   "A wing vibration,"
+	next "may lower SP DEF.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -726,8 +726,8 @@ ReflectDescription:
 	next "with a barrier.@"
 
 ZenHeadbuttDescription:
-	db   "Raises the criti-"
-	next "cal hit ratio.@"
+	db   "A focused willpower"
+	next "bash, may flinch.@"
 
 BideDescription:
 	db   "Waits 2-3 turns &"
@@ -790,16 +790,16 @@ SpikeCannonDescription:
 	next "hit 2-5 times.@"
 
 LeafBladeDescription:
-	db   "An attack that may"
-	next "lower SPEED.@"
+	db   "Sharp leaf slash,"
+	next "high crit ratio.@"
 
 AmnesiaDescription:
 	db   "Sharply raises the"
 	next "user's SPCL.DEF.@"
 
 AirSlashDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+	db   "A blade of air,"
+	next "may flinch.@"
 
 SoftboiledDescription:
 	db   "Restores HP by 1/2"
@@ -822,8 +822,8 @@ PoisonGasDescription:
 	next "poison the foe.@"
 
 CrossPoisonDescription:
-	db   "Throws orbs to hit"
-	next "2-5 times.@"
+	db   "A slash that may"
+	next "poison and crit.@"
 
 LeechLifeDescription:
 	db   "Steals 1/2 of the"
@@ -877,8 +877,8 @@ ExplosionDescription:
 	next "makes user faint.@"
 
 ShadowClawDescription:
-	db   "Quickly scratches"
-	next "2-5 times.@"
+	db   "A sharp claw,"
+	next "high crit ratio.@"
 
 BonemerangDescription:
 	db   "An attack that"
@@ -973,8 +973,8 @@ AeroblastDescription:
 	next "cal hit ratio.@"
 
 DragonPulseDescription:
-	db   "Sharply reduces"
-	next "the foe's SPEED.@"
+	db   "A shock wave from"
+	next "the user's mouth.@"
 
 ReversalDescription:
 	db   "Stronger if the"
@@ -1033,8 +1033,8 @@ ZapCannonDescription:
 	next "always paralyzes.@"
 
 IceShardDescription:
-	db   "Negates accuracy"
-	next "reduction moves.@"
+	db   "Flash frozen ice."
+	next "Priority move.@"
 
 DestinyBondDescription:
 	db   "The foe faints if"
@@ -1181,8 +1181,8 @@ RapidSpinDescription:
 	next "spinning attack.@"
 
 FlashCannonDescription:
-	db   "Reduces the foe's"
-	next "evasiveness.@"
+	db   "Discharged light, "
+	next "may lower SP DEF.@"
 
 IronTailDescription:
 	db   "An attack that may"
