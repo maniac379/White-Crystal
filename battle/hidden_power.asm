@@ -81,16 +81,6 @@ HiddenPowerDamage: ; fbced
 ; Skip Normal
 	inc a
 
-; Skip Bird
-	cp BIRD
-	jr c, .done
-	inc a
-
-; Skip unused types
-	cp UNUSED_TYPES
-	jr c, .done
-	add SPECIAL - UNUSED_TYPES
-
 .done
 
 ; Overwrite the current move type.

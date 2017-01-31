@@ -36,7 +36,7 @@
 	const TACKLE       ; $21
 	const BODY_SLAM    ; $22
 	const WRAP         ; $23
-	const BRAVE_BIRD    ; $24
+	const BRAVE_BIRD   ; $24
 	const THRASH       ; $25
 	const DOUBLE_EDGE  ; $26
 	const TAIL_WHIP    ; $27

@@ -103,20 +103,9 @@ TypeNames: ; 5097b
 	dw Poison
 	dw Ground
 	dw Rock
-	dw Bird
 	dw Bug
 	dw Ghost
 	dw Steel
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw CurseType
 	dw Fire
 	dw Water
 	dw Grass
@@ -125,25 +114,27 @@ TypeNames: ; 5097b
 	dw Ice
 	dw Dragon
 	dw Dark
+	dw Fairy
+	dw CurseType
 
 Normal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
 Flying:    db "FLYING@"
 Poison:    db "POISON@"
-CurseType: db "???@"
+Ground:    db "GROUND@"
+Rock:      db "ROCK@"
+Bug:       db "BUG@"
+Ghost:     db "GHOST@"
+Steel:     db "STEEL@"
 Fire:      db "FIRE@"
 Water:     db "WATER@"
 Grass:     db "GRASS@"
 Electric:  db "ELECTRIC@"
 Psychic:   db "PSYCHIC@"
 Ice:       db "ICE@"
-Ground:    db "GROUND@"
-Rock:      db "ROCK@"
-Bird:      db "BIRD@"
-Bug:       db "BUG@"
-Ghost:     db "GHOST@"
-Steel:     db "STEEL@"
 Dragon:    db "DRAGON@"
 Dark:      db "DARK@"
+Fairy:	db "FAIRY@"
+CurseType: db "???@"
 
 ; 50a28
