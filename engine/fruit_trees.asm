@@ -16,6 +16,10 @@ FruitTreeScript:: ; 44000
 	writetext HeyItsFruitText
 	copybytetovar CurFruit
 	giveitem ITEM_FROM_MEM
+	copybytetovar CurFruit
+	giveitem ITEM_FROM_MEM
+	copybytetovar CurFruit
+	giveitem ITEM_FROM_MEM
 	iffalse .packisfull
 	buttonsound
 	writetext ObtainedFruitText
