@@ -7556,9 +7556,9 @@ ROM Bank #21:
            $6F35 = GoldenrodGameCornerPrizeVendorNoCoinCaseText
            $6CD1 = GoldenrodGameCornerTMVendorMenuData.MenuData2
            $6DB0 = GoldenrodGameCornerPrizeMonVendorScript.MenuDataHeader
-           $6D26 = GoldenrodGameCornerPrizeMonVendorScript.abra
-           $6D54 = GoldenrodGameCornerPrizeMonVendorScript.cubone
-           $6D82 = GoldenrodGameCornerPrizeMonVendorScript.wobbuffet
+           $6D26 = GoldenrodGameCornerPrizeMonVendorScript.skarmory
+           $6D54 = GoldenrodGameCornerPrizeMonVendorScript.larvitar
+           $6D82 = GoldenrodGameCornerPrizeMonVendorScript.dratini
            $6D0C = GoldenrodGameCornerPrizeMonVendorScript.loop
            $6DB8 = GoldenrodGameCornerPrizeMonVendorScript.MenuData2
            $6F55 = GoldenrodGameCornerPharmacistText
@@ -9756,7 +9756,7 @@ ROM Bank #28:
            $6877 = GoldenrodGameCornerPokemonVendor.MenuDataHeader
            $67ED = GoldenrodGameCornerPokemonVendor.pikachu
            $681B = GoldenrodGameCornerPokemonVendor.porygon
-           $6849 = GoldenrodGameCornerPokemonVendor.larvitar
+           $6849 = GoldenrodGameCornerPokemonVendor.mew
            $67D3 = GoldenrodGameCornerPokemonVendor.loop
            $687F = GoldenrodGameCornerPokemonVendor.MenuData2
            $66EF = GoldenrodGameCornerTMVendor

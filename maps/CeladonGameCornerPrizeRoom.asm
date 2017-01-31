@@ -134,7 +134,7 @@ GoldenrodGameCornerPokemonVendor:
 	closewindow
 	if_equal $1, .pikachu
 	if_equal $2, .porygon
-	if_equal $3, .larvitar
+	if_equal $3, .mew
 	jump CeladonPrizeRoom_cancel
 
 .pikachu
@@ -173,21 +173,21 @@ GoldenrodGameCornerPokemonVendor:
 	takecoins 5555
 	jump .loop
 
-.larvitar
+.mew
 	checkcoins 8888
 	if_equal $2, CeladonPrizeRoom_notenoughcoins
 	checkcode VAR_PARTYCOUNT
 	if_equal $6, CeladonPrizeRoom_notenoughroom
-	pokenamemem LARVITAR, $0
+	pokenamemem MEW, $0
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_cancel
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext CeladonPrizeRoom_HereYouGoText
 	waitbutton
-	writebyte LARVITAR
+	writebyte MEW
 	special Special_GameCornerPrizeMonCheckDex
-	givepoke LARVITAR, 40
+	givepoke MEW, 40
 	takecoins 8888
 	jump .loop
 
@@ -204,7 +204,7 @@ GoldenrodGameCornerPokemonVendor:
 	db 4 ; items
 	db "PIKACHU    2222@"
 	db "PORYGON    5555@"
-	db "LARVITAR   8888@"
+	db "MEW        8888@"
 	db "CANCEL@"
 
 

@@ -171,62 +171,62 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	loadmenudata .MenuDataHeader
 	verticalmenu
 	closewindow
-	if_equal $1, .abra
-	if_equal $2, .cubone
-	if_equal $3, .wobbuffet
+	if_equal $1, .skarmory
+	if_equal $2, .larvitar
+	if_equal $3, .dratini
 	jump GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 
-.abra
-	checkcoins 100
+.skarmory
+	checkcoins 500
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem ABRA, $0
+	pokenamemem SKARMORY, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte ABRA
+	writebyte SKARMORY
 	special Special_GameCornerPrizeMonCheckDex
-	givepoke ABRA, 5
-	takecoins 100
+	givepoke SKARMORY, 15
+	takecoins 500
 	jump .loop
 
-.cubone
+.larvitar
 	checkcoins 800
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem CUBONE, $0
+	pokenamemem LARVITAR, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte CUBONE
+	writebyte LARVITAR
 	special Special_GameCornerPrizeMonCheckDex
-	givepoke CUBONE, 15
+	givepoke LARVITAR, 20
 	takecoins 800
 	jump .loop
 
-.wobbuffet
+.dratini
 	checkcoins 1500
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
 	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
-	pokenamemem WOBBUFFET, $0
+	pokenamemem DRATINI, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	waitsfx
 	playsound SFX_TRANSACTION
 	writetext GoldenrodGameCornerPrizeVendorHereYouGoText
 	waitbutton
-	writebyte WOBBUFFET
+	writebyte DRATINI
 	special Special_GameCornerPrizeMonCheckDex
-	givepoke WOBBUFFET, 15
+	givepoke DRATINI, 15
 	takecoins 1500
 	jump .loop
 
@@ -241,9 +241,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 .MenuData2:
 	db $80 ; flags
 	db 4 ; items
-	db "ABRA        100@"
-	db "CUBONE      800@"
-	db "WOBBUFFET  1500@"
+	db "SKARMORY    500@"
+	db "LARVITAR    800@"
+	db "DRATINI    1500@"
 	db "CANCEL@"
 
 

@@ -7453,9 +7453,9 @@
 15:6F35 GoldenrodGameCornerPrizeVendorNoCoinCaseText
 15:6CD1 GoldenrodGameCornerTMVendorMenuData.MenuData2
 15:6DB0 GoldenrodGameCornerPrizeMonVendorScript.MenuDataHeader
-15:6D26 GoldenrodGameCornerPrizeMonVendorScript.abra
-15:6D54 GoldenrodGameCornerPrizeMonVendorScript.cubone
-15:6D82 GoldenrodGameCornerPrizeMonVendorScript.wobbuffet
+15:6D26 GoldenrodGameCornerPrizeMonVendorScript.skarmory
+15:6D54 GoldenrodGameCornerPrizeMonVendorScript.larvitar
+15:6D82 GoldenrodGameCornerPrizeMonVendorScript.dratini
 15:6D0C GoldenrodGameCornerPrizeMonVendorScript.loop
 15:6DB8 GoldenrodGameCornerPrizeMonVendorScript.MenuData2
 15:6F55 GoldenrodGameCornerPharmacistText
@@ -9625,7 +9625,7 @@
 1C:6877 GoldenrodGameCornerPokemonVendor.MenuDataHeader
 1C:67ED GoldenrodGameCornerPokemonVendor.pikachu
 1C:681B GoldenrodGameCornerPokemonVendor.porygon
-1C:6849 GoldenrodGameCornerPokemonVendor.larvitar
+1C:6849 GoldenrodGameCornerPokemonVendor.mew
 1C:67D3 GoldenrodGameCornerPokemonVendor.loop
 1C:687F GoldenrodGameCornerPokemonVendor.MenuData2
 1C:66EF GoldenrodGameCornerTMVendor
