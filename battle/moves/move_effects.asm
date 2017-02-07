@@ -1060,7 +1060,7 @@ OHKOHit:
 	endmove
 
 BraveBird:
-DoubleEdge:
+FlareBlitz:
 Submission:
 Struggle:
 RecoilHit:

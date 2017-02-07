@@ -453,7 +453,6 @@ JigglypuffEvosAttacks:
 	db 19, ROLLOUT
 	db 29, REST
 	db 34, BODY_SLAM
-	db 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 WigglytuffEvosAttacks:
@@ -1423,7 +1422,6 @@ ChanseyEvosAttacks:
 	db 35, EGG_BOMB
 	db 41, DEFENSE_CURL
 	db 49, LIGHT_SCREEN
-	db 57, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TangelaEvosAttacks:
@@ -2020,6 +2018,8 @@ TotodileEvosAttacks:
 	db 1, EARTH_POWER
 	db 1, BRAVE_BIRD
 	db 7, FLASH_CANNON
+	db 7, FLARE_BLITZ
+	db 8, WILLOWISP
 	db 13, WATER_GUN
 	db 20, BITE
 	db 27, SCARY_FACE
@@ -2117,7 +2117,6 @@ LedybaEvosAttacks:
 	db 29, BATON_PASS
 	db 36, SWIFT
 	db 43, AGILITY
-	db 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 LedianEvosAttacks:
@@ -2132,7 +2131,6 @@ LedianEvosAttacks:
 	db 33, BATON_PASS
 	db 42, SWIFT
 	db 51, AGILITY
-	db 60, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 SpinarakEvosAttacks:
@@ -2247,7 +2245,6 @@ TogepiEvosAttacks:
 	db 18, SWEET_KISS
 	db 25, ENCORE
 	db 31, SAFEGUARD
-	db 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 TogeticEvosAttacks:
@@ -2258,7 +2255,6 @@ TogeticEvosAttacks:
 	db 18, SWEET_KISS
 	db 25, ENCORE
 	db 31, SAFEGUARD
-	db 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 NatuEvosAttacks:
@@ -2338,7 +2334,6 @@ MarillEvosAttacks:
 	db 10, WATER_GUN
 	db 15, ROLLOUT
 	db 21, BUBBLEBEAM
-	db 28, DOUBLE_EDGE
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
 
@@ -2353,7 +2348,6 @@ AzumarillEvosAttacks:
 	db 10, WATER_GUN
 	db 15, ROLLOUT
 	db 25, BUBBLEBEAM
-	db 36, DOUBLE_EDGE
 	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
 
@@ -2604,7 +2598,6 @@ PinecoEvosAttacks:
 	db 29, BIDE
 	db 36, EXPLOSION
 	db 43, SPIKES
-	db 50, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 ForretressEvosAttacks:
@@ -2617,7 +2610,6 @@ ForretressEvosAttacks:
 	db 29, BIDE
 	db 39, EXPLOSION
 	db 49, SPIKES
-	db 59, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DunsparceEvosAttacks:
@@ -2930,7 +2922,6 @@ PhanpyEvosAttacks:
 	db 17, FLAIL
 	db 33, ROLLOUT
 	db 41, ENDURE
-	db 49, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 DonphanEvosAttacks:
@@ -3068,7 +3059,6 @@ BlisseyEvosAttacks:
 	db 28, EGG_BOMB
 	db 33, DEFENSE_CURL
 	db 40, LIGHT_SCREEN
-	db 47, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
 RaikouEvosAttacks:

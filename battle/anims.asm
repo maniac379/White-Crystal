@@ -37,7 +37,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Wrap
 	dw BattleAnim_BraveBird
 	dw BattleAnim_Thrash
-	dw BattleAnim_DoubleEdge
+	dw BattleAnim_FlareBlitz
 	dw BattleAnim_TailWhip
 	dw BattleAnim_PoisonSting
 	dw BattleAnim_Twineedle
@@ -2237,19 +2237,27 @@ BattleAnim_BraveBird: ; ca331
 	anim_ret
 ; ca35c
 
-BattleAnim_DoubleEdge: ; ca35c
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_FollowEnemyFeet_0
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $10
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
-	anim_wait 3
-	anim_sound 0, 1, SFX_TACKLE
-	anim_obj ANIM_OBJ_00,  16, 0,   6, 0, $0
+BattleAnim_FlareBlitz: ; ca35c
+	anim_1gfx ANIM_GFX_FIRE
+.loop
+	anim_sound 0, 0, SFX_EMBER
+	anim_obj ANIM_OBJ_7F,   6, 0,  12, 0, $0
 	anim_wait 6
-	anim_sound 0, 1, SFX_TACKLE
-	anim_obj ANIM_OBJ_00, -14, 0,   6, 0, $0
-	anim_wait 3
-	anim_call BattleAnim_ShowMon_0
+	anim_loop 8, .loop
+	anim_wait 96
+	anim_call BattleAnim_FollowEnemyFeet_0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_EMBER
+	anim_obj ANIM_OBJ_0F, -15, 0,   6, 0, $1
+	anim_obj ANIM_OBJ_0F, -15, 0,   6, 0, $4
+	anim_obj ANIM_OBJ_0F, -15, 0,   6, 0, $5
+	anim_wait 8
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 4
+	anim_incobj  9
+	anim_wait 8
 	anim_ret
 ; ca382
 
@@ -2320,14 +2328,17 @@ BattleAnim_Haze: ; ca3ee
 ; ca404
 
 BattleAnim_WillOWisp: ; ca404
-	anim_obp0 $54
-	anim_1gfx ANIM_GFX_HAZE
-	anim_sound 0, 0, SFX_SURF
+	anim_1gfx ANIM_GFX_FIRE
 .loop
-	anim_obj ANIM_OBJ_MIST,   6, 0,   7, 0, $0
-	anim_wait 8
-	anim_loop 10, .loop
+	anim_sound 0, 0, SFX_EMBER
+	anim_obj ANIM_OBJ_7F,   17, 0,  8, 0, $0
+	anim_wait 6
+	anim_loop 8, .loop
 	anim_wait 96
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $0, $0
+	anim_wait 4
+	anim_incobj  9
+	anim_wait 8
 	anim_ret
 ; ca417
 

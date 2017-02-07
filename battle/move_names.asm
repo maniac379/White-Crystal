@@ -35,7 +35,7 @@
 	db "WRAP@"
 	db "BRAVE BIRD@"
 	db "THRASH@"
-	db "DOUBLE-EDGE@"
+	db "FLARE BLITZ@"
 	db "TAIL WHIP@"
 	db "POISON STING@"
 	db "TWINEEDLE@"

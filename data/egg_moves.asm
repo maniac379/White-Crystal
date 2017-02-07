@@ -484,7 +484,6 @@ TotodileEggMoves:
 	db $ff
 
 SentretEggMoves:
-	db DOUBLE_EDGE
 	db PURSUIT
 	db SLASH
 	db REVERSAL
@@ -584,7 +583,6 @@ HoppipEggMoves:
 	db CONFUSION
 	db GROWL
 	db ENCORE
-	db DOUBLE_EDGE
 	db REFLECT
 	db AMNESIA
 	db PAY_DAY

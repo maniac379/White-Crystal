@@ -3097,7 +3097,6 @@ AIHasMoveInArray: ; 392e6
 
 UsefulMoves: ; 39301
 ; Moves that are usable all-around.
-	db DOUBLE_EDGE
 	db SING
 	db FLAMETHROWER
 	db HYDRO_PUMP

@@ -38,7 +38,7 @@
 	const WRAP         ; $23
 	const BRAVE_BIRD   ; $24
 	const THRASH       ; $25
-	const DOUBLE_EDGE  ; $26
+	const FLARE_BLITZ  ; $26
 	const TAIL_WHIP    ; $27
 	const POISON_STING ; $28
 	const TWINEEDLE    ; $29

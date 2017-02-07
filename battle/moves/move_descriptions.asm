@@ -36,7 +36,7 @@
 	dw WrapDescription
 	dw BraveBirdDescription
 	dw ThrashDescription
-	dw DoubleEdgeDescription
+	dw FlareBlitzDescription
 	dw TailWhipDescription
 	dw PoisonStingDescription
 	dw TwineedleDescription
@@ -413,9 +413,9 @@ ThrashDescription:
 	db   "Works 2-3 turns"
 	next "and confuses user.@"
 
-DoubleEdgeDescription:
-	db   "A tackle that also"
-	next "hurts the user.@"
+FlareBlitzDescription:
+	db   "A fire cloaked,"
+	next "recoil charge.@"
 
 TailWhipDescription:
 	db   "Lowers the foe's"
