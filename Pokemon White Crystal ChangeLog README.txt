@@ -23,21 +23,21 @@ Minor Features
 
 Original Move   -->	New Move			New Animation
 -----------------------------------------------------------------------
-03 Doubleslap	-->	Dark Pulse (20% Flc)
+03 Doubleslap	-->	Dark Pulse (20% Flc)		Check
 0D Razor Wind	-->	Nasty Plot (2xSpAtkUp)		Check
 1F Fury Attack	-->	Earth Power (10%SpDef)		Check
 24 Take Down	-->	Brave Bird (1/3 Recoil)		Check
 26 Double Edge	-->	Flare Blitz (1/3 Recoil)	Check
 36 Mist		-->	WillOWisp			Check
-60 Meditate	-->	Bug Buzz (10%SpDef)
+60 Meditate	-->	Bug Buzz (10%SpDef)		Check
 74 Focus Energy	-->	Zen Headbutt (20%Flc)
 84 Constrict	-->	Leaf Blade (Crit)		Check
 86 Kinesis	-->	Air Slash (30%Flc)		Check
 8C Barrage	-->	Cross Poison (Crit)(10%Psn)	Check
 9A Fury Swipes	-->	Shadow Claw (Crit)		Check
-B2 Cotton Spore	-->	Dragon Pulse
-C1 Foresight	-->	Ice Shard (Priority)
-E6 Sweet Scent	-->	Flash Cannon (10%SpDef)
+B2 Cotton Spore	-->	Dragon Pulse			Check
+C1 Foresight	-->	Ice Shard (Priority)		Check
+E6 Sweet Scent	-->	Flash Cannon (10%SpDef)		Check
 FB Beat Up
 
 Animations Wrong

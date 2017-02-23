@@ -710,22 +710,22 @@ BattleAnim_KarateChop: ; c95d5
 ; c9605
 
 BattleAnim_DarkPulse: ; c9605
-	anim_1gfx ANIM_GFX_HIT
-	anim_if_param_equal $1, BattleAnim_DarkPulse_branch_c961b
-	anim_sound 0, 1, SFX_DARK_PULSE
-	anim_obj ANIM_OBJ_08, -14, 0,   6, 0, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_01, -14, 0,   6, 0, $0
-	anim_wait 8
-	anim_ret
-; c961b
-
-BattleAnim_DarkPulse_branch_c961b: ; c961b
-	anim_sound 0, 1, SFX_DARK_PULSE
-	anim_obj ANIM_OBJ_08,  15, 0,   6, 0, $0
-	anim_wait 6
-	anim_obj ANIM_OBJ_01,  15, 0,   6, 0, $0
-	anim_wait 8
+	anim_1gfx ANIM_GFX_BEAM
+	anim_bgp $1b ;black background
+	anim_wait 20
+	anim_sound 0, 0, SFX_PSYCHIC
+	anim_obj ANIM_OBJ_27,   8, 0,  11, 4, $0
+	anim_wait 4
+	anim_sound 0, 0, SFX_PSYCHIC
+	anim_obj ANIM_OBJ_27,  10, 0,  10, 4, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_PSYCHIC
+	anim_obj ANIM_OBJ_27,  12, 0,   9, 4, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_PSYCHIC
+	anim_obj ANIM_OBJ_27,  14, 0,   8, 4, $0
+	anim_obj ANIM_OBJ_28,  15, 6,   7, 6, $0
+	anim_wait 48
 	anim_ret
 ; c962b
 
@@ -2530,15 +2530,14 @@ BattleAnim_PetalDance: ; ca564
 ; ca580
 
 BattleAnim_CrossPoison: ; ca580
-	anim_1gfx ANIM_GFX_CUT
+	anim_2gfx ANIM_GFX_CUT, ANIM_GFX_POISON
 	anim_sound 0, 1, SFX_CUT
 	anim_obj ANIM_OBJ_A0, -13, 0,   5, 0, $0
 	anim_obj ANIM_OBJ_A1,  15, 0,   9, 0, $0
-	anim_1gfx ANIM_GFX_POISON
 	anim_call BattleAnim_Sludge_branch_cbc15
 	anim_wait 92
 	anim_sound 0, 1, SFX_VICEGRIP
-	anim_wait 16
+	anim_wait 24
 	anim_ret
 ; ca596
 
@@ -3031,14 +3030,15 @@ BattleAnim_QuickAttack: ; ca99e
 ; ca9d8
 
 BattleAnim_BugBuzz: ; ca9d8
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_FollowEnemyFeet_0
-	anim_sound 0, 0, SFX_PSYBEAM
-	anim_bgeffect ANIM_BG_WAVE_DEFORM_USER, $0, $1, $0
-	anim_wait 48
-	anim_incbgeffect ANIM_BG_WAVE_DEFORM_USER
-	anim_wait 48
-	anim_call BattleAnim_ShowMon_0
+	anim_1gfx ANIM_GFX_PSYCHIC
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+.loop
+	anim_sound 6, 2, SFX_SUPERSONIC
+	anim_obj ANIM_OBJ_4C,   8, 0,  11, 0, $2
+	anim_wait 12
+	anim_loop 5, .loop
+	anim_wait 64
 	anim_ret
 ; ca9ed
 
@@ -3556,14 +3556,18 @@ BattleAnim_Aeroblast: ; cae4b
 ; cae84
 
 BattleAnim_DragonPulse: ; cae84
-	anim_obp0 $54
-	anim_1gfx ANIM_GFX_MISC
-	anim_sound 0, 1, SFX_POWDER
-.loop ; cae8b
-	anim_obj ANIM_OBJ_COTTON_SPORE, -16, 4,   4, 0, $0
-	anim_wait 8
-	anim_loop 5, .loop
-	anim_wait 96
+	anim_1gfx ANIM_GFX_BEAM
+	anim_call BattleAnim_FollowEnemyFeet_0
+	anim_bgeffect ANIM_BG_1A, $0, $1, $20
+	anim_sound 0, 0, SFX_OUTRAGE
+	anim_wait 72
+	anim_incbgeffect ANIM_BG_1A
+	anim_call BattleAnim_ShowMon_0
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
+	anim_sound 0, 1, SFX_MOVE_PUZZLE_PIECE
+	anim_wait 6
+	anim_call BattleAnim_HyperBeam_branch_cbb39
+	anim_wait 48
 	anim_ret
 ; cae97
 
@@ -3801,17 +3805,12 @@ BattleAnim_ZapCannon: ; cb0b0
 ; cb0d0
 
 BattleAnim_IceShard: ; cb0d0
-	anim_1gfx ANIM_GFX_SHINE
-	anim_call BattleAnim_FollowEnemyFeet_1
-	anim_bgeffect ANIM_BG_07, $0, $0, $0
-	anim_sound 0, 1, SFX_FORESIGHT
-	anim_obj ANIM_OBJ_A7, -16, 4,   5, 0, $0
-	anim_wait 24
-	anim_bgeffect ANIM_BG_19, $0, $0, $40
-	anim_wait 64
-	anim_incbgeffect ANIM_BG_19
-	anim_call BattleAnim_ShowMon_1
-	anim_wait 8
+	anim_2gfx ANIM_GFX_EGG, ANIM_GFX_ICE
+	anim_sound 6, 2, SFX_WHIRLWIND
+	anim_obj ANIM_OBJ_B4,   8, 0,  11, 4, $2
+	anim_wait 32
+	anim_call BattleAnim_IcePunch_branch_cbbdf
+	anim_wait 32
 	anim_ret
 ; cb0f0
 
@@ -4460,19 +4459,10 @@ BattleAnim_RapidSpin: ; cb65e
 ; cb68e
 
 BattleAnim_FlashCannon: ; cb68e
-	anim_2gfx ANIM_GFX_FLOWER, ANIM_GFX_MISC
-	anim_sound 0, 0, SFX_SWEET_SCENT
-	anim_obj ANIM_OBJ_FLOWER,   8, 0,  12, 0, $2
-	anim_wait 2
-	anim_obj ANIM_OBJ_FLOWER,   8, 0,  10, 0, $2
-	anim_wait 96
-	anim_obp0 $54
-	anim_sound 0, 1, SFX_SWEET_SCENT_2
-	anim_obj ANIM_OBJ_COTTON, -15, 0,   5, 0, $15
-	anim_obj ANIM_OBJ_COTTON, -15, 0,   5, 0, $2a
-	anim_obj ANIM_OBJ_COTTON, -15, 0,   5, 0, $3f
-	anim_wait 128
-	anim_ret
+	anim_1gfx ANIM_GFX_BEAM
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_wait 64
 ; cb6b6
 
 BattleAnim_IronTail: ; cb6b6
