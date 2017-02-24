@@ -1806,6 +1806,20 @@ BattleAnim_Softboiled: ; c9f85
 ; c9fb5
 
 BattleAnim_ZenHeadbutt: ; c9fb5
+	anim_1gfx ANIM_GFX_HIT
+	anim_sound 6, 2, SFX_PSYCHIC
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_wait 32
+	anim_call BattleAnim_FollowEnemyFeet_0
+	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
+	anim_wait 4
+	anim_sound 0, 1, SFX_HEADBUTT
+	anim_obj ANIM_OBJ_01, -15, 0,   7, 0, $0
+	anim_wait 8
+	anim_call BattleAnim_ShowMon_0
+	anim_ret
+
 BattleAnim_NastyPlot_branch_c9fb5: ; c9fb5
 BattleAnim_SkullBash_branch_c9fb5: ; c9fb5
 BattleAnim_SkyAttack_branch_c9fb5: ; c9fb5

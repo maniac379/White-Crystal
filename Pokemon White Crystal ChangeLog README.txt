@@ -8,7 +8,7 @@ Major Features
 -The last 4 moves a Pokemon learn, the ones trainers/wild would have, produce a competitive moveset
 -Evolving no longer changes rate of move learning
 -Running Shoes by pressing B
--Physical/Special Split and added some later gen moves to balance the split
+-Physical/Special Split
 
 
 Minor Features
@@ -18,30 +18,29 @@ Minor Features
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
 -Only Pokemon that flee will be the 3 Dogs
 -Game Corner Prizes Updated
+-Extra berries from trees
 
 
 
-Original Move   -->	New Move			New Animation
------------------------------------------------------------------------
-03 Doubleslap	-->	Dark Pulse (20% Flc)		Check
-0D Razor Wind	-->	Nasty Plot (2xSpAtkUp)		Check
-1F Fury Attack	-->	Earth Power (10%SpDef)		Check
-24 Take Down	-->	Brave Bird (1/3 Recoil)		Check
-26 Double Edge	-->	Flare Blitz (1/3 Recoil)	Check
-36 Mist		-->	WillOWisp			Check
-60 Meditate	-->	Bug Buzz (10%SpDef)		Check
-74 Focus Energy	-->	Zen Headbutt (20%Flc)
-84 Constrict	-->	Leaf Blade (Crit)		Check
-86 Kinesis	-->	Air Slash (30%Flc)		Check
-8C Barrage	-->	Cross Poison (Crit)(10%Psn)	Check
-9A Fury Swipes	-->	Shadow Claw (Crit)		Check
-B2 Cotton Spore	-->	Dragon Pulse			Check
-C1 Foresight	-->	Ice Shard (Priority)		Check
-E6 Sweet Scent	-->	Flash Cannon (10%SpDef)		Check
+Original Move   -->	New Move		
+-------------------------------------------------------
+03 Doubleslap	-->	Dark Pulse (20% Flc)		
+0D Razor Wind	-->	Nasty Plot (2xSpAtkUp)		
+1F Fury Attack	-->	Earth Power (10%SpDef)		
+24 Take Down	-->	Brave Bird (1/3 Recoil)		
+26 Double Edge	-->	Flare Blitz (1/3 Recoil)	
+36 Mist		-->	WillOWisp			
+60 Meditate	-->	Bug Buzz (10%SpDef)		
+74 Focus Energy	-->	Zen Headbutt (20%Flc)		
+84 Constrict	-->	Leaf Blade (Crit)		
+86 Kinesis	-->	Air Slash (30%Flc)		
+8C Barrage	-->	Cross Poison (Crit)(10%Psn)	
+9A Fury Swipes	-->	Shadow Claw (Crit)		
+B2 Cotton Spore	-->	Dragon Pulse			
+C1 Foresight	-->	Ice Shard (Priority)
+E6 Sweet Scent	-->	Flash Cannon (10%SpDef)
 FB Beat Up
 
-Animations Wrong
-Sound Effect Wrong
 Create WillOWisp Effect
 Create 1/3 Recoil effect
 
@@ -162,26 +161,6 @@ Attack Changes
 -Increased Anicientpower PP from 5 to 10
 
 
-Original Move   -->	New Move		New Animation
------------------------------------------------------------------
-03 Doubleslap	-->	Dark Pulse (20% Flc)	(5A Fissure)
-0D Razor Wind	-->	Nasty Plot (2xSpAtkUp)	(AE Curse)
-1F Fury Attack	-->	Earth Power (10%SpDef)	(F6 AncientPower)
-24 Take Down	-->	Brave Bird (1/3 Recoil)	(F5 Extremespeed)
-26 Double Edge	-->	Flare Blitz (1/3 Recoil)(AC Flame Wheel)
-36 Mist		-->	Will-O-Wisp		(53 Fire Spin)
-60 Meditate	-->	Bug Buzz (10%SpDef)	(C1 Foresight)
-74 Focus Energy	-->	Zen Headbutt (20%Flc)	(1D Headbut)
-84 Constrict	-->	LeafBlade (Crit)	(E5 Rapid Spin)
-86 Kinesis	-->	AirSlas	(30%Flc)	(0F Cut)
-8C Barrage	-->	CrosPsn (Crit)(10%Psn)	(5C Toxic)
-9A Fury Swipes	-->	Shadow Claw (Crit)	(0C Guillotine)
-B2 Cotton Spore	-->	Dragon Pulse		(3C Psybeam)
-C1 Foresight	-->	Ice Shard (Priority)	(7A Lick)
-E6 Sweet Scent	-->	FlashCannon (10%SpDef)	(6F Defense Curl)
-FB Beat Up
-
-
 TM	Name		Orig Name/Loc					Location
 ---------------------------------------------------------------------------------------------
 01	Fire Punch	*Dynamicpunch/Cianwood Gym			+Goldenrod Dept Store
@@ -242,7 +221,6 @@ ToDo List
 -Maximum 30 items and 16 Balls in your bag pocket
 -Burn/Poison/Paralyze improve catch rate
 -Special Balls work
--2 Berries from trees
 -Birds cutscene
 -More In-game trades
 -Give Rods Earlier through sailors in Cherrygrove, Ecruteak, and Island
@@ -260,3 +238,13 @@ ToDo List
 -Abilities
 -Secret Bases
 -AutoChange Full PC Boxes
+
+Prism
+------
+-Abilities
+-Status Guard Items
+-Menu Sprites
+-30 Badges
+-Catch XP
+
+
