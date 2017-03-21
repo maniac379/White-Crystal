@@ -538,24 +538,6 @@ Function2cadf: ; 2cadf
 ; 2cb0c
 
 ConsumeTM: ; 2cb0c (b:4b0c)
-	call ConvertCurItemIntoCurTMHM
-	ld a, [wd265]
-	dec a
-	ld hl, TMsHMs
-	ld b, 0
-	ld c, a
-	add hl, bc
-	ld a, [hl]
-	and a
-	ret z
-	dec a
-	ld [hl], a
-	ret nz
-	ld a, [wTMHMPocketScrollPosition]
-	and a
-	ret z
-	dec a
-	ld [wTMHMPocketScrollPosition], a
 	ret
 
 CountTMsHMs: ; 2cb2a (b:4b2a)
