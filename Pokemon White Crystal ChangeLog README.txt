@@ -19,6 +19,7 @@ Minor Features
 -Only Pokemon that flee will be the 3 Dogs
 -Game Corner Prizes Updated
 -Extra berries from trees
+-TMs are Reusable
 
 
 
