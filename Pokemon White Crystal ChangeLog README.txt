@@ -9,6 +9,7 @@ Major Features
 -Evolving no longer changes rate of move learning
 -Running Shoes by pressing B
 -Physical/Special Split
+-Pokemon sprites overhauled courtesy of Chamber_ and others
 
 
 Minor Features

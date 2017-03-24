@@ -9,8 +9,7 @@ LoadOverworldMonIcon: ; 8e82b
 	ld a, [hli]
 	ld e, a
 	ld d, [hl]
-	ld b, BANK(Icons)
-	ld c, 8
+	call GetExtendedIconBank
 	ret
 ; 8e83f
 
@@ -347,12 +346,24 @@ endr
 	ld d, [hl]
 	pop hl
 
-	lb bc, BANK(Icons), 8
+	call GetExtendedIconBank
 	call GetGFXUnlessMobile
 
 	pop hl
 	ret
 ; 8ea3f
+
+; routine by com3tiin
+; http://www.pokecommunity.com/showthread.php?t=338470
+GetExtendedIconBank:
+	ld a, [CurIcon]
+	cp a, $80
+	jr nc, .get_bank_2
+	lb bc, BANK(Icons1), 8
+	ret
+.get_bank_2
+	lb bc, BANK(Icons2), 8
+	ret
 
 GetGFXUnlessMobile: ; 8ea3f
 	ld a, [wLinkMode]
