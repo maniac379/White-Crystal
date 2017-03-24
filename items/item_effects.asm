@@ -505,6 +505,7 @@ ParkBall: ; e8a2
 .Transformed:
 
 	ld a, [EnemyMonSpecies]
+	push af
 	ld [wWildMon], a
 	ld [CurPartySpecies], a
 	ld [wd265], a
@@ -519,7 +520,14 @@ ParkBall: ; e8a2
 
 	call ClearSprites
 
-	ld a, [wd265]
+	callba GiveExperiencePointsAfterCatch
+	ld a, [EnemyMonLevel]
+	ld [CurPartyLevel], a
+	pop af
+	ld [wWildMon], a
+	ld [CurPartySpecies], a
+	ld [wd265], a
+
 	dec a
 	call CheckCaughtMon
 
@@ -695,6 +703,7 @@ ParkBall: ; e8a2
 	jr .return_from_capture
 
 .FinishTutorial:
+	pop af
 	ld hl, Text_GotchaMonWasCaught
 
 .shake_and_break_free
