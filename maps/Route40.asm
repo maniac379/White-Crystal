@@ -25,12 +25,6 @@ Route40_MapScriptHeader:
 
 MonicaCallback:
 	clearevent EVENT_BATTLE_TOWER_OUTSIDE_SAILOR
-	checkcode VAR_WEEKDAY
-	if_equal MONDAY, .MonicaAppears
-	disappear ROUTE40_MONICA
-	return
-
-.MonicaAppears:
 	appear ROUTE40_MONICA
 	return
 
@@ -100,8 +94,6 @@ MonicaScript:
 	opentext
 	checkevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
 	iftrue MonicaMondayScript
-	checkcode VAR_WEEKDAY
-	if_not_equal MONDAY, MonicaNotMondayScript
 	checkevent EVENT_MET_MONICA_OF_MONDAY
 	iftrue .MetMonica
 	writetext MeetMonicaText

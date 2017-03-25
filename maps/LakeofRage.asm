@@ -39,12 +39,6 @@ LakeofRage_MapScriptHeader:
 	return
 
 .Wesley:
-	checkcode VAR_WEEKDAY
-	if_equal WEDNESDAY, .WesleyAppears
-	disappear LAKEOFRAGE_WESLEY
-	return
-
-.WesleyAppears:
 	appear LAKEOFRAGE_WESLEY
 	return
 
@@ -199,8 +193,6 @@ WesleyScript:
 	opentext
 	checkevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	iftrue WesleyWednesdayScript
-	checkcode VAR_WEEKDAY
-	if_not_equal WEDNESDAY, WesleyNotWednesdayScript
 	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
 	iftrue .MetWesley
 	writetext MeetWesleyText

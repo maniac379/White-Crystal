@@ -25,12 +25,6 @@ BlackthornCity_MapScriptHeader:
 	return
 
 .Santos:
-	checkcode VAR_WEEKDAY
-	if_equal SATURDAY, .SantosAppears
-	disappear BLACKTHORNCITY_SANTOS
-	return
-
-.SantosAppears:
 	appear BLACKTHORNCITY_SANTOS
 	return
 
@@ -94,8 +88,6 @@ SantosScript:
 	opentext
 	checkevent EVENT_GOT_SPELL_TAG_FROM_SANTOS
 	iftrue .Saturday
-	checkcode VAR_WEEKDAY
-	if_not_equal SATURDAY, .NotSaturday
 	checkevent EVENT_MET_SANTOS_OF_SATURDAY
 	iftrue .MetSantos
 	writetext MeetSantosText

@@ -22,6 +22,7 @@ Minor Features
 -Extra berries from trees
 -TMs are Reusable
 -Gain experience for catching pokemon like in Gen VI
+-Days of the Week Siblings are always visibile and interactive regardless of day
 
 
 Special Thanks
@@ -113,8 +114,6 @@ ToDo List
 -Mandatory 'Set' battle style
 -Recieve Exp. Share early on
 -In-Game Trades Updated
--Removed all Kanto hidden items
--Days of the Week Siblings are always visibile and interactive regardless of day
 -All Goldenrod citizens are always visibile and interactive regardless of day
 
 -Maximum 30 items and 16 Balls in your bag pocket
@@ -139,6 +138,7 @@ ToDo List
 -AutoChange Full PC Boxes
 -Create true WillOWisp Effect
 -Create 1/3 Recoil effect
+-Change Hidden Items to a trade in item reward system/scav hunt w/ clues
 
 
 Prism

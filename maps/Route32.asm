@@ -40,12 +40,6 @@ Route32_MapScriptHeader:
 	end
 
 .Frieda:
-	checkcode VAR_WEEKDAY
-	if_equal FRIDAY, .FriedaAppears
-	disappear ROUTE32_FRIEDA
-	return
-
-.FriedaAppears:
 	appear ROUTE32_FRIEDA
 	return
 
@@ -461,8 +455,6 @@ FriedaScript:
 	opentext
 	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	iftrue .Friday
-	checkcode VAR_WEEKDAY
-	if_not_equal FRIDAY, .NotFriday
 	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
 	iftrue .MetFrieda
 	writetext MeetFriedaText

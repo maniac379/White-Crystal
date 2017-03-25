@@ -38,8 +38,6 @@ Route29_MapScriptHeader:
 	return
 
 .DoesTuscanyAppear:
-	checkcode VAR_WEEKDAY
-	if_not_equal TUESDAY, .TuscanyDisappears
 	appear ROUTE29_TUSCANY
 	return
 
@@ -176,8 +174,6 @@ TuscanyScript:
 	opentext
 	checkevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
 	iftrue TuscanyTuesdayScript
-	checkcode VAR_WEEKDAY
-	if_not_equal TUESDAY, TuscanyNotTuesdayScript
 	checkevent EVENT_MET_TUSCANY_OF_TUESDAY
 	iftrue .MetTuscany
 	writetext MeetTuscanyText

@@ -31,12 +31,6 @@ Route36_MapScriptHeader:
 	end
 
 .ArthurCallback:
-	checkcode VAR_WEEKDAY
-	if_equal THURSDAY, .ArthurAppears
-	disappear ROUTE36_ARTHUR
-	return
-
-.ArthurAppears:
 	appear ROUTE36_ARTHUR
 	return
 
@@ -325,8 +319,6 @@ ArthurScript:
 	opentext
 	checkevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
 	iftrue .AlreadyGotStone
-	checkcode VAR_WEEKDAY
-	if_not_equal THURSDAY, ArthurNotThursdayScript
 	checkevent EVENT_MET_ARTHUR_OF_THURSDAY
 	iftrue .MetArthur
 	writetext MeetArthurText
