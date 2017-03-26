@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FLYING
-	db 3 ; catch rate
+	db 45 ; catch rate
 	db 220 ; base exp
 	db SACRED_ASH ; item 1
 	db SACRED_ASH ; item 2

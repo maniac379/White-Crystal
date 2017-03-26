@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, PSYCHIC
-	db 45 ; catch rate
+	db 120 ; catch rate
 	db 87 ; base exp
 	db ICE_BERRY ; item 1
 	db ICE_BERRY ; item 2

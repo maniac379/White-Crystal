@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db FIRE, FIRE
-	db 45 ; catch rate
+	db 120 ; catch rate
 	db 117 ; base exp
 	db BURNT_BERRY ; item 1
 	db BURNT_BERRY ; item 2

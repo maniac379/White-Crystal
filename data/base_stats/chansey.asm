@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL
-	db 30 ; catch rate
+	db 90 ; catch rate
 	db 255 ; base exp
 	db NO_ITEM ; item 1
 	db LUCKY_EGG ; item 2

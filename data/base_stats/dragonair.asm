@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db DRAGON, DRAGON
-	db 45 ; catch rate
+	db 90 ; catch rate
 	db 144 ; base exp
 	db NO_ITEM ; item 1
 	db DRAGON_SCALE ; item 2

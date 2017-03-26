@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db DARK, ICE
-	db 60 ; catch rate
+	db 120 ; catch rate
 	db 132 ; base exp
 	db NO_ITEM ; item 1
 	db QUICK_CLAW ; item 2

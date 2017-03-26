@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON
-	db 45 ; catch rate
+	db 120 ; catch rate
 	db 159 ; base exp
 	db NO_ITEM ; item 1
 	db POISON_BARB ; item 2

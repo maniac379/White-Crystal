@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, STEEL
-	db 60 ; catch rate
+	db 120 ; catch rate
 	db 161 ; base exp
 	db NO_ITEM ; item 1
 	db METAL_COAT ; item 2

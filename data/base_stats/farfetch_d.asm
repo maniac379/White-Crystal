@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, FLYING
-	db 45 ; catch rate
+	db 120 ; catch rate
 	db 94 ; base exp
 	db NO_ITEM ; item 1
 	db STICK ; item 2

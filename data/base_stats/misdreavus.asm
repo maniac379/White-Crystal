@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, GHOST
-	db 45 ; catch rate
+	db 120 ; catch rate
 	db 147 ; base exp
 	db NO_ITEM ; item 1
 	db SPELL_TAG ; item 2

@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL
-	db 25 ; catch rate
+	db 120 ; catch rate
 	db 129 ; base exp
 	db MYSTERYBERRY ; item 1
 	db MOON_STONE ; item 2

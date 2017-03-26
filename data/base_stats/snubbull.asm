@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL
-	db 190 ; catch rate
+	db 255 ; catch rate
 	db 63 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

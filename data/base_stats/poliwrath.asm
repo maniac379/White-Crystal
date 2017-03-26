@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, FIGHTING
-	db 45 ; catch rate
+	db 90 ; catch rate
 	db 185 ; base exp
 	db NO_ITEM ; item 1
 	db KINGS_ROCK ; item 2

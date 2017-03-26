@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, PSYCHIC
-	db 60 ; catch rate
+	db 90 ; catch rate
 	db 207 ; base exp
 	db STARDUST ; item 1
 	db STAR_PIECE ; item 2

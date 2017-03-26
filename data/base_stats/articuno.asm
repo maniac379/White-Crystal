@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ICE, FLYING
-	db 3 ; catch rate
+	db 45 ; catch rate
 	db 215 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db PSYCHIC, PSYCHIC
-	db 225 ; catch rate
+	db 255 ; catch rate
 	db 61 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

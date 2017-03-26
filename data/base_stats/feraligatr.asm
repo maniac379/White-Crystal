@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER
-	db 45 ; catch rate
+	db 90 ; catch rate
 	db 210 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

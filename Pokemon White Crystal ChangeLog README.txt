@@ -23,6 +23,7 @@ Minor Features
 -TMs are Reusable
 -Gain experience for catching pokemon like in Gen VI
 -Days of the Week Siblings are always visibile and interactive regardless of day
+-Increased Capture Rates
 
 
 Special Thanks
@@ -110,7 +111,6 @@ ToDo List
 -Legendary birds appear after 16 Badges
 -Celebi Event added through Kurt's Daughter
 -Mewtwo accessible through original Cerulean Cave
--Increased Capture Rates
 -Mandatory 'Set' battle style
 -Recieve Exp. Share early on
 -In-Game Trades Updated

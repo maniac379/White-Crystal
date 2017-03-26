@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GHOST, POISON
-	db 90 ; catch rate
+	db 120 ; catch rate
 	db 126 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

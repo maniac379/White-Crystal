@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, POISON
-	db 60 ; catch rate
+	db 120 ; catch rate
 	db 205 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

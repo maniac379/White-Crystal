@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db STEEL, FLYING
-	db 25 ; catch rate
+	db 90 ; catch rate
 	db 168 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

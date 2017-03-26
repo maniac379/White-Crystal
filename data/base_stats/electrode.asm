@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, ELECTRIC
-	db 60 ; catch rate
+	db 90 ; catch rate
 	db 150 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

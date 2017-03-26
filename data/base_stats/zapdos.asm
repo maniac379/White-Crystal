@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db ELECTRIC, FLYING
-	db 3 ; catch rate
+	db 45 ; catch rate
 	db 216 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2

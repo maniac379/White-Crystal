@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db GROUND, GROUND
-	db 75 ; catch rate
+	db 120 ; catch rate
 	db 124 ; base exp
 	db NO_ITEM ; item 1
 	db THICK_CLUB ; item 2

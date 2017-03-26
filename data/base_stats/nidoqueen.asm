@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 
 	db POISON, GROUND
-	db 45 ; catch rate
+	db 90 ; catch rate
 	db 194 ; base exp
 	db NO_ITEM ; item 1
 	db NO_ITEM ; item 2
