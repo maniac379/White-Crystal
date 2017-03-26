@@ -59,6 +59,7 @@ CharmanderEvosAttacks:
 	db 31, FLAMETHROWER
 	db 36, CRUNCH
 	db 42, OUTRAGE
+	db 49, BELLY_DRUM
 	db 0 ; no more level-up moves
 
 CharmeleonEvosAttacks:
@@ -71,6 +72,7 @@ CharmeleonEvosAttacks:
 	db 31, FLAMETHROWER
 	db 36, CRUNCH
 	db 42, OUTRAGE
+	db 49, BELLY_DRUM
 	db 0 ; no more level-up moves
 
 CharizardEvosAttacks:
@@ -81,6 +83,7 @@ CharizardEvosAttacks:
 	db 1, FLAMETHROWER
 	db 36, CRUNCH
 	db 42, OUTRAGE
+	db 49, BELLY_DRUM
 	db 0 ; no more level-up moves
 
 SquirtleEvosAttacks:
