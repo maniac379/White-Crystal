@@ -26,6 +26,8 @@ Minor Features
 -Increased Capture Rates
 -Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
 -Mahogony Mart sells Evolution Stones
+-Burn/Poison/Paralyze correctly improve catch rate
+-Kurt Poke Balls work as intended
 
 
 Special Thanks
@@ -117,8 +119,6 @@ ToDo List
 -All Goldenrod citizens are always visibile and interactive regardless of day
 
 -Maximum 30 items and 16 Balls in your bag pocket
--Burn/Poison/Paralyze improve catch rate
--Special Balls work
 -Birds cutscene
 -More In-game trades
 -Give Rods Earlier through sailors in Cherrygrove, Ecruteak, and Island

@@ -337,12 +337,13 @@ ParkBall: ; e8a2
 ; no status effect at all. But instead, it makes BRN/PSN/PAR provide no
 ; benefit.
 ; Uncomment the line below to fix this.
+; Uncommented 3/26/17
 	ld b, a
 	ld a, [EnemyMonStatus]
 	and 1 << FRZ | SLP
 	ld c, 10
 	jr nz, .addstatus
-	; ld a, [EnemyMonStatus]
+	ld a, [EnemyMonStatus]
 	and a
 	ld c, 5
 	jr nz, .addstatus
@@ -365,9 +366,11 @@ ParkBall: ; e8a2
 	; is never used.
 
 	; Uncomment the line below to fix.
+	; Uncommented 3/26/17
+
 
 	ld a, [BattleMonItem]
-;	ld b, a
+	ld b, a
 	callba GetItemHeldEffect
 	ld a, b
 	cp HELD_CATCH_CHANCE
@@ -953,10 +956,11 @@ GLOBAL EvosAttacksPointers
 ; Moon Stone's constant from Pokémon Red is used.
 ; No Pokémon evolve with Burn Heal,
 ; so Moon Balls always have a catch rate of 1×.
+; Changed to cp MOON_STONE 3/26/2017
 	push bc
 	ld a, BANK(EvosAttacks)
 	call GetFarByte
-	cp MOON_STONE_RED ; BURN_HEAL
+	cp MOON_STONE
 	pop bc
 	ret nz
 
@@ -1015,7 +1019,8 @@ LoveBallMultiplier:
 	pop de
 	cp d
 	pop bc
-	ret nz ; for the intended effect, this should be “ret z”
+	ret z ; for the intended effect, this should be “ret z�
+		; fixed 3/26/2017
 
 	sla b
 	jr c, .max
@@ -1053,7 +1058,8 @@ FastBallMultiplier:
 	cp -1
 	jr z, .next
 	cp c
-	jr nz, .next ; for the intended effect, this should be “jr nz, .loop”
+	jr nz, .loop ; for the intended effect, this should be “jr nz, .loop”
+		;fixed 3/26/2017
 	sla b
 	jr c, .max
 
