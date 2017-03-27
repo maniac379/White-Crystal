@@ -478,19 +478,19 @@ Item2Attributes:
 	item_attribute   200, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_CLOSE,   ITEMMENU_NOUSE
 
 ; HEAVY BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; FLOWER MAIL
 	item_attribute    50, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; LEVEL BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; LURE BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; FAST BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; TERU-SAMA
 	item_attribute $9999, 0,                 0,                       0, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
@@ -499,13 +499,13 @@ Item2Attributes:
 	item_attribute   100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
 
 ; FRIEND BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; MOON BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; LOVE BALL
-	item_attribute   150, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
+	item_attribute   400, 0,                 0,             CANT_SELECT, BALL,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; NORMAL BOX
 	item_attribute    10, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_CURRENT, ITEMMENU_NOUSE

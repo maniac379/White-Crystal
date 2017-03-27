@@ -24,6 +24,8 @@ Minor Features
 -Gain experience for catching pokemon like in Gen VI
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
+-Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
+-Mahogony Mart sells Evolution Stones
 
 
 Special Thanks
@@ -103,10 +105,8 @@ ToDo List
 -Script to encourage team diversity
 -Check Goldenrod scripts that they reset stock daily
 -Change spark to shockwave, add spark to more pokemon?
--Give Charizard Belly Drum
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
--Switched evolution stones from Goldenrod to Mahogony Mart
 -Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Legendary birds appear after 16 Badges
 -Celebi Event added through Kurt's Daughter
@@ -157,9 +157,3 @@ In-Game Trade Changes
 -Blackthorn City: Charmander for Cyndaquil
 -Pewter City: Squirtle for Totodile
 -Route 14: Bulbasaur for Chikorita
-
-PokeMart Edits
----------------
--Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
--Pokeballs available to buy first time through Cherrywood
--Mahogony Mart sells Evolution Stones

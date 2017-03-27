@@ -74,14 +74,14 @@ Mart2: ; 160fa
 Mart3: ; 16106
 	db 9 ; # items
 	db CHARCOAL
-	db POKE_BALL
+	db HEAVY_BALL
+	db LEVEL_BALL
+	db LURE_BALL
+	db FAST_BALL
+	db FRIEND_BALL
+	db MOON_BALL
 	db POTION
 	db SUPER_POTION
-	db ESCAPE_ROPE
-	db REPEL
-	db ANTIDOTE
-	db PARLYZ_HEAL
-	db FLOWER_MAIL
 	db $ff
 ; 16111
 
@@ -219,14 +219,14 @@ Mart15: ; 1616a
 Mart16: ; 16170
 	db 9 ; # items
 	db RAGECANDYBAR
+	db THUNDERSTONE
+	db FIRE_STONE
+	db LEAF_STONE
+	db WATER_STONE
 	db GREAT_BALL
-	db SUPER_POTION
 	db HYPER_POTION
-	db ANTIDOTE
-	db PARLYZ_HEAL
 	db SUPER_REPEL
 	db REVIVE
-	db FLOWER_MAIL
 	db $ff
 ; 1617b
 
