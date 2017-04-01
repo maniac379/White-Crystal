@@ -10,11 +10,14 @@ const_value set 2
 
 Route29_MapScriptHeader:
 .MapTriggers:
-	db 2
+	db 4
 
 	; triggers
 	maptrigger .Trigger0
 	maptrigger .Trigger1
+	maptrigger .Trigger2
+	maptrigger .Trigger3
+
 
 .MapCallbacks:
 	db 1
@@ -27,6 +30,12 @@ Route29_MapScriptHeader:
 	end
 
 .Trigger1:
+	end
+
+.Trigger2:
+	end
+
+.Trigger3:
 	end
 
 .Tuscany:
@@ -90,6 +99,16 @@ Route29Tutorial2:
 	dotrigger $0
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 	end
+
+BabyPokemon1:
+writetext BabyPokemonAlertText
+closetext
+end
+
+BabyPokemon2:
+writetext BabyPokemonAlertText
+closetext
+end
 
 Script_RefusedTutorial1:
 	writetext CatchingTutorialDeclinedText
@@ -294,6 +313,17 @@ CatchingTutorialRepeatText:
 	cont "catch #MON?"
 	done
 
+BabyPokemonAlertText:
+	text "Yo. How are your"
+	line "#MON?"
+
+	para "If they're weak"
+	line "and not ready for"
+
+	para "battle, keep out"
+	line "of the grass."
+	done
+
 Route29YoungsterText:
 	text "Yo. How are your"
 	line "#MON?"
@@ -416,26 +446,22 @@ Route29Sign2Text:
 	line "NEW BARK TOWN"
 	done
 
-Route29_MapEventHeader:
-	; filler
-	db 0, 0
+Route29_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 1
-	warp_def $1, $1b, 3, ROUTE_29_46_GATE
+.Warps: db 1
+	warp_def 1, 27, 3, ROUTE_29_46_GATE
 
-.XYTriggers:
-	db 2
-	xy_trigger 1, $8, $35, $0, Route29Tutorial1, $0, $0
-	xy_trigger 1, $9, $35, $0, Route29Tutorial2, $0, $0
+.CoordEvents: db 4
+	xy_trigger 1, 8, 53, 0, Route29Tutorial1, 0, 0
+	xy_trigger 1, 9, 53, 0, Route29Tutorial2, 0, 0
+	xy_trigger 1, 6, 31, 0, BabyPokemon1, 0, 0
+	xy_trigger 1, 7, 31, 0, BabyPokemon2, 0, 0
 
-.Signposts:
-	db 2
+.BGEvents: db 2
 	signpost 7, 51, SIGNPOST_READ, Route29Sign1
 	signpost 5, 3, SIGNPOST_READ, Route29Sign2
 
-.PersonEvents:
-	db 8
+.ObjectEvents: db 8
 	person_event SPRITE_COOLTRAINER_M, 12, 50, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	person_event SPRITE_YOUNGSTER, 16, 27, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29YoungsterScript, -1
 	person_event SPRITE_TEACHER, 11, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29TeacherScript, -1
@@ -444,3 +470,4 @@ Route29_MapEventHeader:
 	person_event SPRITE_COOLTRAINER_M, 4, 13, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
 	person_event SPRITE_TEACHER, 12, 29, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 	person_event SPRITE_POKE_BALL, 2, 48, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
+

@@ -171,8 +171,7 @@ git add -A 				//A is all, can add individual files
 git commit -m "Change Notes Here" 	//Comments
 git push
 
+python crowdmap/server.py 8000		//crowdmap
 
-Pokecrystal Directory:
 cd /cygdrive/d/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
-or
 cd d:/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
