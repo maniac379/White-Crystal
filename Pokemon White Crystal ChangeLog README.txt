@@ -30,6 +30,11 @@ Minor Features
 -Kurt Poke Balls work as intended
 
 
+Known Glitches
+---------------
+-Incorrect overworld sprites for Butterfree, Poliwrath, TBD
+
+
 Special Thanks
 ---------------
 -Crystal_
@@ -157,3 +162,17 @@ In-Game Trade Changes
 -Blackthorn City: Charmander for Cyndaquil
 -Pewter City: Squirtle for Totodile
 -Route 14: Bulbasaur for Chikorita
+
+
+Github Functions
+-----------------
+git status 
+git add -A 				//A is all, can add individual files
+git commit -m "Change Notes Here" 	//Comments
+git push
+
+
+Pokecrystal Directory:
+cd /cygdrive/d/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
+or
+cd d:/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
