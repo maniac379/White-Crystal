@@ -21,11 +21,12 @@ Route29_MapScriptHeader:
 
 
 .MapCallbacks:
-	db 1
+	db 2
 
 	; callbacks
 
 	dbw MAPCALLBACK_OBJECTS, .Tuscany
+	dbw MAPCALLBACK_OBJECTS, .Woman
 
 .Trigger0:
 	end
@@ -38,6 +39,15 @@ Route29_MapScriptHeader:
 
 .Trigger3:
 	end
+
+.Woman:
+	checkevent EVENT_BABY_POKEMON_EXPLAINED
+	iftrue .DisappearWoman
+	return
+
+.DisappearWoman
+	disappear ROUTE29_WOMAN
+	return
 
 .Tuscany:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -112,6 +122,7 @@ BabyPokemon1:
 	applymovement ROUTE29_WOMAN, WomanMovementData1b
 	disappear ROUTE29_WOMAN
 	dotrigger $0
+	setevent EVENT_BABY_POKEMON_EXPLAINED
 	end
 
 BabyPokemon2:
@@ -126,6 +137,7 @@ BabyPokemon2:
 	applymovement ROUTE29_WOMAN, WomanMovementData2b
 	disappear ROUTE29_WOMAN
 	dotrigger $0
+	setevent EVENT_BABY_POKEMON_EXPLAINED
 	end
 
 Script_RefusedTutorial1:
