@@ -71,7 +71,7 @@ Route29Tutorial1:
 	writetext CatchingTutorialDebriefText
 	waitbutton
 	closetext
-	dotrigger $0
+	dotrigger $2
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 	end
 
@@ -96,19 +96,23 @@ Route29Tutorial2:
 	writetext CatchingTutorialDebriefText
 	waitbutton
 	closetext
-	dotrigger $0
+	dotrigger $2
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 	end
 
 BabyPokemon1:
-writetext BabyPokemonAlertText
-closetext
-end
+	opentext
+	writetext BabyPokemonAlertText
+	closetext
+	dotrigger $0
+	end
 
 BabyPokemon2:
-writetext BabyPokemonAlertText
-closetext
-end
+	opentext
+	writetext BabyPokemonAlertText
+	closetext
+	dotrigger $0
+	end
 
 Script_RefusedTutorial1:
 	writetext CatchingTutorialDeclinedText
@@ -314,14 +318,8 @@ CatchingTutorialRepeatText:
 	done
 
 BabyPokemonAlertText:
-	text "Yo. How are your"
-	line "#MON?"
-
-	para "If they're weak"
-	line "and not ready for"
-
-	para "battle, keep out"
-	line "of the grass."
+	text "Test"
+	line "Test2"
 	done
 
 Route29YoungsterText:
@@ -451,17 +449,17 @@ Route29_MapEventHeader:: db 0, 0
 .Warps: db 1
 	warp_def 1, 27, 3, ROUTE_29_46_GATE
 
-.CoordEvents: db 4
+.XYTriggers: db 4
 	xy_trigger 1, 8, 53, 0, Route29Tutorial1, 0, 0
 	xy_trigger 1, 9, 53, 0, Route29Tutorial2, 0, 0
-	xy_trigger 1, 6, 31, 0, BabyPokemon1, 0, 0
-	xy_trigger 1, 7, 31, 0, BabyPokemon2, 0, 0
+	xy_trigger 2, 6, 31, 0, BabyPokemon1, 0, 0
+	xy_trigger 2, 7, 31, 0, BabyPokemon2, 0, 0
 
-.BGEvents: db 2
+.Signposts: db 2
 	signpost 7, 51, SIGNPOST_READ, Route29Sign1
 	signpost 5, 3, SIGNPOST_READ, Route29Sign2
 
-.ObjectEvents: db 8
+.PersonEvents: db 8
 	person_event SPRITE_COOLTRAINER_M, 12, 50, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	person_event SPRITE_YOUNGSTER, 16, 27, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29YoungsterScript, -1
 	person_event SPRITE_TEACHER, 11, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29TeacherScript, -1
