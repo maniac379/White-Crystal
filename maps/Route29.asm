@@ -7,6 +7,7 @@ const_value set 2
 	const ROUTE29_COOLTRAINER_M2
 	const ROUTE29_TUSCANY
 	const ROUTE29_POKE_BALL
+	const ROUTE29_WOMAN
 
 Route29_MapScriptHeader:
 .MapTriggers:
@@ -101,20 +102,29 @@ Route29Tutorial2:
 	end
 
 BabyPokemon1:
-	applymovement ROUTE29_FISHER, FisherMovementData1a
+	showemote EMOTE_SHOCK, ROUTE29_WOMAN, 15
+	applymovement ROUTE29_WOMAN, WomanMovementData1a
 	opentext
 	writetext BabyPokemonAlertText
+	waitbutton
 	closetext
-	applymovement ROUTE29_FISHER, FisherMovementData1b
+	spriteface ROUTE29_WOMAN, LEFT
+	applymovement ROUTE29_WOMAN, WomanMovementData1b
+	disappear ROUTE29_WOMAN
 	dotrigger $0
 	end
 
 BabyPokemon2:
-	applymovement ROUTE29_FISHER, FisherMovementData2a
+	showemote EMOTE_SHOCK, ROUTE29_WOMAN, 15
+	applymovement ROUTE29_WOMAN, WomanMovementData2a
+	spriteface ROUTE29_WOMAN, DOWN
 	opentext
 	writetext BabyPokemonAlertText
+	waitbutton
 	closetext
-	applymovement ROUTE29_FISHER, FisherMovementData2b
+	spriteface ROUTE29_WOMAN, LEFT
+	applymovement ROUTE29_WOMAN, WomanMovementData2b
+	disappear ROUTE29_WOMAN
 	dotrigger $0
 	end
 
@@ -276,50 +286,30 @@ DudeMovementData2b:
 	step DOWN
 	step_end
 
-FisherMovementData1a:
-	step DOWN
-	step DOWN
-	step DOWN
-	step LEFT
-	step LEFT
+WomanMovementData1a:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+WomanMovementData1b:
 	step LEFT
 	step LEFT
 	step LEFT
 	step_end
 
-FisherMovementData1b:
+WomanMovementData2a:
 	step RIGHT
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step UP
 	step_end
 
-FisherMovementData2a:
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+WomanMovementData2b:
 	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
-	step LEFT
-	step_end
-
-FisherMovementData2b:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step UP
-	step UP
-	step UP
-	step UP
 	step_end
 
 UnknownText_0x1a10a7:
@@ -509,7 +499,7 @@ Route29_MapEventHeader:: db 0, 0
 	signpost 7, 51, SIGNPOST_READ, Route29Sign1
 	signpost 5, 3, SIGNPOST_READ, Route29Sign2
 
-.PersonEvents: db 8
+.PersonEvents: db 9
 	person_event SPRITE_COOLTRAINER_M, 12, 50, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	person_event SPRITE_YOUNGSTER, 16, 27, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29YoungsterScript, -1
 	person_event SPRITE_TEACHER, 11, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29TeacherScript, -1
@@ -518,4 +508,6 @@ Route29_MapEventHeader:: db 0, 0
 	person_event SPRITE_COOLTRAINER_M, 4, 13, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
 	person_event SPRITE_TEACHER, 12, 29, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 	person_event SPRITE_POKE_BALL, 2, 48, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
+	person_event SPRITE_TEACHER, 6, 27, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BabyPokemon1, -1
+
 
