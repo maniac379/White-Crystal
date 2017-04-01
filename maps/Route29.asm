@@ -101,16 +101,20 @@ Route29Tutorial2:
 	end
 
 BabyPokemon1:
+	applymovement ROUTE29_FISHER, FisherMovementData1a
 	opentext
 	writetext BabyPokemonAlertText
 	closetext
+	applymovement ROUTE29_FISHER, FisherMovementData1b
 	dotrigger $0
 	end
 
 BabyPokemon2:
+	applymovement ROUTE29_FISHER, FisherMovementData2a
 	opentext
 	writetext BabyPokemonAlertText
 	closetext
+	applymovement ROUTE29_FISHER, FisherMovementData2b
 	dotrigger $0
 	end
 
@@ -119,7 +123,7 @@ Script_RefusedTutorial1:
 	waitbutton
 	closetext
 	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
-	dotrigger $0
+	dotrigger $2
 	end
 
 Script_RefusedTutorial2:
@@ -127,7 +131,7 @@ Script_RefusedTutorial2:
 	waitbutton
 	closetext
 	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
-	dotrigger $0
+	dotrigger $2
 	end
 
 CatchingTutorialDudeScript:
@@ -270,6 +274,52 @@ DudeMovementData2b:
 	step DOWN
 	step DOWN
 	step DOWN
+	step_end
+
+FisherMovementData1a:
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+FisherMovementData1b:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step_end
+
+FisherMovementData2a:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end
+
+FisherMovementData2b:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step UP
+	step UP
+	step UP
+	step UP
 	step_end
 
 UnknownText_0x1a10a7:
