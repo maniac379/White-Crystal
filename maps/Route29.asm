@@ -21,11 +21,12 @@ Route29_MapScriptHeader:
 
 
 .MapCallbacks:
-	db 1
+	db 2
 
 	; callbacks
 
 	dbw MAPCALLBACK_OBJECTS, .Tuscany
+	dbw MAPCALLBACK_OBJECTS, .Woman
 
 .Trigger0:
 	end
@@ -42,6 +43,21 @@ Route29_MapScriptHeader:
 .Tuscany:
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .DoesTuscanyAppear
+
+.Woman
+	disappear ROUTE29_WOMAN
+	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	iftrue .AppearWoman
+	return
+
+.AppearWoman
+	checkevent EVENT_BABY_POKEMON_EXPLAINED
+	iffalse .AppearWoman2
+	return
+
+.AppearWoman2
+	appear ROUTE29_WOMAN
+	return
 
 .TuscanyDisappears:
 	disappear ROUTE29_TUSCANY
@@ -119,6 +135,7 @@ BabyPokemon2:
 	showemote EMOTE_SHOCK, ROUTE29_WOMAN, 15
 	applymovement ROUTE29_WOMAN, WomanMovementData2a
 	spriteface ROUTE29_WOMAN, DOWN
+	spriteface PLAYER, UP
 	opentext
 	writetext BabyPokemonAlertText
 	waitbutton
@@ -360,8 +377,17 @@ CatchingTutorialRepeatText:
 	done
 
 BabyPokemonAlertText:
-	text "Test"
-	line "Test2"
+	text "Have you heard?"
+	line "-can't believe!"
+
+	para "There's so many"
+	line "cute baby Pokemon"
+
+	para "that showed up,"
+	line "just North at"
+
+	para "that gatehouse!"
+	line "I have to hurry!"
 	done
 
 Route29YoungsterText:
