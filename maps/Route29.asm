@@ -21,12 +21,11 @@ Route29_MapScriptHeader:
 
 
 .MapCallbacks:
-	db 2
+	db 1
 
 	; callbacks
 
 	dbw MAPCALLBACK_OBJECTS, .Tuscany
-	dbw MAPCALLBACK_OBJECTS, .Woman
 
 .Trigger0:
 	end
@@ -39,15 +38,6 @@ Route29_MapScriptHeader:
 
 .Trigger3:
 	end
-
-.Woman:
-	checkevent EVENT_BABY_POKEMON_EXPLAINED
-	iftrue .DisappearWoman
-	return
-
-.DisappearWoman
-	disappear ROUTE29_WOMAN
-	return
 
 .Tuscany:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -520,6 +510,6 @@ Route29_MapEventHeader:: db 0, 0
 	person_event SPRITE_COOLTRAINER_M, 4, 13, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
 	person_event SPRITE_TEACHER, 12, 29, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
 	person_event SPRITE_POKE_BALL, 2, 48, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION
-	person_event SPRITE_TEACHER, 6, 27, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BabyPokemon1, -1
+	person_event SPRITE_TEACHER, 6, 27, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BabyPokemon1, EVENT_ROUTE_29_WOMAN
 
 

@@ -270,7 +270,7 @@
 	const EVENT_TIFFANY_GAVE_PINK_BOW
 ; White Crystal New Events
 	const EVENT_BABY_POKEMON_EXPLAINED
-	const EVENT_106
+	const EVENT_ROUTE_29_WOMAN
 	const EVENT_107
 	const EVENT_108
 	const EVENT_109
