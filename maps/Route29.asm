@@ -381,13 +381,13 @@ BabyPokemonAlertText:
 	line "-can't believe!"
 
 	para "There's so many"
-	line "cute baby Pokemon"
+	line "cute baby #mon!"
 
-	para "that showed up,"
+	para "They showed up,"
 	line "just North at"
+	cont "that gatehouse!"
 
-	para "that gatehouse!"
-	line "I have to hurry!"
+	para "I have to hurry!"
 	done
 
 Route29YoungsterText:

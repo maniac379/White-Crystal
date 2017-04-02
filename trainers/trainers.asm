@@ -2499,7 +2499,7 @@ CooltrainerMGroup:
 	db 0 ; normal
 
 	; party
-	db 27, CHARIZARD
+	db 36, CHARIZARD
 
 	db $ff ; end
 

@@ -32,7 +32,7 @@ Minor Features
 
 Known Glitches
 ---------------
--Incorrect overworld sprites for Butterfree, Poliwrath, TBD
+-Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
 
 
 Special Thanks
@@ -167,6 +167,8 @@ In-Game Trade Changes
 Github Functions
 -----------------
 git status 
+git reset --hard xxxx			//Replace xx with commit code
+git checkout xxx			//Replace xxx with branch name to switch branches/create branch
 git add -A 				//A is all, can add individual files
 git commit -m "Change Notes Here" 	//Comments
 git push

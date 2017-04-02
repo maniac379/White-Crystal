@@ -1274,6 +1274,25 @@ AideText_ExplainBalls:
 	para "Throw # BALLS"
 	line "at wild #MON"
 	cont "to get them."
+
+	para "You also have"
+	line "access to Prof."
+	cont "Oak's PC."
+	
+	para "I actually help"
+	line "run it!"
+
+	para "You know..."
+	line "We really need"
+	cont "the help."
+
+	para "Access the PC or"
+	line "come back and"
+
+	para "talk to me every"
+	line "so many caught"
+	cont "#MON for a"
+	cont "prize!" 
 	done
 
 ElmsLabOfficerText1:
