@@ -33,7 +33,7 @@ Minor Features
 
 Known Glitches
 ---------------
--Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
+-Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, Gyara, TBD
 
 
 Special Thanks
@@ -108,9 +108,6 @@ Game Corner Changes
 ToDo List
 -----------
 -Add Aura Sphere/Shockwave
--Script after Rocket Radio Tower for Girl to announce Mahogony Mart
--Script to encourage team diversity
--Check Goldenrod scripts that they reset stock daily
 -Change spark to shockwave, add spark to more pokemon?
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant

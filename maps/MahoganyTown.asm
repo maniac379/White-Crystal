@@ -6,11 +6,13 @@ const_value set 2
 
 MahoganyTown_MapScriptHeader:
 .MapTriggers:
-	db 2
+	db 4
 
 	; triggers
 	maptrigger .Trigger0
 	maptrigger .Trigger1
+	maptrigger .Trigger2
+	maptrigger .Trigger3
 
 .MapCallbacks:
 	db 1
@@ -22,6 +24,12 @@ MahoganyTown_MapScriptHeader:
 	end
 
 .Trigger1:
+	end
+
+.Trigger2:
+	end
+
+.Trigger3:
 	end
 
 .FlyPoint:
@@ -111,7 +119,31 @@ FisherScript_0x190092:
 	jumptextfaceplayer UnknownText_0x190276
 
 LassScript_0x190095:
-	jumptextfaceplayer UnknownText_0x1902f2
+	jumptextfaceplayer EvolutionStoneAlertText
+
+EvolutionStoneAlert1:
+	showemote EMOTE_SHOCK, MAHOGANYTOWN_LASS, 15
+	spriteface PLAYER, UP
+	opentext
+	writetext EvolutionStoneAlertText
+	waitbutton
+	closetext
+	dotrigger $2
+	end
+
+EvolutionStoneAlert2:
+	showemote EMOTE_SHOCK, MAHOGANYTOWN_LASS, 15
+	applymovement MAHOGANYTOWN_LASS, MahoganyTownLassMovement1
+	spriteface MAHOGANYTOWN_LASS, DOWN
+	spriteface PLAYER, UP
+	opentext
+	writetext EvolutionStoneAlertText
+	waitbutton
+	closetext
+	applymovement MAHOGANYTOWN_LASS, MahoganyTownLassMovement2
+	spriteface MAHOGANYTOWN_LASS, DOWN
+	dotrigger $2
+	end
 
 MahoganyTownSign:
 	jumptext MahoganyTownSignText
@@ -124,6 +156,14 @@ MahoganyGymSign:
 
 MahoganyTownPokeCenterSign:
 	jumpstd pokecentersign
+
+MahoganyTownLassMovement1:
+	step RIGHT
+	step_end
+
+MahoganyTownLassMovement2:
+	step LEFT
+	step_end
 
 MovementData_0x1900a4:
 	step DOWN
@@ -143,6 +183,20 @@ MovementData_0x1900ad:
 	step UP
 	turn_head DOWN
 	step_end
+
+EvolutionStoneAlertText:
+	text "Hey!"
+	
+	para "Now that all those"
+	line "jerks are gone, my"
+	cont "grandma's store is"
+	cont "open again!"
+
+	para "She has a bunch of"
+	line "rare stones!"
+
+	para "Come stop by!"
+	done
 
 UnknownText_0x1900b0:
 	text "Hiya, kid!"
@@ -261,9 +315,11 @@ MahoganyTown_MapEventHeader:
 	warp_def $1, $9, 3, ROUTE_43_MAHOGANY_GATE
 
 .XYTriggers:
-	db 2
+	db 4
 	xy_trigger 0, $8, $13, $0, UnknownScript_0x190013, $0, $0
 	xy_trigger 0, $9, $13, $0, UnknownScript_0x190013, $0, $0
+	xy_trigger 1, 9, 12, $0, EvolutionStoneAlert1, $0, $0
+	xy_trigger 1, 9, 13, $0, EvolutionStoneAlert2, $0, $0
 
 .Signposts:
 	db 4
