@@ -14,6 +14,7 @@ Major Features
 
 Minor Features
 --------------
+-New scripts to alert of certain changes
 -Changed 15 moves to help adjust for the physical/special split
 -Trade/Happiness evolutions changed to level-up/stone evolutions
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
@@ -108,7 +109,6 @@ ToDo List
 -----------
 -Add Aura Sphere/Shockwave
 -Script after Rocket Radio Tower for Girl to announce Mahogony Mart
--Script First gym dude to caution player
 -Script to encourage team diversity
 -Check Goldenrod scripts that they reset stock daily
 -Change spark to shockwave, add spark to more pokemon?

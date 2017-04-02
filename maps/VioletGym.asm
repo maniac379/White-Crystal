@@ -6,10 +6,19 @@ const_value set 2
 
 VioletGym_MapScriptHeader:
 .MapTriggers:
-	db 0
+	db 2
+
+	maptrigger .Trigger0
+	maptrigger .Trigger1
 
 .MapCallbacks:
 	db 0
+
+.Trigger0:
+	end
+
+.Trigger1:
+	end
 
 FalknerScript_0x683c2:
 	faceplayer
@@ -93,7 +102,7 @@ VioletGymGuyScript:
 	opentext
 	checkevent EVENT_BEAT_FALKNER
 	iftrue .VioletGymGuyWinScript
-	writetext VioletGymGuyText
+	writetext VioletGymGuyWarningText
 	waitbutton
 	closetext
 	end
@@ -103,6 +112,56 @@ VioletGymGuyScript:
 	waitbutton
 	closetext
 	end
+
+VioletGymGuyWarning1:
+	showemote EMOTE_SHOCK, VIOLETGYM_GYM_GUY, 15
+	applymovement VIOLETGYM_GYM_GUY, GymGuyMovementData1a
+	spriteface PLAYER, RIGHT
+	opentext
+	writetext VioletGymGuyWarningText
+	waitbutton
+	closetext
+	spriteface VIOLETGYM_GYM_GUY, RIGHT
+	applymovement VIOLETGYM_GYM_GUY, GymGuyMovementData1b
+	spriteface VIOLETGYM_GYM_GUY, DOWN
+	dotrigger $1
+	end
+
+VioletGymGuyWarning2:
+	showemote EMOTE_SHOCK, VIOLETGYM_GYM_GUY, 15
+	applymovement VIOLETGYM_GYM_GUY, GymGuyMovementData2a
+	spriteface PLAYER, RIGHT
+	opentext
+	writetext VioletGymGuyWarningText
+	waitbutton
+	closetext
+	spriteface VIOLETGYM_GYM_GUY, RIGHT
+	applymovement VIOLETGYM_GYM_GUY, GymGuyMovementData2b
+	spriteface VIOLETGYM_GYM_GUY, DOWN
+	dotrigger $1
+	end
+
+GymGuyMovementData1a:
+	step DOWN
+	step LEFT
+	step LEFT
+	step_end
+
+GymGuyMovementData1b:
+	step RIGHT
+	step RIGHT
+	step UP
+	step_end
+
+GymGuyMovementData2a:
+	step DOWN
+	step LEFT
+	step_end
+
+GymGuyMovementData2b:
+	step RIGHT
+	step UP
+	step_end
 
 VioletGymStatue:
 	checkflag ENGINE_ZEPHYRBADGE
@@ -281,6 +340,23 @@ VioletGymGuyWinText:
 	line "time at all!"
 	done
 
+VioletGymGuyWarningText:
+	text "Yo, Champ in the"
+	line "making! I give"
+	cont "newbies advice."
+
+	para "You seem like you"
+	line "know what's up,"
+	cont "but trust me."
+
+	para "Falkner is no easy"
+	line "pushover anymore"
+	
+	para "You better bring"
+	line "at least a FIRE"
+	cont "and ELECTRIC type!"
+	done
+
 VioletGym_MapEventHeader:
 	; filler
 	db 0, 0
@@ -291,7 +367,9 @@ VioletGym_MapEventHeader:
 	warp_def $f, $5, 2, VIOLET_CITY
 
 .XYTriggers:
-	db 0
+	db 2
+	xy_trigger 0, 14, 4, 0, VioletGymGuyWarning1, 0, 0
+	xy_trigger 0, 14, 5, 0, VioletGymGuyWarning2, 0, 0
 
 .Signposts:
 	db 2
