@@ -16,6 +16,7 @@ Minor Features
 --------------
 -New scripts to alert of certain changes
 -Changed 15 moves to help adjust for the physical/special split
+-Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Trade/Happiness evolutions changed to level-up/stone evolutions
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
 -Only Pokemon that flee will be the 3 Dogs
@@ -33,7 +34,7 @@ Minor Features
 
 Known Glitches
 ---------------
--Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, Gyara, TBD
+-Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
 
 
 Special Thanks
@@ -108,10 +109,12 @@ Game Corner Changes
 ToDo List
 -----------
 -Add Aura Sphere/Shockwave
+-Script after Rocket Radio Tower for Girl to announce Mahogony Mart
+-Script to encourage team diversity
+-Check Goldenrod scripts that they reset stock daily
 -Change spark to shockwave, add spark to more pokemon?
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
--Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Legendary birds appear after 16 Badges
 -Celebi Event added through Kurt's Daughter
 -Mewtwo accessible through original Cerulean Cave
@@ -171,6 +174,48 @@ git commit -m "Change Notes Here" 	//Comments
 git push
 
 python crowdmap/server.py 8000		//crowdmap
+Ctrl + C				//Closes Script
 
 cd /cygdrive/d/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
 cd d:/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
+
+
+ASM/Binary Functions
+---------------------
+Arithmetic operators on binary numbers: +, -, * or ×, / or ÷
+Binary operators: &, |, ^, <<, and >>
+
+0 is false and 1 is true
+
+& means "and"
+	Naturally, if both values are true (first and second) then the result is true; otherwise it's false. 
+	So: 0 & 0 = 0; 0 & 1 = 0; 1 & 0 = 0; 1 & 1 = 1.
+| means "or"
+	Again, just like with the English word "or", if either value is true (first or second) then the result is true; otherwise it's false. 
+	So: 0 | 0 = 0; 0 | 1 = 1; 1 | 0 = 1; 1 | 1 = 1.
+^ means "xor" aka "exclusive or"
+	This is like "either/or" in English: you can have ice cream in a bowl xor a cup but not both (whereas you can have vanilla or chocolate, i.e. you can have some of both). 
+	You can also treat it as ?, since it's true if the values are not equal. 
+	So: 0 ^ 0 = 0; 0 ^ 1 = 1; 1 ^ 0 = 1; 1 ^ 1 = 0.
+<< and >> mean "shift"
+	Imagine a byte as a string of bits; so 15010 (decimal) = $96 (hex) = %10010110 (binary). Shifting moves the bits left or right, filling in the blanks with 0s. For example, %101 << 3 = %101000, that is, 5 << 3 = 40. And %1001 >> 2 = %10, that is, 9 >> 2 = 2.
+	(Actually, logical shift operations fill in the blanks with 0s. Arithmetic shift is different when you're shifting right: since two's complement notation treats the leftmost bit as a sign indicator, the byte %10010110 represents -106, not 150. %10010110 >> 1 with logical shift would be %01001011, which is definitely 75. But %10010110 >> 1 with arithmetic shift would be %10001011, which is -117 in two's complement. I'm just mentioning this for completeness, since your shiny code is using left shift.)
+You'll notice that the assembly instructions and, or, xor, sla, sra, and srl are just those binary operations with register a as both the first value and the result. 
+	So "xor b" calculates a ^ b and stores the result in a. Or, "and 1 << SHINY_ATK_BIT" calculates a & (1 << SHINY_ATK_BIT) and stores the result in a. (SHINY_ATK_BIT is 5, so 1 << SHINY_ATK_BIT is 1 << 5, which is 32—or more clearly, %100000, a 1 with five zeros.)
+
+Consider "and"ing some value %abcdefgh with %11110000:
+	abcdefgh
+      &	11110000
+	————————
+   	abcd0000
+
+For a single bit q, no matter whether it's 0 or 1, q & 0 = 0. 
+	So the lower four digits become 0. 
+	Furthermore, for the upper four being "and"ed with 1, 0 & 1 = 0 and 1 & 1 = 1, so simply q & 1 = q, and the upper four stay the same.
+	(Just as "and" can selectively make bits 0, "or" can selectively make bits 1. Try "or"ing some arbitrary values with, say, %00110000 and see what it does.)
+
+hli		     ; increments to the next byte
+cp b                 ; compare a with b
+jr c, .a_less_than_b ; carry flag c is set if a < argument
+jr z, .a_equals_b    ; zero flag z is set if a == argument
+jr .a_greater_than_b ; if neither c nor z is set, then it must be a > argument
