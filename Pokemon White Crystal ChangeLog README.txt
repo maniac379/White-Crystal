@@ -108,11 +108,7 @@ Game Corner Changes
 
 ToDo List
 -----------
--Add Aura Sphere/Shockwave
--Script after Rocket Radio Tower for Girl to announce Mahogony Mart
--Script to encourage team diversity
--Check Goldenrod scripts that they reset stock daily
--Change spark to shockwave, add spark to more pokemon?
+-Add Aura Sphere/Shockwave or add spark to more pokemon?
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
@@ -143,15 +139,7 @@ ToDo List
 -AutoChange Full PC Boxes
 -Create true WillOWisp Effect
 -Create 1/3 Recoil effect
--Change Hidden Items to a trade in item reward system/scav hunt w/ clues
-
-
-Prism
-------
--Abilities
--Status Guard Items
--Menu Sprites
--30 Badges
+-Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 
 
 In-Game Trade Changes
