@@ -513,6 +513,7 @@ AideScript_GiveYouBalls:
 	itemnotify
 	closetext
 	dotrigger $2
+	setevent EVENT_CAUGHT_REWARD_EXPLAINED
 	end
 
 AideScript_ReceiveTheBalls:
@@ -522,6 +523,8 @@ AideScript_ReceiveTheBalls:
 ElmsAideScript:
 	faceplayer
 	opentext
+	checkevent EVENT_CAUGHT_REWARD_EXPLAINED
+	iftrue AideScript_CheckCaught
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
 	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
@@ -540,17 +543,255 @@ AideScript_TheftTestimony:
 	end
 
 AideScript_ExplainBalls:
+	setevent EVENT_CAUGHT_REWARD_EXPLAINED
 	writetext AideText_ExplainBalls
 	waitbutton
 	closetext
 	end
 
 AideScript_AfterTheft:
+	setevent EVENT_CAUGHT_REWARD_EXPLAINED
 	writetext AideText_AfterTheft
 	waitbutton
 	closetext
 	end
 
+AideScript_CheckCaught:
+	writetext AideText_CheckCaught
+	yesorno
+	iffalse AideScript_NoCheckCaught
+	checkevent EVENT_251_CAUGHT_REWARD
+	iftrue AideScript_Finished_Research
+	checkevent EVENT_5_CAUGHT_REWARD
+	iffalse AideScript_Check5Caught
+	checkevent EVENT_10_CAUGHT_REWARD
+	iffalse AideScript_Check10Caught
+	checkevent EVENT_20_CAUGHT_REWARD
+	iffalse AideScript_Check20Caught
+	checkevent EVENT_35_CAUGHT_REWARD
+	iffalse AideScript_Check35Caught
+	checkevent EVENT_50_CAUGHT_REWARD
+	iffalse AideScript_Check50Caught
+	checkevent EVENT_75_CAUGHT_REWARD
+	iffalse AideScript_Check75Caught
+	checkevent EVENT_100_CAUGHT_REWARD
+	iffalse AideScript_Check100Caught
+	checkevent EVENT_150_CAUGHT_REWARD
+	iffalse AideScript_Check150Caught
+	checkevent EVENT_200_CAUGHT_REWARD
+	iffalse AideScript_Check200Caught
+	checkevent EVENT_251_CAUGHT_REWARD
+	iffalse AideScript_Check251Caught	
+	writetext AideText_Catch5Total
+	waitbutton
+	closetext
+	end
+
+AideScript_NoCheckCaught:
+	writetext AideText_NoCheckCaught
+	waitbutton
+	closetext
+	end
+	
+AideScript_Check5Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 5, .AideScript_Give5Reward
+	writetext AideText_NextReward5
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give5Reward
+	setevent EVENT_5_CAUGHT_REWARD
+	writetext AideText_5Reward
+	waitbutton
+	giveitem POKE_BALL, 5
+	itemtotext POKE_BALL, $1
+	scall AideScript_ReceiveTheBalls
+	writetext AideText_NextReward10
+	waitbutton
+	closetext
+	end
+
+AideScript_Check10Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 10, .AideScript_Give10Reward
+	writetext AideText_NextReward10
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give10Reward
+	setevent EVENT_10_CAUGHT_REWARD
+	writetext AideText_10Reward
+	waitbutton
+	giveitem EXP_SHARE, 1
+	itemtotext EXP_SHARE, $1
+	scall AideScript_ReceiveTheBalls
+	writetext AideText_NextReward20
+	waitbutton
+	closetext
+	end
+
+AideScript_Check20Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 20, .AideScript_Give20Reward
+	writetext AideText_NextReward20
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give20Reward
+	setevent EVENT_20_CAUGHT_REWARD
+	writetext AideText_20Reward
+	waitbutton
+	giveitem GOOD_ROD, 1
+	itemtotext GOOD_ROD, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+	
+AideScript_Check35Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 35, .AideScript_Give35Reward
+	writetext AideText_NextReward35
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give35Reward
+	setevent EVENT_35_CAUGHT_REWARD
+	writetext AideText_35Reward
+	waitbutton
+	giveitem LEFTOVERS, 1
+	itemtotext LEFTOVERS, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Check50Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 50, .AideScript_Give50Reward
+	writetext AideText_NextReward50
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give50Reward
+	setevent EVENT_50_CAUGHT_REWARD
+	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	writetext AideText_50Reward
+	waitbutton
+	giveitem GS_BALL, 1
+	itemtotext GS_BALL, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+	
+AideScript_Check75Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 75, .AideScript_Give75Reward
+	writetext AideText_NextReward75
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give75Reward
+	setevent EVENT_75_CAUGHT_REWARD
+	writetext AideText_75Reward
+	waitbutton
+	giveitem SUPER_ROD, 1
+	itemtotext SUPER_ROD, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Check100Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 100, .AideScript_Give100Reward
+	writetext AideText_NextReward100
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give100Reward
+	setevent EVENT_100_CAUGHT_REWARD
+	writetext AideText_100Reward
+	waitbutton
+	giveitem LUCKY_EGG, 1
+	itemtotext LUCKY_EGG, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Check150Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 150, .AideScript_Give150Reward
+	writetext AideText_NextReward150
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give150Reward
+	setevent EVENT_150_CAUGHT_REWARD
+	writetext AideText_150Reward
+	waitbutton
+	giveitem RARE_CANDY, 20
+	itemtotext RARE_CANDY, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Check200Caught:
+	checkcode VAR_DEXCAUGHT
+	if_greater_than 200, .AideScript_Give200Reward
+	writetext AideText_NextReward200
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give200Reward
+	setevent EVENT_200_CAUGHT_REWARD
+	writetext AideText_200Reward
+	waitbutton
+	giveitem PP_UP, 10
+	itemtotext PP_UP, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Check251Caught:
+	checkcode VAR_DEXCAUGHT
+	if_equal 251, .AideScript_Give251Reward
+	writetext AideText_NextReward251
+	waitbutton
+	closetext
+	end
+
+.AideScript_Give251Reward
+	setevent EVENT_251_CAUGHT_REWARD
+	writetext AideText_251Reward
+	waitbutton
+	giveitem MASTER_BALL, 5
+	itemtotext MASTER_BALL, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	closetext
+	end
+
+AideScript_Finished_Research:
+	writetext AideText_FinishedResearch
+	waitbutton
+	closetext
+	end
+	
 MeetCopScript2:
 	applymovement PLAYER, MeetCopScript2_StepLeft
 
@@ -1295,6 +1536,200 @@ AideText_ExplainBalls:
 	cont "prize!" 
 	done
 
+AideText_NoCheckCaught:
+	text "Oh that's a shame."
+	
+	para "Stop by anytime!"
+	done
+	
+AideText_CheckCaught:
+	text "Have you come to"
+	line "see if you've"
+	cont "caught enough?"
+	done
+	
+AideText_Catch5Total:
+	text "Sorry you need to"
+	line "catch at least 5"
+	cont "total #mon!"
+	done
+	
+AideText_5Reward:
+	text "Wow you've caught"
+	line "5 #MON!"
+	
+	para "Take these Balls"
+	line "to keep up the"
+	cont "good work!"
+	done
+	
+AideText_NextReward5:
+	text "The next reward"
+	line "is for 5 caught"
+	cont "#MON."
+	done
+
+AideText_10Reward:
+	text "Wow you've caught"
+	line "10 #MON!"
+	
+	para "This EXP SHARE"
+	line "should help keep"
+	cont "all your #MON"
+	cont "strong!"
+	done
+	
+AideText_NextReward10:
+	text "The next reward"
+	line "is for 10 caught"
+	cont "#MON."
+	done
+
+AideText_20Reward:
+	text "Wow you've caught"
+	line "20 #MON!"
+	
+	para "Try using this"
+	line "GOOD ROD to find"
+	cont "even more!"
+	done
+	
+AideText_NextReward20:
+	text "The next reward"
+	line "is for 20 caught"
+	cont "#MON."
+	done
+	
+AideText_35Reward:
+	text "Wow you've caught"
+	line "35 #MON!"
+	
+	para "I had extra food,"
+	line "you should take"
+	cont "some! #MON love"
+	cont "to eat them."
+	done
+	
+AideText_NextReward35:
+	text "The next reward"
+	line "is for 35 caught"
+	cont "#MON."
+	done
+
+AideText_50Reward:
+	text "Wow you've caught"
+	line "50 #MON!"
+	
+	para "An old friend"
+	line "gave me this fine-"
+	cont "ly crafted ball."
+	
+	para "I hear it may have"
+	line "originated from"
+	cont "Ilex Forest."
+	done
+	
+AideText_NextReward50:
+	text "The next reward"
+	line "is for 50 caught"
+	cont "#MON."
+	done
+
+AideText_75Reward:
+	text "Wow you've caught"
+	line "75 #MON!"
+	
+	para "You seem like you"
+	line "could use a better"
+	cont "fishing rod!"
+	done
+	
+AideText_NextReward75:
+	text "The next reward"
+	line "is for 75 caught"
+	cont "#MON."
+	done
+
+AideText_100Reward:
+	text "Wow you've caught"
+	line "100 #MON!"
+	
+	para "I hear this egg"
+	line "brings the holder"
+	cont "extra luck!"
+	done
+	
+AideText_NextReward100:
+	text "The next reward"
+	line "is for 100 caught"
+	cont "#MON."
+	done
+
+AideText_150Reward:
+	text "Wow you've caught"
+	line "150 #MON!"
+	
+	para "Your #MON"
+	line "might find these"
+	cont "useful."
+	done
+	
+AideText_NextReward150:
+	text "The next reward"
+	line "is for 150 caught"
+	cont "#MON."
+	done
+
+AideText_200Reward:
+	text "Wow you've caught"
+	line "200 #MON!"
+	
+	para "I hear these are"
+	line "pretty rare!"
+	done
+	
+AideText_NextReward200:
+	text "The next reward"
+	line "is for 200 caught"
+	cont "#MON."
+	
+	para "We've almost"
+	line "finished all of"
+	cont "research!"
+	done
+
+AideText_251Reward:
+	text "Wow you've caught"
+	line "all 251 #MON!"
+	
+	para "I could submit"
+	line "for you to get a"
+	cont "Diploma...."
+	
+	para "I think you would"
+	line "find these more"
+	cont "useful!"
+	done
+	
+AideText_NextReward251:
+	text "The next reward"
+	line "is for 251 caught"
+	cont "#MON."
+	done
+
+AideText_FinishedResearch:
+	text "I can't believe"
+	line "it!  You finished"
+	cont "the research!"
+	
+	para "Thanks for enjoy-"
+	line "ing my ROM HACK,"
+	cont "White Crystal."
+	
+	para "Congratulations!"
+	line "      --Maniac379"
+	done
+	
 ElmsLabOfficerText1:
 	text "I heard a #MON"
 	line "was stolen here…"

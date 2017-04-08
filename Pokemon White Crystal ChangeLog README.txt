@@ -10,11 +10,13 @@ Major Features
 -Running Shoes by pressing B
 -Physical/Special Split
 -Pokemon sprites overhauled courtesy of Chamber_ and others
+-Celebi obtainable via Elm's Aide Rewards
 
 
 Minor Features
 --------------
 -New scripts to alert of certain changes
+-Elm's Aide provides rewards every so many caught Pokemon
 -Changed 15 moves to help adjust for the physical/special split
 -Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Trade/Happiness evolutions changed to level-up/stone evolutions
@@ -112,7 +114,6 @@ ToDo List
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
--Celebi Event added through Kurt's Daughter
 -Mewtwo accessible through original Cerulean Cave
 -Mandatory 'Set' battle style
 -Recieve Exp. Share early on
@@ -131,10 +132,10 @@ ToDo List
 -New Rocket Attack
 -Move Tutors
 -Move Reminder
--Prof Oak's Aides
 -Enemy AI doesn't fail extra
 -New Items (Choice Items)
 -Abilities
+-Edit Prof Oak PC to give items
 -Secret Bases
 -AutoChange Full PC Boxes
 -Create true WillOWisp Effect
