@@ -72,6 +72,7 @@ B2 Cotton Spore	-->	Dragon Pulse
 C1 Foresight	-->	Ice Shard (Priority)
 E6 Sweet Scent	-->	Flash Cannon (10%SpDef)
 FB Beat Up	-->	TBD
+Waterfall 20% Flinch Chance
 Tackle 100% Accuracy
 Fly 100% Accuracy
 Sonicboom 100% Accuracy
