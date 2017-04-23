@@ -34,6 +34,12 @@ Minor Features
 -Kurt Poke Balls work as intended
 
 
+AI Improvements
+----------------
+-Will not try tu burn fire types, paralyze electric types
+-Will not cast future sight if active
+
+
 Known Glitches
 ---------------
 -Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
