@@ -1060,7 +1060,6 @@ OHKOHit:
 	endmove
 
 BraveBird:
-FlareBlitz:
 Submission:
 Struggle:
 RecoilHit:
@@ -1082,6 +1081,30 @@ RecoilHit:
 	checkdestinybond
 	buildopponentrage
 	kingsrock
+	endmove
+
+FlareBlitz:
+	checkobedience
+	usedmovetext
+	doturn
+	critical
+	damagestats
+	damagecalc
+	stab
+	damagevariation
+	checkhit
+	effectchance
+	hittarget
+	failuretext
+	checkfaint
+	criticaltext
+	supereffectivetext
+	recoil
+	defrost
+	checkdestinybond
+	buildopponentrage
+	kingsrock
+	burntarget
 	endmove
 
 Mist:

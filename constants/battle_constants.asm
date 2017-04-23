@@ -322,6 +322,7 @@ SUBSTATUS_CURLED       EQU 0
 	const EFFECT_BEAT_UP
 	const EFFECT_FLY
 	const EFFECT_DEFENSE_CURL
+	const EFFECT_FLARE_BLITZ
 
 ; Battle vars used in home/battle.asm
 	const_def

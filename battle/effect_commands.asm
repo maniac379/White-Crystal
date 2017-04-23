@@ -217,6 +217,8 @@ CheckPlayerTurn:
 	jr z, .not_frozen
 	cp SACRED_FIRE
 	jr z, .not_frozen
+	cp FLARE_BLITZ
+	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
 	call StdBattleTextBox
@@ -461,6 +463,8 @@ CheckEnemyTurn: ; 3421f
 	cp FLAME_WHEEL
 	jr z, .not_frozen
 	cp SACRED_FIRE
+	jr z, .not_frozen
+	cp FLARE_BLITZ
 	jr z, .not_frozen
 
 	ld hl, FrozenSolidText
