@@ -138,7 +138,6 @@ ToDo List
 -Edit Prof Oak PC to give items
 -Secret Bases
 -AutoChange Full PC Boxes
--Create true WillOWisp Effect
 -Create 1/3 Recoil effect
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 

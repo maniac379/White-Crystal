@@ -2265,3 +2265,14 @@ DefenseCurl:
 	statupmessage
 	statupfailtext
 	endmove
+
+Willowisp:
+DoBurn:	
+	checkobedience
+	usedmovetext
+	doturn
+	checkhit
+	checksafeguard
+	burntarget
+	endmove
+	

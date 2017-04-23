@@ -66,6 +66,7 @@ AI_Basic: ; 38591
 	db EFFECT_TOXIC
 	db EFFECT_POISON
 	db EFFECT_PARALYZE
+	db EFFECT_BURN
 	db $ff
 ; 385e0
 
@@ -3419,9 +3420,11 @@ AI_Status: ; 39453
 	jr z, .poisonimmunity
 	cp EFFECT_POISON
 	jr z, .poisonimmunity
-	cp EFFECT_SLEEP
-	jr z, .typeimmunity
 	cp EFFECT_PARALYZE
+	jr z, .parimmunity
+	cp EFFECT_BURN
+	jr z, .brnimmunity
+	cp EFFECT_SLEEP
 	jr z, .typeimmunity
 
 	ld a, [wEnemyMoveStruct + MOVE_POWER]
@@ -3437,7 +3440,29 @@ AI_Status: ; 39453
 	ld a, [BattleMonType2]
 	cp POISON
 	jr z, .immune
+	
+	jr .typeimmunity
 
+.parimmunity
+	ld a, [BattleMonType1]
+	cp ELECTRIC
+	jr z, .immune
+	ld a, [BattleMonType2]
+	cp ELECTRIC
+	jr z, .immune
+	
+	jr .typeimmunity
+
+.brnimmunity
+	ld a, [BattleMonType1]
+	cp FIRE
+	jr z, .immune
+	ld a, [BattleMonType2]
+	cp FIRE
+	jr z, .immune
+	
+	jr .typeimmunity
+	
 .typeimmunity
 	push hl
 	push bc
@@ -3451,11 +3476,11 @@ AI_Status: ; 39453
 
 	ld a, [wd265]
 	and a
-	jr nz, .checkmove
+	jp nz, .checkmove
 
 .immune
 	call AIDiscourageMove
-	jr .checkmove
+	jp .checkmove
 ; 394a9
 
 

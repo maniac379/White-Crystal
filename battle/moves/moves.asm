@@ -66,7 +66,7 @@ ENDM
  	move ACID,         EFFECT_DEFENSE_DOWN_HIT,   40, POISON,   100, 30,  10, SPECIAL
  	move EMBER,        EFFECT_BURN_HIT,           40, FIRE,     100, 25,  10, SPECIAL
  	move FLAMETHROWER, EFFECT_BURN_HIT,           95, FIRE,     100, 15,  10, SPECIAL
- 	move WILLOWISP,    EFFECT_BURN_HIT,            0, FIRE,     100, 30, 100, STATUS
+ 	move WILLOWISP,    EFFECT_BURN,                0, FIRE,      85, 15,   0, STATUS
  	move WATER_GUN,    EFFECT_NORMAL_HIT,         40, WATER,    100, 25,   0, SPECIAL
  	move HYDRO_PUMP,   EFFECT_NORMAL_HIT,        120, WATER,     80,  5,   0, SPECIAL
  	move SURF,         EFFECT_NORMAL_HIT,         95, WATER,    100, 15,   0, SPECIAL
