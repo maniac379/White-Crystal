@@ -123,14 +123,12 @@ ToDo List
 -Legendary birds appear after 16 Badges
 -Mewtwo accessible through original Cerulean Cave
 -Mandatory 'Set' battle style
--Recieve Exp. Share early on
 -In-Game Trades Updated
 -All Goldenrod citizens are always visibile and interactive regardless of day
 
 -Maximum 30 items and 16 Balls in your bag pocket
 -Birds cutscene
 -More In-game trades
--Give Rods Earlier through sailors in Cherrygrove, Ecruteak, and Island
 -Increase Stat Boosting Held Items
 -Add items that prevent statuses (unused)
 -Change title screen

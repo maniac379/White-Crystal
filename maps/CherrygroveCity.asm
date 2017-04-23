@@ -4,6 +4,7 @@ const_value set 2
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
 	const CHERRYGROVECITY_FISHER
+	const CHERRYGROVECITY_OLDRODFISHER
 
 CherrygroveCity_MapScriptHeader:
 .MapTriggers:
@@ -229,6 +230,37 @@ MysticWaterGuy:
 	closetext
 	end
 
+OldRodScript:
+	faceplayer
+	opentext
+	checkevent EVENT_GOT_OLD_ROD
+	iftrue .OldRodFishing
+	writetext GiveOldRodText
+	yesorno
+	iffalse .NoOldRodFishing
+	writetext TakeThisOldRod
+	buttonsound
+	waitbutton
+	verbosegiveitem OLD_ROD
+	setevent EVENT_GOT_OLD_ROD
+	closetext
+	spriteface CHERRYGROVECITY_OLDRODFISHER, LEFT
+	end
+
+.OldRodFishing:
+	writetext HaveOldRod
+	waitbutton
+	closetext
+	spriteface CHERRYGROVECITY_OLDRODFISHER, LEFT
+	end
+	
+.NoOldRodFishing:
+	writetext NoOldRod
+	waitbutton
+	closetext
+	spriteface CHERRYGROVECITY_OLDRODFISHER, LEFT
+	end
+	
 CherrygroveCitySign:
 	jumptext CherrygroveCitySignText
 
@@ -539,6 +571,28 @@ MysticWaterGuyTextAfter:
 	line "for me, then."
 	done
 
+GiveOldRodText:
+	text "You look like a"
+	line "young trainer who"
+	cont "appreciates the"
+	cont "finer things."
+	done
+
+TakeThisOldRod:
+	text "Take this!"
+	done
+
+NoOldRod:
+	text "Oh..."
+	
+	para "That's a shame."
+	done
+	
+HaveOldRod:
+	text "How's my old baby"
+	line "been treating you?"
+	done
+	
 CherrygroveCitySignText:
 	text "CHERRYGROVE CITY"
 
@@ -575,9 +629,10 @@ CherrygroveCity_MapEventHeader:
 	signpost 3, 30, SIGNPOST_READ, CherrygroveCityPokeCenterSign
 
 .PersonEvents:
-	db 5
+	db 6
 	person_event SPRITE_GRAMPS, 6, 32, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CherrygroveCityGuideGent, EVENT_GUIDE_GENT_IN_HIS_HOUSE
 	person_event SPRITE_SILVER, 6, 39, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	person_event SPRITE_TEACHER, 12, 27, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	person_event SPRITE_YOUNGSTER, 7, 23, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
 	person_event SPRITE_FISHER, 12, 7, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, MysticWaterGuy, -1
+	person_event SPRITE_FISHER, 9, 10, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, OldRodScript, -1

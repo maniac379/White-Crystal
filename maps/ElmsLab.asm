@@ -645,8 +645,8 @@ AideScript_Check20Caught:
 	setevent EVENT_20_CAUGHT_REWARD
 	writetext AideText_20Reward
 	waitbutton
-	giveitem GOOD_ROD, 1
-	itemtotext GOOD_ROD, $1
+	giveitem SUPER_ROD, 1
+	itemtotext SUPER_ROD, $1
 	scall AideScript_ReceiveTheBalls
 	waitbutton
 	closetext
@@ -1590,7 +1590,7 @@ AideText_20Reward:
 	line "20 #MON!"
 	
 	para "Try using this"
-	line "GOOD ROD to find"
+	line "SUPER ROD to find"
 	cont "even more!"
 	done
 	
