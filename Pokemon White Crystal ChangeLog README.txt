@@ -23,6 +23,7 @@ Minor Features
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
 -Only Pokemon that flee will be the 3 Dogs
 -Game Corner Prizes Updated
+-In-Game Trades Updated
 -Extra berries from trees
 -TMs are Reusable
 -Gain experience for catching pokemon like in Gen VI
@@ -109,6 +110,16 @@ Evolution Changes
 -Slowpoke	Moon Stone to Slowking
 
 
+In-Game Trade Changes
+----------------------
+-Violet City: Wooper for Horsea
+-Goldenrod City: Eevee for Ponyta
+-Olivine City: Farfetch'd for Snorlax
+-Blackthorn City: Charmander for Cyndaquil
+-Pewter City: Squirtle for Totodile
+-Route 14: Bulbasaur for Chikorita
+
+
 Game Corner Changes
 --------------------
 -Goldenrod GC Prizes: Skarmory/Larvitar/Dratini
@@ -123,7 +134,6 @@ ToDo List
 -Legendary birds appear after 16 Badges
 -Mewtwo accessible through original Cerulean Cave
 -Mandatory 'Set' battle style
--In-Game Trades Updated
 -All Goldenrod citizens are always visibile and interactive regardless of day
 
 -Maximum 30 items and 16 Balls in your bag pocket
@@ -145,16 +155,6 @@ ToDo List
 -AutoChange Full PC Boxes
 -Create 1/3 Recoil effect
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
-
-
-In-Game Trade Changes
-----------------------
--Violet City: Wooper for Horsea
--Goldenrod City: Eevee for Ponyta
--Olivine City: Farfetch'd for Snorlax
--Blackthorn City: Charmander for Cyndaquil
--Pewter City: Squirtle for Totodile
--Route 14: Bulbasaur for Chikorita
 
 
 Github Functions
