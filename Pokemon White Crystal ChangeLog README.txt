@@ -11,6 +11,7 @@ Major Features
 -Physical/Special Split
 -Pokemon sprites overhauled courtesy of Chamber_ and others
 -Celebi obtainable via Elm's Aide Rewards
+-Cerulean Cave is explorable
 
 
 Minor Features
@@ -37,8 +38,8 @@ Minor Features
 
 AI Improvements
 ----------------
--Will not try tu burn fire types, paralyze electric types
--Will not cast future sight if active
+-No longer tries to burn fire types, paralyze electric types
+-No longer casts future sight if already active
 
 
 Known Glitches
@@ -128,23 +129,18 @@ Game Corner Changes
 
 ToDo List
 -----------
--Add Aura Sphere/Shockwave or add spark to more pokemon?
+-Add Rock Polish, Aerial Ace, Energy Ball
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
--Mewtwo accessible through original Cerulean Cave
+-Mewtwo battle in Cerulean Cave
 -Mandatory 'Set' battle style
 -All Goldenrod citizens are always visibile and interactive regardless of day
-
 -Maximum 30 items and 16 Balls in your bag pocket
 -Birds cutscene
--More In-game trades
 -Increase Stat Boosting Held Items
--Add items that prevent statuses (unused)
 -Change title screen
 -E4 Rematch
--Safari Zone
--New Rocket Attack
 -Move Tutors
 -Move Reminder
 -Enemy AI doesn't fail extra
@@ -155,6 +151,9 @@ ToDo List
 -AutoChange Full PC Boxes
 -Create 1/3 Recoil effect
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
+-Update Growth
+-Permanent Cut Trees
+-Hatchet to Cut Trees
 
 
 Github Functions

@@ -181,8 +181,11 @@ MAP_NONE   EQU 0
 	mapgroup ROUTE_10_NORTH,                              9, 10 ; 14
 	mapgroup ROUTE_24,                                    9, 10 ; 15
 	mapgroup ROUTE_25,                                    9, 30 ; 16
-	mapgroup CERULEAN_CITY,                              18, 20 ; 17
-
+	mapgroup CERULEAN_CITY, 							  18, 20
+	mapgroup CERULEAN_CAVE_1F, 9, 15
+	mapgroup CERULEAN_CAVE_2F, 9, 15
+	mapgroup CERULEAN_CAVE_B1, 9, 15
+	
 	newgroup                                                    ;  8
 
 	mapgroup AZALEA_POKECENTER_1F,                        4,  5 ;  1

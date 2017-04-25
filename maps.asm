@@ -510,3 +510,6 @@ SECTION "Map Scripts 25", ROMX, BANK[MAP_SCRIPTS_25]
 
 INCLUDE "maps/SilverCaveOutside.asm"
 INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
+INCLUDE "maps/CeruleanCaveB1.asm"

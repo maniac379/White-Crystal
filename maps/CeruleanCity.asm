@@ -282,13 +282,14 @@ CeruleanCity_MapEventHeader:
 	db 0, 0
 
 .Warps:
-	db 6
+	db 7
 	warp_def $f, $7, 1, CERULEAN_GYM_BADGE_SPEECH_HOUSE
 	warp_def $11, $1c, 1, CERULEAN_POLICE_STATION
 	warp_def $13, $d, 1, CERULEAN_TRADE_SPEECH_HOUSE
 	warp_def $15, $13, 1, CERULEAN_POKECENTER_1F
 	warp_def $17, $1e, 1, CERULEAN_GYM
 	warp_def $1d, $19, 2, CERULEAN_MART
+	warp_def 13, 2, 1, CERULEAN_CAVE_1F
 
 .XYTriggers:
 	db 0
@@ -303,7 +304,7 @@ CeruleanCity_MapEventHeader:
 	signpost 29, 14, SIGNPOST_READ, CeruleanLockedDoor
 	signpost 21, 20, SIGNPOST_READ, CeruleanCityPokeCenterSign
 	signpost 29, 26, SIGNPOST_READ, CeruleanCityMartSign
-	signpost 12, 2, SIGNPOST_ITEM, CeruleanCityHiddenBerserkGene
+	signpost 17, 2, SIGNPOST_ITEM, CeruleanCityHiddenBerserkGene
 
 .PersonEvents:
 	db 6

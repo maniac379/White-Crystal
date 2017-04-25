@@ -239,7 +239,7 @@
 	connection north, CERULEAN_CITY, CeruleanCity, -3, 2, 16, ROUTE_5
 	connection south, SAFFRON_CITY, SaffronCity, -3, 2, 16, ROUTE_5
 
-	map_header_2 CeruleanCity, CERULEAN_CITY, $f, NORTH | SOUTH | WEST | EAST
+	map_header_2 CeruleanCity, CERULEAN_CITY, 15, NORTH | SOUTH | WEST | EAST
 	connection north, ROUTE_24, Route24, 6, 0, 10, CERULEAN_CITY
 	connection south, ROUTE_5, Route5, 5, 0, 10, CERULEAN_CITY
 	connection west, ROUTE_4, Route4, 5, 0, 9, CERULEAN_CITY
@@ -596,3 +596,6 @@
 	map_header_2 Route30BerrySpeechHouse, ROUTE_30_BERRY_SPEECH_HOUSE, $0, 0
 	map_header_2 MrPokemonsHouse, MR_POKEMONS_HOUSE, $0, 0
 	map_header_2 Route31VioletGate, ROUTE_31_VIOLET_GATE, $0, 0
+	map_header_2 CeruleanCave1F, CERULEAN_CAVE_1F, 29, 0
+	map_header_2 CeruleanCave2F, CERULEAN_CAVE_2F, 29, 0
+	map_header_2 CeruleanCaveB1, CERULEAN_CAVE_B1, 29, 0

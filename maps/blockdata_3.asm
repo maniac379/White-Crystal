@@ -264,3 +264,13 @@ BetaBlank_BlockData:
 
 GoldenrodDeptStoreRoof_BlockData:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
+	
+CeruleanCave1F_BlockData:
+	INCBIN "maps/CeruleanCave1F.blk"
+
+CeruleanCave2F_BlockData:
+	INCBIN "maps/CeruleanCave2F.blk"
+
+CeruleanCaveB1_BlockData:
+	INCBIN "maps/CeruleanCaveB1.blk"
+	
