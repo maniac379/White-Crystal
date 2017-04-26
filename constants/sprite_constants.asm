@@ -143,6 +143,8 @@ SPRITE_POKEMON EQU const_value
 	const SPRITE_GYARADOS ; a0
 	const SPRITE_LUGIA ; a1
 	const SPRITE_HO_OH ; a2
+	const SPRITE_MEWTWO
+	const SPRITE_POLIWRATH
 
 const_value SET $e0
 	const SPRITE_DAYCARE_MON_1 ; e0

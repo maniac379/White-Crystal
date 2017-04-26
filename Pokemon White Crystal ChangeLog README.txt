@@ -10,8 +10,8 @@ Major Features
 -Running Shoes by pressing B
 -Physical/Special Split
 -Pokemon sprites overhauled courtesy of Chamber_ and others
--Celebi obtainable via Elm's Aide Rewards
--Cerulean Cave is explorable
+-Celebi obtainable via Elm's Aide Rewards giving GS Ball
+-Mewtwo obtainable via Cerulean Cave
 
 
 Minor Features
@@ -133,7 +133,6 @@ ToDo List
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
--Mewtwo battle in Cerulean Cave
 -Mandatory 'Set' battle style
 -All Goldenrod citizens are always visibile and interactive regardless of day
 -Maximum 30 items and 16 Balls in your bag pocket
@@ -154,6 +153,7 @@ ToDo List
 -Update Growth
 -Permanent Cut Trees
 -Hatchet to Cut Trees
+-Update moves to S/M status
 
 
 Github Functions
