@@ -4360,7 +4360,7 @@ ROM Bank #9:
     SLACK: $05B5 bytes
 
 ROM Bank #10:
-  SECTION: $4000-$7CE9 ($3CEA bytes)
+  SECTION: $4000-$7D88 ($3D89 bytes)
            $6394 = JumpRoamMons
            $4EEF = Predef_LinkTextbox
            $4F63 = TradeAnimationPlayer2
@@ -4567,7 +4567,7 @@ ROM Bank #10:
            $60B7 = FindNest.RoamMon1
            $60CF = FindNest.RoamMon2
            $7274 = KantoGrassWildMons
-           $77F7 = KantoWaterWildMons
+           $7884 = KantoWaterWildMons
            $6088 = FindNest.SearchMapForMon
            $609C = FindNest.AppendNest
            $6103 = TryWildEncounter.EncounterRate
@@ -4583,10 +4583,10 @@ ROM Bank #10:
            $61D9 = ChooseWildEncounter.WaterMonTable
            $61CB = ChooseWildEncounter.GrassMonTable
            $64A0 = ValidateTempWildMonSpecies
-           $78D0 = SwarmGrassWildMons
+           $796F = SwarmGrassWildMons
            $623D = _SwarmWildmonCheck
            $6235 = _JohtoWildmonCheck
-           $792F = SwarmWaterWildMons
+           $79CE = SwarmWaterWildMons
            $627F = CopyCurrMapDE
            $6288 = LookUpWildmonsForMapDE
            $6355 = UpdateRoamMons.Update
@@ -4594,17 +4594,17 @@ ROM Bank #10:
            $640F = RoamMaps
            $63CD = JumpRoamMon
            $651A = RandomPhoneRareWildMon.SawRareMonText
-           $7995 = DetermineLinkBattleResult.CountMonsRemaining
-           $79E1 = DetermineLinkBattleResult.BothSides_CheckNumberMonsAtFullHealth
-           $79A6 = DetermineLinkBattleResult.CalcPercentHPRemaining
-           $7A01 = DetermineLinkBattleResult.CheckFaintedOrFullHealth
-           $7930 = DetermineLinkBattleResult
-           $7BAA = DudeBackpic
-           $7A1A = ChrisBackpic
+           $7A34 = DetermineLinkBattleResult.CountMonsRemaining
+           $7A80 = DetermineLinkBattleResult.BothSides_CheckNumberMonsAtFullHealth
+           $7A45 = DetermineLinkBattleResult.CalcPercentHPRemaining
+           $7AA0 = DetermineLinkBattleResult.CheckFaintedOrFullHealth
+           $79CF = DetermineLinkBattleResult
+           $7C49 = DudeBackpic
+           $7AB9 = ChrisBackpic
            $5676 = TradeAnim_AnimateTrademonInTube
            $601F = FindNest
            $60E7 = TryWildEncounter
-    SLACK: $0316 bytes
+    SLACK: $0277 bytes
 
 ROM Bank #11:
   SECTION: $4000-$6FB3 ($2FB4 bytes)

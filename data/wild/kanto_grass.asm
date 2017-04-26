@@ -810,4 +810,85 @@
 	db 53, SKARMORY
 	db 53, SKARMORY
 
+	map CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 60, ELECTRODE
+	db 65, BLISSEY
+	db 62, UMBREON
+	db 64, GOLEM
+	db 65, ALAKAZAM
+	db 70, DITTO
+	db 70, DITTO
+	; day
+	db 60, ELECTRODE
+	db 65, BLISSEY
+	db 62, UMBREON
+	db 64, GOLEM
+	db 65, ALAKAZAM
+	db 70, DITTO
+	db 70, DITTO
+	; nite
+	db 60, ELECTRODE
+	db 65, BLISSEY
+	db 62, UMBREON
+	db 64, GOLEM
+	db 65, ALAKAZAM
+	db 70, DITTO
+	db 70, DITTO
+
+	map CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 60, VENOMOTH
+	db 65, PINSIR
+	db 62, UMBREON
+	db 64, STEELIX
+	db 65, GENGAR
+	db 70, DITTO
+	db 70, DITTO
+	; day
+	db 60, VENOMOTH
+	db 65, PINSIR
+	db 62, UMBREON
+	db 64, STEELIX
+	db 65, GENGAR
+	db 70, DITTO
+	db 70, DITTO
+	; nite
+	db 60, VENOMOTH
+	db 65, PINSIR
+	db 62, UMBREON
+	db 64, STEELIX
+	db 65, GENGAR
+	db 70, DITTO
+	db 70, DITTO
+
+	map CERULEAN_CAVE_B1
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 60, TYRANITAR
+	db 65, AERODACTYL
+	db 62, FLAREON
+	db 64, VICTREEBEL
+	db 65, JOLTEON
+	db 70, DITTO
+	db 70, DITTO
+	; day
+	db 60, TYRANITAR
+	db 65, AERODACTYL
+	db 62, FLAREON
+	db 64, VICTREEBEL
+	db 65, JOLTEON
+	db 70, DITTO
+	db 70, DITTO
+	; nite
+	db 60, TYRANITAR
+	db 65, AERODACTYL
+	db 62, FLAREON
+	db 64, VICTREEBEL
+	db 65, JOLTEON
+	db 70, DITTO
+	db 70, DITTO
+	
 	db -1 ; end
