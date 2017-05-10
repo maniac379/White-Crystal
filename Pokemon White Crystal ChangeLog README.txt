@@ -35,6 +35,8 @@ Minor Features
 -Mahogony Mart sells Evolution Stones
 -Burn/Poison/Paralyze correctly improve catch rate
 -Kurt Poke Balls work as intended
+-Base Stats Updated to Gen VII
+-Moves Updated to Gen VII
 
 
 AI Improvements
@@ -80,11 +82,9 @@ Tackle 100% Accuracy
 Fly 100% Accuracy
 Sonicboom 100% Accuracy
 Submission 100% Accuracy
-Increased Mega Drain PP from 10 to 15
-Increased Giga Drain PP from 5 to 10
-Increased Giga Drain Power from 60 to 70
 Increased ExtremeSpeed PP from 5 to 10
 Increased Anicientpower PP from 5 to 10
+Moves Updated to Gen VII
 
 
 Evolution Changes
@@ -154,7 +154,6 @@ ToDo List
 -Update Growth
 -Permanent Cut Trees
 -Hatchet to Cut Trees
--Update moves to S/M status
 
 
 Github Functions
