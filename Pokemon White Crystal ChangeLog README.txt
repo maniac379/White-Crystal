@@ -27,6 +27,7 @@ Minor Features
 -In-Game Trades Updated
 -Extra berries from trees
 -TMs are Reusable
+-Heal from Poison at 1 HP in Overworld
 -Gain experience for catching pokemon like in Gen VI
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
