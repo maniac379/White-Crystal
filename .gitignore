@@ -1,0 +1,12 @@
+*.o
+*.gbc
+*.rtc
+*.sav
+*.sgm
+*.sh
+*.py
+*.map
+*.sym
+roms.md5
+Vagrantfile
+Makefile
