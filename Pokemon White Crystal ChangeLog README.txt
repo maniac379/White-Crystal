@@ -84,7 +84,8 @@ Sonicboom 100% Accuracy
 Submission 100% Accuracy
 Increased ExtremeSpeed PP from 5 to 10
 Increased Anicientpower PP from 5 to 10
-Moves Updated to Gen VII
+Moves Updated to Gen VII (Not Leech Life)
+Growth Raises both Attack and Sp Attack
 
 
 Evolution Changes
@@ -151,7 +152,6 @@ ToDo List
 -AutoChange Full PC Boxes
 -Create 1/3 Recoil effect
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
--Update Growth
 -Permanent Cut Trees
 -Hatchet to Cut Trees
 

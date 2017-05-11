@@ -286,7 +286,6 @@ SpeedUp:
 	statupfailtext
 	endmove
 
-Growth:
 SpecialAttackUp:
 	checkobedience
 	usedmovetext
@@ -1204,6 +1203,13 @@ TriAttack:
 	checkdestinybond
 	buildopponentrage
 	tristatuschance
+	endmove
+
+Growth:
+	checkobedience
+	usedmovetext
+	doturn
+	growth
 	endmove
 
 Toxic:

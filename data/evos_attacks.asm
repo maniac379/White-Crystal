@@ -598,10 +598,11 @@ ParasEvosAttacks:
 	db 7, STUN_SPORE
 	db 14, MEGA_DRAIN
 	db 19, SLASH
-	db 25, SPORE
-	db 28, SUBSTITUTE
-	db 32, GIGA_DRAIN
-	db 37, BUG_BUZZ
+	db 25, GROWTH
+	db 29, SPORE
+	db 34, SUBSTITUTE
+	db 37, GIGA_DRAIN
+	db 42, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 ParasectEvosAttacks:
@@ -610,10 +611,11 @@ ParasectEvosAttacks:
 	db 1, STUN_SPORE
 	db 1, MEGA_DRAIN
 	db 1, SLASH
-	db 25, SPORE
-	db 28, SUBSTITUTE
-	db 32, GIGA_DRAIN
-	db 37, BUG_BUZZ
+	db 25, GROWTH
+	db 29, SPORE
+	db 34, SUBSTITUTE
+	db 37, GIGA_DRAIN
+	db 42, BUG_BUZZ
 	db 0 ; no more level-up moves
 
 VenonatEvosAttacks:
@@ -1451,7 +1453,7 @@ TangelaEvosAttacks:
 	db 1, WRAP
 	db 1, POISONPOWDER
 	db 6, ABSORB
-	db 11, BIND
+	db 11, GROWTH
 	db 19, VINE_WHIP
 	db 24, STUN_SPORE
 	db 31, GIGA_DRAIN
