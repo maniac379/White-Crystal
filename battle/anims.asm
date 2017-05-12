@@ -250,7 +250,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_FutureSight
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
-	dw BattleAnim_BeatUp
+	dw BattleAnim_EnergyBall
 	dw BattleAnim_252
 	dw BattleAnim_253
 	dw BattleAnim_254
@@ -4888,24 +4888,34 @@ BattleAnim_Whirlpool: ; cba6a
 	anim_ret
 ; cba84
 
-BattleAnim_BeatUp: ; cba84
-	anim_if_param_equal $0, .current_mon
-	anim_sound 0, 0, SFX_BALL_POOF
-	anim_bgeffect ANIM_BG_RETURN_MON, $0, $1, $0
-	anim_wait 16
-	anim_beatup
-	anim_sound 0, 0, SFX_BALL_POOF
-	anim_bgeffect ANIM_BG_ENTER_MON, $0, $1, $0
-	anim_wait 16
-.current_mon
-	anim_1gfx ANIM_GFX_HIT
-	anim_call BattleAnim_FollowEnemyFeet_0
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
-	anim_wait 4
-	anim_sound 0, 1, SFX_BEAT_UP
-	anim_obj ANIM_OBJ_00, -15, 0,   6, 0, $0
+;anim from polishedcrystal from prism
+BattleAnim_EnergyBall: ; cba84
+	anim_2gfx ANIM_GFX_CHARGE, ANIM_GFX_EGG
+	anim_sound 0, 0, SFX_GIGA_DRAIN
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 0
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 8
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 16
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 24
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 32
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 40
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 48
+	anim_obj ANIM_OBJ_3C,  6, 0, 10, 4, 56
 	anim_wait 8
-	anim_call BattleAnim_ShowMon_0
+	anim_obj ANIM_OBJ_3D,  6, 0, 10, 4, $0
+	anim_wait 64
+	anim_bgeffect ANIM_BG_1F, $60, $2, $0
+.loop
+	anim_sound 0, 0, SFX_AEROBLAST
+	anim_obj ANIM_OBJ_ENERGY_BALL,  7, 6, 11, 4, $2
+	anim_wait 3
+	anim_obj ANIM_OBJ_ENERGY_BALL,  8, 2, 11, 4, $2
+	anim_wait 3
+	anim_loop 8, .loop
+	anim_call BattleAnim_FollowEnemyFeet_1
+	anim_bgeffect ANIM_BG_VIBRATE_MON, $0, $0, $0
+	anim_wait 32
+	anim_call BattleAnim_ShowMon_1
+	anim_wait 1
 	anim_ret
 ; cbab3
 

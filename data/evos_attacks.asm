@@ -21,7 +21,8 @@ BulbasaurEvosAttacks:
 	db 22, GIGA_DRAIN
 	db 30, SLUDGE_BOMB
 	db 38, SYNTHESIS
-	db 46, SOLARBEAM
+	db 46, ENERGY_BALL
+	db 54, SOLARBEAM
 	db 0 ; no more level-up moves
 
 IvysaurEvosAttacks:
@@ -34,7 +35,8 @@ IvysaurEvosAttacks:
 	db 22, GIGA_DRAIN
 	db 30, SLUDGE_BOMB
 	db 38, SYNTHESIS
-	db 46, SOLARBEAM
+	db 46, ENERGY_BALL
+	db 54, SOLARBEAM
 	db 0 ; no more level-up moves
 
 VenusaurEvosAttacks:
@@ -44,7 +46,8 @@ VenusaurEvosAttacks:
 	db 1, SLEEP_POWDER
 	db 1, SLUDGE_BOMB
 	db 38, SYNTHESIS
-	db 46, SOLARBEAM
+	db 46, ENERGY_BALL
+	db 54, SOLARBEAM
 	db 0 ; no more level-up moves
 
 CharmanderEvosAttacks:

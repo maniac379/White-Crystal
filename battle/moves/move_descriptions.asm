@@ -249,7 +249,7 @@
 	dw FutureSightDescription
 	dw RockSmashDescription
 	dw WhirlpoolDescription
-	dw BeatUpDescription
+	dw EnergyBallDescription
 	dw MoveFCDescription
 	dw MoveFDDescription
 	dw MoveFEDescription
@@ -1264,7 +1264,7 @@ WhirlpoolDescription:
 	db   "Traps the foe for"
 	next "2-5 turns.@"
 
-BeatUpDescription:
-	db   "Party #MON join"
-	next "in the attack.@"
+EnergyBallDescription:
+	db   "Power from Nature"
+	next "May lower SP DEF.@"
 ; 2ed44

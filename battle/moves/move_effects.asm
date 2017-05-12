@@ -724,6 +724,7 @@ PsychicM:
 Crunch:
 FlashCannon:
 ShadowBall:
+EnergyBall:
 SpecialDefenseDownHit:
 	checkobedience
 	usedmovetext

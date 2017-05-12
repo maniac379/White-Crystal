@@ -251,7 +251,7 @@
 	const FUTURE_SIGHT ; $f8
 	const ROCK_SMASH   ; $f9
 	const WHIRLPOOL    ; $fa
-	const BEAT_UP      ; $fb
+	const ENERGY_BALL  ; $fb
 
 const_value SET const_value + -1
 

@@ -131,7 +131,7 @@ Game Corner Changes
 
 ToDo List
 -----------
--Add Rock Polish, Aerial Ace, Energy Ball
+-Add Rock Polish, Aerial Ace
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
@@ -154,6 +154,8 @@ ToDo List
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 -Permanent Cut Trees
 -Hatchet to Cut Trees
+-TMs Add: Energy Ball
+-TMs Remove: Defense Curl
 
 
 Github Functions
