@@ -76,7 +76,8 @@ Move Changes
 B2 Cotton Spore	-->	Dragon Pulse			
 C1 Foresight	-->	Ice Shard (Priority)
 E6 Sweet Scent	-->	Flash Cannon (10%SpDef)
-FB Beat Up	-->	TBD
+FB Beat Up	-->	Energy Ball (10%SpDef)
+   Skull Bash	-->	Aerial Ace (NoMiss)
 Waterfall 20% Flinch Chance
 Tackle 100% Accuracy
 Fly 100% Accuracy
@@ -131,7 +132,7 @@ Game Corner Changes
 
 ToDo List
 -----------
--Add Rock Polish, Aerial Ace
+-Add Rock Polish
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
@@ -145,7 +146,8 @@ ToDo List
 -Move Tutors
 -Move Reminder
 -Enemy AI doesn't fail extra
--New Items (Choice Items)
+-Choice Items
+-Items of Potential
 -Abilities
 -Edit Prof Oak PC to give items
 -Secret Bases
@@ -154,7 +156,7 @@ ToDo List
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 -Permanent Cut Trees
 -Hatchet to Cut Trees
--TMs Add: Energy Ball
+-TMs Add: Energy Ball, Aerial Ace
 -TMs Remove: Defense Curl
 
 

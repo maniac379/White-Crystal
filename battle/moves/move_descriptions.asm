@@ -128,7 +128,7 @@
 	dw WaterfallDescription
 	dw ClampDescription
 	dw SwiftDescription
-	dw SkullBashDescription
+	dw AerialAceDescription
 	dw SpikeCannonDescription
 	dw LeafBladeDescription
 	dw AmnesiaDescription
@@ -781,9 +781,9 @@ SwiftDescription:
 	db   "An attack that"
 	next "never misses.@"
 
-SkullBashDescription:
-	db   "1st turn: Prepare"
-	next "2nd turn: Attack@"
+AerialAceDescription:
+	db   "A very fast and"
+	next "unavoidable hit.@"
 
 SpikeCannonDescription:
 	db   "Fires spikes to"

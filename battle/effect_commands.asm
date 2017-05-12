@@ -7359,10 +7359,6 @@ BattleCommand_Charge: ; 36b4d
 	ld hl, .Solarbeam
 	jr z, .done
 
-	cp SKULL_BASH
-	ld hl, .SkullBash
-	jr z, .done
-
 	cp SKY_ATTACK
 	ld hl, .SkyAttack
 	jr z, .done
@@ -7385,11 +7381,6 @@ BattleCommand_Charge: ; 36b4d
 .Solarbeam:
 ; 'took in sunlight!'
 	text_jump UnknownText_0x1c0d26
-	db "@"
-
-.SkullBash:
-; 'lowered its head!'
-	text_jump UnknownText_0x1c0d3a
 	db "@"
 
 .SkyAttack:

@@ -127,7 +127,7 @@
 	db "WATERFALL@"
 	db "CLAMP@"
 	db "SWIFT@"
-	db "SKULL BASH@"
+	db "AERIAL ACE@"
 	db "SPIKE CANNON@"
 	db "LEAF BLADE@"
 	db "AMNESIA@"

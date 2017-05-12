@@ -26,6 +26,7 @@ Aeroblast:
 Megahorn:
 CrossChop:
 Swift:
+AerialAce:
 FaintAttack:
 VitalThrow:
 JumpKick:

@@ -257,7 +257,7 @@ SpearowEvosAttacks:
 	db 8, MIRROR_MOVE
 	db 12, RAGE
 	db 16, AGILITY
-	db 19, WING_ATTACK
+	db 19, AERIAL_ACE
 	db 25, STEEL_WING
 	db 31, MIRROR_MOVE
 	db 30, DRILL_PECK
@@ -269,7 +269,7 @@ FearowEvosAttacks:
 	db 1, MIRROR_MOVE
 	db 1, RAGE
 	db 1, AGILITY
-	db 1, WING_ATTACK
+	db 1, AERIAL_ACE
 	db 25, STEEL_WING
 	db 31, MIRROR_MOVE
 	db 30, DRILL_PECK
@@ -655,9 +655,9 @@ DiglettEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, SCRATCH
 	db 1, GROWL
-	db 9, MAGNITUDE
+	db 9, DIG
 	db 13, ROCK_THROW
-	db 17, DIG
+	db 17, AERIAL_ACE
 	db 26, SLASH
 	db 33, ROCK_SLIDE
 	db 41, EARTHQUAKE
@@ -666,9 +666,9 @@ DiglettEvosAttacks:
 
 DugtrioEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, MAGNITUDE
 	db 1, ROCK_THROW
 	db 1, DIG
+	db 1, AERIAL_ACE
 	db 26, SLASH
 	db 33, ROCK_SLIDE
 	db 41, EARTHQUAKE
@@ -1072,7 +1072,8 @@ FarfetchDEvosAttacks:
 	db 1, FALSE_SWIPE
 	db 1, AGILITY
 	db 10, WING_ATTACK
-	db 20, SWORDS_DANCE
+	db 15, SWORDS_DANCE
+	db 20, AERIAL_ACE
 	db 25, SLASH
 	db 30, BATON_PASS
 	db 35, AGILITY
@@ -2623,7 +2624,7 @@ GligarEvosAttacks:
 	db 8, FALSE_SWIPE
 	db 13, QUICK_ATTACK
 	db 19, MAGNITUDE
-	db 25, WING_ATTACK
+	db 25, AERIAL_ACE
 	db 33, SLASH
 	db 44, EARTHQUAKE
 	db 52, GUILLOTINE
@@ -2716,7 +2717,7 @@ HeracrossEvosAttacks:
 	db 12, ENDURE
 	db 16, PIN_MISSILE
 	db 22, MACH_PUNCH
-	db 28, HEADBUTT
+	db 28, AERIAL_ACE
 	db 35, REVERSAL
 	db 41, SWORDS_DANCE
 	db 48, MEGAHORN

@@ -129,7 +129,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Waterfall
 	dw BattleAnim_Clamp
 	dw BattleAnim_Swift
-	dw BattleAnim_SkullBash
+	dw BattleAnim_AerialAce
 	dw BattleAnim_SpikeCannon
 	dw BattleAnim_LeafBlade
 	dw BattleAnim_Amnesia
@@ -1821,7 +1821,6 @@ BattleAnim_ZenHeadbutt: ; c9fb5
 	anim_ret
 
 BattleAnim_NastyPlot_branch_c9fb5: ; c9fb5
-BattleAnim_SkullBash_branch_c9fb5: ; c9fb5
 BattleAnim_SkyAttack_branch_c9fb5: ; c9fb5
 	anim_1gfx ANIM_GFX_SPEED
 	anim_call BattleAnim_FollowEnemyFeet_0
@@ -2629,24 +2628,6 @@ BattleAnim_Crabhammer: ; ca624
 	anim_loop 3, .loop
 	anim_ret
 ; ca63f
-
-BattleAnim_SkullBash: ; ca63f
-	anim_if_param_equal $1, BattleAnim_SkullBash_branch_c9fb5
-	anim_1gfx ANIM_GFX_HIT
-	anim_bgeffect ANIM_BG_1F, $14, $2, $0
-	anim_wait 32
-	anim_call BattleAnim_FollowEnemyFeet_0
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $3
-	anim_bgeffect ANIM_BG_TACKLE, $0, $1, $0
-	anim_wait 4
-.loop
-	anim_sound 0, 1, SFX_HEADBUTT
-	anim_obj ANIM_OBJ_01, -15, 0,   7, 0, $0
-	anim_wait 8
-	anim_loop 3, .loop
-	anim_call BattleAnim_ShowMon_0
-	anim_ret
-; ca66a
 
 BattleAnim_AirSlash: ; ca66a
 	anim_2gfx ANIM_GFX_WIND, ANIM_GFX_HIT
@@ -4769,6 +4750,7 @@ BattleAnim_PsychUp: ; cb917
 	anim_ret
 ; cb940
 
+BattleAnim_AerialAce: ; ca63f
 BattleAnim_Extremespeed: ; cb940
 	anim_2gfx ANIM_GFX_SPEED, ANIM_GFX_CUT
 	anim_bgeffect ANIM_BG_HIDE_MON, $0, $1, $0

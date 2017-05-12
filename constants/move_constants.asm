@@ -130,7 +130,7 @@
 	const WATERFALL    ; $7f
 	const CLAMP        ; $80
 	const SWIFT        ; $81
-	const SKULL_BASH   ; $82
+	const AERIAL_ACE   ; $82
 	const SPIKE_CANNON ; $83
 	const LEAF_BLADE   ; $84
 	const AMNESIA      ; $85

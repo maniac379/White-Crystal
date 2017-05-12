@@ -17,7 +17,6 @@ EggMoves::
 
 BulbasaurEggMoves:
 	db LIGHT_SCREEN
-	db SKULL_BASH
 	db SAFEGUARD
 if !_CRYSTAL
 	db CHARM
@@ -313,7 +312,6 @@ CuboneEggMoves:
 	db ANCIENTPOWER
 	db BELLY_DRUM
 	db SCREECH
-	db SKULL_BASH
 	db PERISH_SONG
 if _CRYSTAL
 	db SWORDS_DANCE
