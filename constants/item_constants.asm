@@ -204,7 +204,7 @@
 	add_tm HIDDEN_POWER ; $C9
 	add_tm SUNNY_DAY    ; $CA
 	add_tm QUICK_ATTACK ; $CB
-	add_tm SNORE        ; $CC
+	add_tm ENERGY_BALL  ; $CC
 	add_tm BLIZZARD     ; $CD
 	add_tm HYPER_BEAM   ; $CE
 	add_tm ICY_WIND     ; $CF

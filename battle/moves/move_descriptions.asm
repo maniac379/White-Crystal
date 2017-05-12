@@ -171,7 +171,7 @@
 	dw MindReaderDescription
 	dw NightmareDescription
 	dw FlameWheelDescription
-	dw SnoreDescription
+	dw RockPolishDescription
 	dw CurseDescription
 	dw FlailDescription
 	dw Conversion2Description
@@ -952,9 +952,9 @@ FlameWheelDescription:
 	db   "An attack that may"
 	next "cause a burn.@"
 
-SnoreDescription:
-	db   "An attack useable"
-	next "only while asleep.@"
+RockPolishDescription:
+	db   "Polish to sharply"
+	next "increase speed.@"
 
 CurseDescription:
 	db   "Works differently"
@@ -1265,6 +1265,6 @@ WhirlpoolDescription:
 	next "2-5 turns.@"
 
 EnergyBallDescription:
-	db   "Power from Nature"
+	db   "Power from nature,"
 	next "May lower SP DEF.@"
 ; 2ed44

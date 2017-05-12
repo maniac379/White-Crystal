@@ -366,6 +366,7 @@ DefenseUp2:
 	endmove
 
 Agility:
+RockPolish:
 SpeedUp2:
 	checkobedience
 	usedmovetext

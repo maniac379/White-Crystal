@@ -957,7 +957,8 @@ GeodudeEvosAttacks:
 	db 16, MAGNITUDE
 	db 21, SELFDESTRUCT
 	db 26, BODY_SLAM
-	db 33, ROCK_SLIDE
+	db 30, ROCK_POLISH
+	db 34, ROCK_SLIDE
 	db 40, EARTHQUAKE
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
@@ -970,16 +971,17 @@ GravelerEvosAttacks:
 	db 1, MAGNITUDE
 	db 1, SELFDESTRUCT
 	db 26, BODY_SLAM
-	db 33, ROCK_SLIDE
+	db 30, ROCK_POLISH
+	db 34, ROCK_SLIDE
 	db 40, EARTHQUAKE
 	db 48, EXPLOSION
 	db 0 ; no more level-up moves
 
 GolemEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, MAGNITUDE
 	db 1, SELFDESTRUCT
 	db 1, BODY_SLAM
+	db 1, ROCK_POLISH
 	db 1, ROCK_SLIDE
 	db 40, EARTHQUAKE
 	db 48, EXPLOSION
@@ -1424,17 +1426,18 @@ RhyhornEvosAttacks:
 	db 8, ROCK_THROW
 	db 13, STOMP
 	db 19, MAGNITUDE
+	db 27, THRASH
 	db 31, ROCK_SLIDE
-	db 37, THRASH
+	db 37, ROCK_POLISH
 	db 42, EARTHQUAKE
 	db 50, HORN_DRILL
 	db 0 ; no more level-up moves
 
 RhydonEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, STOMP
-	db 1, ROCK_SLIDE
 	db 1, THRASH
+	db 1, ROCK_SLIDE
+	db 1, ROCK_POLISH
 	db 1, EARTHQUAKE
 	db 50, HORN_DRILL
 	db 0 ; no more level-up moves
@@ -1766,20 +1769,25 @@ OmanyteEvosAttacks:
 	db 1, WRAP
 	db 1, WITHDRAW
 	db 8, WATER_GUN
-	db 13, BITE
+	db 13, SPIKE_CANNON
 	db 20, PROTECT
 	db 28, ANCIENTPOWER
-	db 35, SPIKES
-	db 40, SPIKE_CANNON
+	db 35, SURF
+	db 40, SPIKES
+	db 43, ROCK_POLISH
+	db 50, ROCK_SLIDE
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
 OmastarEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, WATER_GUN
+	db 1, SPIKE_CANNON
+	db 1, SURF
 	db 1, ANCIENTPOWER
 	db 1, SPIKES
-	db 1, SPIKE_CANNON
+	db 40, SPIKES
+	db 43, ROCK_POLISH
+	db 50, ROCK_SLIDE
 	db 55, HYDRO_PUMP
 	db 0 ; no more level-up moves
 
@@ -1827,7 +1835,6 @@ SnorlaxEvosAttacks:
 	db 1, TACKLE
 	db 1, AMNESIA
 	db 20, REST
-	db 20, SNORE
 	db 26, HEADBUTT
 	db 34, BELLY_DRUM
 	db 43, BODY_SLAM
@@ -2359,7 +2366,7 @@ SudowoodoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROCK_THROW
 	db 1, MIMIC
-	db 10, FLAIL
+	db 10, ROCK_POLISH
 	db 19, LOW_KICK
 	db 23, MEGA_DRAIN
 	db 28, ROCK_SLIDE
@@ -2745,7 +2752,6 @@ TeddiursaEvosAttacks:
 	db 1, LEER
 	db 8, RAGE
 	db 12, FAINT_ATTACK
-	db 20, SNORE
 	db 20, REST
 	db 27, SLASH
 	db 34, SWORDS_DANCE

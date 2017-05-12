@@ -170,7 +170,7 @@
 	db "MIND READER@"
 	db "NIGHTMARE@"
 	db "FLAME WHEEL@"
-	db "SNORE@"
+	db "ROCK POLISH@"
 	db "CURSE@"
 	db "FLAIL@"
 	db "CONVERSION2@"

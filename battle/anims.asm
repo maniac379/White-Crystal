@@ -172,7 +172,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_MindReader
 	dw BattleAnim_Nightmare
 	dw BattleAnim_FlameWheel
-	dw BattleAnim_Snore
+	dw BattleAnim_RockPolish
 	dw BattleAnim_Curse
 	dw BattleAnim_Flail
 	dw BattleAnim_Conversion2
@@ -3038,6 +3038,7 @@ BattleAnim_BugBuzz: ; ca9d8
 ; ca9ed
 
 BattleAnim_Sharpen: ; ca9ed
+BattleAnim_RockPolish:
 	anim_1gfx ANIM_GFX_SHAPES
 	anim_obp0 $e4
 	anim_call BattleAnim_FollowEnemyFeet_0
@@ -3435,20 +3436,6 @@ BattleAnim_FlameWheel: ; cad30
 	anim_wait 8
 	anim_ret
 ; cad6b
-
-BattleAnim_Snore: ; cad6b
-	anim_2gfx ANIM_GFX_STATUS, ANIM_GFX_NOISE
-	anim_obj ANIM_OBJ_54,   8, 0,  10, 0, $0
-	anim_wait 32
-	anim_bgeffect ANIM_BG_1F, $60, $2, $0
-	anim_sound 0, 0, SFX_SNORE
-.loop
-	anim_call BattleAnim_Snore_branch_cbbbc
-	anim_wait 16
-	anim_loop 2, .loop
-	anim_wait 8
-	anim_ret
-; cad86
 
 BattleAnim_Curse: ; cad86
 	anim_if_param_equal $1, .NotGhost
@@ -5005,7 +4992,6 @@ BattleAnim_Selfdestruct_branch_cbb8f: ; cbb8f
 
 BattleAnim_Growl_branch_cbbbc: ; cbbbc
 BattleAnim_Roar_branch_cbbbc: ; cbbbc
-BattleAnim_Snore_branch_cbbbc: ; cbbbc
 	anim_obj ANIM_OBJ_4B,   8, 0,   9, 4, $0
 	anim_obj ANIM_OBJ_4B,   8, 0,  11, 0, $1
 	anim_obj ANIM_OBJ_4B,   8, 0,  12, 4, $2

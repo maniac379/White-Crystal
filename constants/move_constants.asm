@@ -173,7 +173,7 @@
 	const MIND_READER  ; $aa
 	const NIGHTMARE    ; $ab
 	const FLAME_WHEEL  ; $ac
-	const SNORE        ; $ad
+	const ROCK_POLISH  ; $ad
 	const CURSE        ; $ae
 	const FLAIL        ; $af
 	const CONVERSION2  ; $b0

@@ -206,7 +206,6 @@ MoveGrammar: ; 105e7a
 	db SHARPEN
 	db SUBSTITUTE
 	db MIND_READER
-	db SNORE
 	db PROTECT
 	db SPIKES
 	db ENDURE

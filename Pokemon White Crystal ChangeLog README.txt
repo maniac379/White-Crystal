@@ -61,23 +61,23 @@ Special Thanks
 
 Move Changes
 --------------
-03 Doubleslap	-->	Dark Pulse (20% Flc)		
-0D Razor Wind	-->	Nasty Plot (2xSpAtkUp)		
-1F Fury Attack	-->	Earth Power (10%SpDef)		
-24 Take Down	-->	Brave Bird (1/3 Recoil)		
-26 Double Edge	-->	Flare Blitz (1/3 Recoil)	
-36 Mist		-->	WillOWisp			
-60 Meditate	-->	Bug Buzz (10%SpDef)		
-74 Focus Energy	-->	Zen Headbutt (20%Flc)		
-84 Constrict	-->	Leaf Blade (Crit)		
-86 Kinesis	-->	Air Slash (30%Flc)		
-8C Barrage	-->	Cross Poison (Crit)(10%Psn)	
-9A Fury Swipes	-->	Shadow Claw (Crit)		
-B2 Cotton Spore	-->	Dragon Pulse			
-C1 Foresight	-->	Ice Shard (Priority)
-E6 Sweet Scent	-->	Flash Cannon (10%SpDef)
-FB Beat Up	-->	Energy Ball (10%SpDef)
-   Skull Bash	-->	Aerial Ace (NoMiss)
+Doubleslap	-->	Dark Pulse (20% Flc)		
+Razor Wind	-->	Nasty Plot (2xSpAtkUp)		
+Fury Attack	-->	Earth Power (10%SpDef)		
+Take Down	-->	Brave Bird (1/3 Recoil)		
+Double Edge	-->	Flare Blitz (1/3 Recoil)	
+Mist		-->	WillOWisp			
+Meditate	-->	Bug Buzz (10%SpDef)		
+Focus Energy	-->	Zen Headbutt (20%Flc)		
+Constrict	-->	Leaf Blade (Crit)		
+Kinesis		-->	Air Slash (30%Flc)		
+Barrage		-->	Cross Poison (Crit)(10%Psn)	
+Fury Swipes	-->	Shadow Claw (Crit)		
+Cotton Spore	-->	Dragon Pulse			
+Foresight	-->	Ice Shard (Priority)
+Sweet Scent	-->	Flash Cannon (10%SpDef)
+Beat Up		-->	Energy Ball (10%SpDef)
+Skull Bash	-->	Aerial Ace (NoMiss)
 Waterfall 20% Flinch Chance
 Tackle 100% Accuracy
 Fly 100% Accuracy
@@ -87,6 +87,11 @@ Increased ExtremeSpeed PP from 5 to 10
 Increased Anicientpower PP from 5 to 10
 Moves Updated to Gen VII (Not Leech Life)
 Growth Raises both Attack and Sp Attack
+
+
+TM Changes
+-----------
+TM 13	Snore		-->	Energy Ball
 
 
 Evolution Changes
@@ -132,7 +137,6 @@ Game Corner Changes
 
 ToDo List
 -----------
--Add Rock Polish
 -Edit phoned rematches
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges
@@ -156,8 +160,9 @@ ToDo List
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 -Permanent Cut Trees
 -Hatchet to Cut Trees
--TMs Add: Energy Ball, Aerial Ace
--TMs Remove: Defense Curl
+-TMs Add: Aerial Ace
+-TMs Remove: Defense Curl, Sleep Talk
+-Adjust Moo Moo Farm TM Given
 
 
 Github Functions
