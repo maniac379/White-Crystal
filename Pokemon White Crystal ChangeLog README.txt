@@ -18,7 +18,7 @@ Minor Features
 --------------
 -New scripts to alert of certain changes
 -Elm's Aide provides rewards every so many caught Pokemon
--Changed 15 moves to help adjust for the physical/special split
+-Changed moves to help adjust for the physical/special split
 -Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Trade/Happiness evolutions changed to level-up/stone evolutions
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
@@ -37,10 +37,12 @@ Minor Features
 -Kurt Poke Balls work as intended
 -Base Stats Updated to Gen VII
 -Moves Updated to Gen VII
+-Player badge boost has been removed
 
 
 AI Improvements
 ----------------
+-No longer fails extra for status or stat affecting moves
 -No longer tries to burn fire types, paralyze electric types
 -No longer casts future sight if already active
 
@@ -149,7 +151,6 @@ ToDo List
 -E4 Rematch
 -Move Tutors
 -Move Reminder
--Enemy AI doesn't fail extra
 -Choice Items
 -Items of Potential
 -Abilities

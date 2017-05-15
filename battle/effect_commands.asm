@@ -5040,7 +5040,6 @@ BattleCommand_SleepTarget: ; 35e5c
 	jr nz, .dont_fail
 
 	call BattleRandom
-	cp $40 ; 25%
 	ret c
 
 .dont_fail

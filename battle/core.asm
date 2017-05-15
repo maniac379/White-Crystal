@@ -7101,34 +7101,7 @@ BadgeStatBoosts: ; 3ed45
 ; 3ed7c
 
 BoostStat: ; 3ed7c
-; Raise stat at hl by 1/8.
-
-	ld a, [hli]
-	ld d, a
-	ld e, [hl]
-	srl d
-	rr e
-	srl d
-	rr e
-	srl d
-	rr e
-	ld a, [hl]
-	add e
-	ld [hld], a
-	ld a, [hl]
-	adc d
-	ld [hli], a
-
-; Cap at 999.
-	ld a, [hld]
-	sub 999 % $100
-	ld a, [hl]
-	sbc 999 / $100
-	ret c
-	ld a, 999 / $100
-	ld [hli], a
-	ld a, 999 % $100
-	ld [hld], a
+; Removed badge boost
 	ret
 ; 3ed9f
 
