@@ -160,9 +160,22 @@ ToDo List
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 -Permanent Cut Trees
 -Hatchet to Cut Trees
--TMs Add: Aerial Ace
--TMs Remove: Defense Curl, Sleep Talk
+-TMs Add to Learnset: Quick Attack, Energy Ball
 -Adjust Moo Moo Farm TM Given
+-Is TM Psych Up Unobtainable?
+-Add Hail
+-TMs:
+	//Endure	->	AncientPower
+	//Icy Wind	->	Hail
+	//Sleep Talk	->	Zen Headbutt
+	//Roar		->	Twister
+	//Double Team	->	Substitute
+	//Rollout	->	False Swipe
+	//Defense Curl	->	Belly Drum
+-Add 51+ TMs: 	Earth Power, Dizzy Punch, Megahorn, Dark Pulse, Shadow Claw, Tri Attack
+		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
+-Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
+-Add Move Tutor (Counter): Counter, Mirror Coat
 
 
 Github Functions
