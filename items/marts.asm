@@ -72,7 +72,9 @@ Mart2: ; 160fa
 ; 16106
 
 Mart3: ; 16106
-	db 9 ; # items
+	db 15 ; # items
+	db POTION
+	db SUPER_POTION
 	db CHARCOAL
 	db HEAVY_BALL
 	db LEVEL_BALL
@@ -80,8 +82,12 @@ Mart3: ; 16106
 	db FAST_BALL
 	db FRIEND_BALL
 	db MOON_BALL
-	db POTION
-	db SUPER_POTION
+	db REPEAT_BALL
+	db TIMER_BALL
+	db QUICK_BALL
+	db DUSK_BALL
+	db NEST_BALL
+	db NET_BALL
 	db $ff
 ; 16111
 

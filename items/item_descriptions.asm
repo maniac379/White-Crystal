@@ -166,8 +166,8 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw TeruSama9Desc
-	dw TeruSama10Desc
+	dw NestBallDesc
+	dw NetBallDesc
 	dw TeruSama11Desc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
@@ -176,11 +176,11 @@ ItemDescriptions:
 	dw TeruSama13Desc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw TeruSama14Desc
+	dw RepeatBallDesc
 	dw LeftoversDesc
-	dw TeruSama15Desc
-	dw TeruSama16Desc
-	dw TeruSama17Desc
+	dw TimerBallDesc
+	dw QuickBallDesc
+	dw DuskBallDesc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
@@ -810,11 +810,13 @@ PassDesc:
 	db   "A ticket for the"
 	next "MAGNET TRAIN.@"
 
-TeruSama9Desc:
-	db   "?@"
+NestBallDesc:
+	db   "A Ball for weak-"
+	next "er #mon.@"
 
-TeruSama10Desc:
-	db   "?@"
+NetBallDesc:
+	db   "A Ball for Water"
+	next "or Bug #mon.@"
 
 TeruSama11Desc:
 	db   "?@"
@@ -845,21 +847,25 @@ DragonFangDesc:
 	db   "Powers up dragon-"
 	next "type moves. (HOLD)@"
 
-TeruSama14Desc:
-	db   "?@"
-
+RepeatBallDesc:
+	db   "A Ball for #mon"
+	next "caught before.@"
+ 
 LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-TeruSama15Desc:
-	db   "?@"
+TimerBallDesc:
+	db   "A Ball for late"
+	next "in a battle.@"
+ 
+QuickBallDesc:
+	db   "A Ball for early"
+	next "in a battle.@"
 
-TeruSama16Desc:
-	db   "?@"
-
-TeruSama17Desc:
-	db   "?@"
+DuskBallDesc:
+	db   "A Ball for night-"
+	next "time or caves.@"
 
 MysteryBerryDesc:
 	db   "A self-restore"

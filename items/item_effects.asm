@@ -148,8 +148,8 @@ ItemEffects: ; e73c
 	dw StarPiece
 	dw BasementKey
 	dw Pass
-	dw Item87
-	dw Item88
+	dw NestBall
+	dw NetBall
 	dw Item89
 	dw Charcoal
 	dw BerryJuice
@@ -158,11 +158,11 @@ ItemEffects: ; e73c
 	dw Item8E
 	dw MetalCoat
 	dw DragonFang
-	dw Item91
+	dw RepeatBall
 	dw Leftovers
-	dw Item93
-	dw Item94
-	dw Item95
+	dw TimerBall
+	dw QuickBall
+	dw DuskBall
 	dw Mysteryberry
 	dw DragonScale
 	dw BerserkGene
@@ -207,6 +207,12 @@ FastBall:
 FriendBall:
 MoonBall:
 LoveBall:
+RepeatBall:
+TimerBall:
+QuickBall:
+DuskBall:
+NestBall:
+NetBall:
 ParkBall: ; e8a2
 	ld a, [wBattleMode]
 	dec a
@@ -755,6 +761,12 @@ BallMultiplierFunctionTable:
 	dbw MOON_BALL,   MoonBallMultiplier
 	dbw LOVE_BALL,   LoveBallMultiplier
 	dbw PARK_BALL,   ParkBallMultiplier
+	dbw REPEAT_BALL, RepeatBallMultiplier
+	dbw TIMER_BALL,  TimerBallMultiplier
+	dbw QUICK_BALL,  QuickBallMultiplier
+	dbw DUSK_BALL,   DuskBallMultiplier
+	dbw NEST_BALL,   NestBallMultiplier
+	dbw NET_BALL,    NetBallMultiplier
 	db $ff
 
 UltraBallMultiplier:
@@ -1103,6 +1115,180 @@ LevelBallMultiplier:
 	ld b, $ff
 	ret
 
+RepeatBallMultiplier:
+; multiply catch rate by 3 if enemy mon is already in Pokédex
+	ld a, [TempEnemyMonSpecies]
+	dec a
+	call CheckCaughtMon
+	ret z
+
+	ld a, b
+	add a
+	jr c, .max
+
+	add b
+	jr nc, .done
+.max
+	ld a, $ff
+.done
+	ld b, a
+	ret
+
+TimerBallMultiplier:
+; multiply catch rate by 1 + (turns passed * 3) / 10, capped at 4
+	ld a, [PlayerTurnsTaken]
+	cp 10
+	jr nc, .nocap
+	ld a, 10
+.nocap
+	ld c, a
+	add c
+	add c
+
+	; hMultiplier = turns passed * 3
+	ld [hMultiplier], a
+
+	; hMultiplicand = catch rate
+	xor a
+	ld [hMultiplicand + 0], a
+	ld [hMultiplicand + 1], a
+	ld a, b
+	ld [hMultiplicand + 2], a
+
+	; hProduct = catch rate * (turns passed * 3)
+	call Multiply
+
+	; hDividend = hProduct = catch rate * (turns passed * 3)
+	ld hl, hDividend
+	ld a, [hProduct + 0]
+	ld [hli], a
+	ld a, [hProduct + 1]
+	ld [hli], a
+	ld a, [hProduct + 2]
+	ld [hli], a
+	ld a, [hProduct + 3]
+	ld [hl], a
+
+	; hDivisor = 10
+	ld a, 10
+	ld [hDivisor], a
+
+	; hQuotient = catch rate * (turns passed * 3) / 10
+	ld b, 4
+	call Divide
+
+	; b = hQuotient = catch rate * (turns passed * 3) / 10
+	ld a, [hQuotient + 2]
+	ld b, a
+
+	ret
+
+QuickBallMultiplier:
+; multiply catch rate by 5 on first turn
+	ld a, [PlayerTurnsTaken]
+	cp 1
+	ret z
+
+	ld a,b
+	
+	sla b
+	jr c, .max
+
+	add a
+	ret nc
+
+.max
+	ld b, $ff
+	ret
+
+DuskBallMultiplier:
+; multiply catch rate by 3.5 at night or in caves
+	ld a, [wPermission]
+	cp CAVE
+	jr z, .dusk
+
+	ld a, [TimeOfDay]
+	cp 1 << NITE
+	jr z, .dusk
+
+	ret
+
+.dusk
+	ld a, b
+	srl a
+	add b
+	add b
+	add b
+	ld b, a
+	ret nc
+	ld b, $ff
+	ret
+
+NestBallMultiplier:
+; multiply catch rate by (41 - enemy mon level) / 5, floored at 1
+	ld a, [EnemyMonLevel]
+	cp 30
+	ret nc
+
+	push bc
+	ld b, a
+	ld a, 41
+	sub b
+	pop bc
+
+	; hMultiplier = 41 - level
+	ld [hMultiplier], a
+
+	; hMultiplicand = catch rate
+	xor a
+	ld [hMultiplicand + 0], a
+	ld [hMultiplicand + 1], a
+	ld a, b
+	ld [hMultiplicand + 2], a
+
+	; hProduct = catch rate * (41 - level)
+	call Multiply
+
+	; hDivisor = 5
+	ld a, 5
+	ld [hDivisor], a
+
+	; hQuotient = catch rate * (41 - level) / 5
+	ld b, 4
+	call Divide
+
+	; b = hQuotient = catch rate * (41 - level) / 5
+	ld a, [hQuotient + 2]
+	ld b, a
+
+	ret
+
+NetBallMultiplier:
+; multiply catch rate by 3 if mon is water or bug type
+	ld a, [EnemyMonType1]
+	cp WATER
+	jr z, .ok
+	cp BUG
+	jr z, .ok
+	ld a, [EnemyMonType2]
+	cp WATER
+	jr z, .ok
+	cp BUG
+	ret nz
+
+.ok
+	ld a, b
+	add a
+	jr c, .max
+
+	add b
+	jr nc, .done
+.max
+	ld a, $ff
+.done
+	ld b, a
+	ret
+	
 ; These two texts were carried over from gen 1.
 ; They are not used in gen 2, and are dummied out.
 
@@ -2903,8 +3089,6 @@ LostItem:
 Stardust:
 StarPiece:
 Pass:
-Item87:
-Item88:
 Item89:
 Charcoal:
 ScopeLens:
@@ -2912,11 +3096,7 @@ Item8D:
 Item8E:
 MetalCoat:
 DragonFang:
-Item91:
 Leftovers:
-Item93:
-Item94:
-Item95:
 DragonScale:
 BerserkGene:
 Item99:

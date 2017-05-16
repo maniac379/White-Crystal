@@ -32,6 +32,7 @@ Minor Features
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
 -Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
+-Nest/Net/Quick/Dusk/Timer/Repeat Balls Added
 -Mahogony Mart sells Evolution Stones
 -Burn/Poison/Paralyze correctly improve catch rate
 -Kurt Poke Balls work as intended
@@ -144,12 +145,10 @@ ToDo List
 -Legendary birds appear after 16 Badges
 -Mandatory 'Set' battle style
 -All Goldenrod citizens are always visibile and interactive regardless of day
--Maximum 30 items and 16 Balls in your bag pocket
 -Birds cutscene
 -Increase Stat Boosting Held Items
 -Change title screen
 -E4 Rematch
--Move Tutors
 -Move Reminder
 -Choice Items
 -Items of Potential
@@ -177,6 +176,9 @@ ToDo List
 		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
 -Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
 -Add Move Tutor (Counter): Counter, Mirror Coat
+-Make Original Move Tutor Always Visible
+-Increase size of Ball Pocket
+-Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls
 
 
 Github Functions
