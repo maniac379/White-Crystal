@@ -178,7 +178,8 @@ ToDo List
 -Add Move Tutor (Counter): Counter, Mirror Coat
 -Make Original Move Tutor Always Visible
 -Increase size of Ball Pocket
--Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls
+-Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls or have Kurt's Daughter Make
+-Remake Viridian Forest
 
 
 Github Functions
