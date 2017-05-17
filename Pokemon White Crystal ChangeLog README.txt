@@ -25,6 +25,7 @@ Minor Features
 -Only Pokemon that flee will be the 3 Dogs
 -Game Corner Prizes Updated
 -In-Game Trades Updated
+-Certain TMs Updated
 -Extra berries from trees
 -TMs are Reusable
 -Heal from Poison at 1 HP in Overworld
@@ -96,8 +97,14 @@ Growth Raises both Attack and Sp Attack
 
 TM Changes
 -----------
+TM 05	Roar		-->	Twister
+TM 12	Sweet Scent	-->	Quick Attack
 TM 13	Snore		-->	Energy Ball
 TM 16	Icy Wind	-->	Hail
+TM 20	Endure		-->	AncientPower
+TM 32	Double Team	-->	Substitute
+TM 35	Sleep Talk	-->	Zen Headbutt
+TM 40	Defense Curl	->	Belly Drum
 
 
 Evolution Changes
@@ -141,45 +148,44 @@ Game Corner Changes
 -Celadon GC Prizes:Pikachu/Porygon/Mew
 
 
-ToDo List
------------
--Edit phoned rematches
+Version 1.0 ToDo List
+----------------------
+-FIX OVERWORLD POKEMON SPRITES
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
--Legendary birds appear after 16 Badges
+-Legendary birds appear after 16 Badges/Cut Scene
 -Mandatory 'Set' battle style
--All Goldenrod citizens are always visibile and interactive regardless of day
--Birds cutscene
--Change title screen
--E4 Rematch
--Move Reminder
--Choice Items
 -Items of Potential
--Abilities
--Edit Prof Oak PC to give items
--Secret Bases
--AutoChange Full PC Boxes
 -Create 1/3 Recoil effect
 -Change Hidden Items to a trade in item reward system/scav hunt w/ clue
 -Permanent Cut Trees
 -Hatchet to Cut Trees
--TMs Add to Learnset: Quick Attack, Energy Ball
+-Berry Pocket
 -Adjust Moo Moo Farm TM Given
 -Is TM Psych Up Unobtainable?
--TMs:
-	//Endure	->	AncientPower
-	//Sleep Talk	->	Zen Headbutt
-	//Roar		->	Twister
-	//Double Team	->	Substitute
-	//Rollout	->	False Swipe
-	//Defense Curl	->	Belly Drum
 -Add 51+ TMs: 	Earth Power, Dizzy Punch, Megahorn, Dark Pulse, Shadow Claw, Tri Attack
 		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
 -Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
 -Add Move Tutor (Counter): Counter, Mirror Coat
+-Add Move Tutor: Return, Frustration
 -Make Original Move Tutor Always Visible
 -Increase size of Ball Pocket
 -Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls or have Kurt's Daughter Make
--Remake Viridian Forest
+-Viridian Forest
+-Safari Zone
+-Adjust Growth Rates
+
+
+Wish List
+----------
+-Edit Phoned Rematches
+-E4 Rematch
+-Change title screen
+-Toggleable Abilities
+-Secret Bases
+-Edit Prof Oak PC to give items
+-AutoChange Full PC Boxes
+-Move Reminder
+-Choice Items
 
 
 Github Functions

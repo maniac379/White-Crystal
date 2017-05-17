@@ -101,18 +101,18 @@ Route32CooltrainerMStopsYou:
 	applymovement ROUTE32_COOLTRAINER_M, Movement_Route32CooltrainerMReset2
 	end
 
-Route32RoarTMGuyScript:
+Route32TwisterTMGuyScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM05_ROAR
-	iftrue .AlreadyHaveRoar
-	writetext Text_RoarIntro
+	checkevent EVENT_GOT_TM05_TWISTER
+	iftrue .AlreadyHaveTwister
+	writetext Text_TwisterIntro
 	buttonsound
-	verbosegiveitem TM_ROAR
+	verbosegiveitem TM_TWISTER
 	iffalse .Finish
-	setevent EVENT_GOT_TM05_ROAR
-.AlreadyHaveRoar:
-	writetext Text_RoarOutro
+	setevent EVENT_GOT_TM05_TWISTER
+.AlreadyHaveTwister:
+	writetext Text_TwisterOutro
 	waitbutton
 .Finish:
 	closetext
@@ -843,23 +843,23 @@ Route32UnusedText:
 	cont "bugging them…"
 	done
 
-Text_RoarIntro:
-	text "WROOOOAR!"
+Text_TwisterIntro:
+	text "WHOOSH!"
 	line "PEOPLE RUN WHEN I"
 
-	para "ROAR! BUT YOU"
+	para "SPIN! BUT YOU"
 	line "CAME LOOKING!"
 
 	para "THAT PLEASES ME!"
 	line "NOW TAKE THIS!"
 	done
 
-Text_RoarOutro:
-	text "WROOOAR!"
-	line "IT'S ROAR!"
+Text_TwisterOutro:
+	text "WHOOSH!"
+	line "IT'S TWISTER!"
 
-	para "EVEN #MON RUN"
-	line "FROM A GOOD ROAR!"
+	para "JUST LIKE THE"
+	line "DRAGONS USE!"
 	done
 
 MeetFriedaText:
@@ -965,6 +965,6 @@ Route32_MapEventHeader:
 	person_event SPRITE_YOUNGSTER, 82, 11, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 3, TrainerBird_keeperPeter, -1
 	person_event SPRITE_FISHER, 70, 7, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, SlowpokeTailSalesmanScript, EVENT_SLOWPOKE_WELL_ROCKETS
 	person_event SPRITE_POKE_BALL, 53, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route32GreatBall, EVENT_ROUTE_32_GREAT_BALL
-	person_event SPRITE_FISHER, 13, 15, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route32RoarTMGuyScript, -1
+	person_event SPRITE_FISHER, 13, 15, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route32TwisterTMGuyScript, -1
 	person_event SPRITE_LASS, 67, 12, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FriedaScript, EVENT_ROUTE_32_FRIEDA_OF_FRIDAY
 	person_event SPRITE_POKE_BALL, 30, 3, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route32Repel, EVENT_ROUTE_32_REPEL

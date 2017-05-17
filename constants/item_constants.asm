@@ -196,7 +196,7 @@
 	add_tm CURSE        ; $C1
 	add_tm ROLLOUT      ; $C2
 	const ITEM_C3       ; $C3
-	add_tm ROAR         ; $C4
+	add_tm TWISTER      ; $C4
 	add_tm TOXIC        ; $C5
 	add_tm ZAP_CANNON   ; $C6
 	add_tm ROCK_SMASH   ; $C7
@@ -211,7 +211,7 @@
 	add_tm PROTECT      ; $D0
 	add_tm RAIN_DANCE   ; $D1
 	add_tm GIGA_DRAIN   ; $D2
-	add_tm ENDURE       ; $D3
+	add_tm ANCIENTPOWER ; $D3
 	add_tm FRUSTRATION  ; $D4
 	add_tm SOLARBEAM    ; $D5
 	add_tm IRON_TAIL    ; $D6
@@ -224,15 +224,15 @@
 	add_tm PSYCHIC      ; $DD
 	add_tm SHADOW_BALL  ; $DE
 	add_tm MUD_SLAP     ; $DF
-	add_tm DOUBLE_TEAM  ; $E0
+	add_tm SUBSTITUTE   ; $E0
 	add_tm ICE_PUNCH    ; $E1
 	add_tm SWAGGER      ; $E2
-	add_tm SLEEP_TALK   ; $E3
+	add_tm ZEN_HEADBUTT ; $E3
 	add_tm SLUDGE_BOMB  ; $E4
 	add_tm SANDSTORM    ; $E5
 	add_tm FIRE_BLAST   ; $E6
 	add_tm SWIFT        ; $E7
-	add_tm DEFENSE_CURL ; $E8
+	add_tm BELLY_DRUM   ; $E8
 	add_tm THUNDERPUNCH ; $E9
 	add_tm DREAM_EATER  ; $EA
 	add_tm DETECT       ; $EB

@@ -28,20 +28,20 @@ CeladonPrizeRoom_tmcounterloop:
 	loadmenudata CeladonPrizeRoom_TMMenuDataHeader
 	verticalmenu
 	closewindow
-	if_equal $1, .doubleteam
+	if_equal $1, .substitute
 	if_equal $2, .psychic
 	if_equal $3, .hyperbeam
 	jump CeladonPrizeRoom_cancel
 
-.doubleteam
-	checkcoins 1500
+.substitute
+	checkcoins 2500
 	if_equal $2, CeladonPrizeRoom_notenoughcoins
-	itemtotext TM_DOUBLE_TEAM, $0
+	itemtotext TM_SUBSTITUTE, $0
 	scall CeladonPrizeRoom_askbuy
 	iffalse CeladonPrizeRoom_cancel
-	giveitem TM_DOUBLE_TEAM
+	giveitem TM_SUBSTITUTE
 	iffalse CeladonPrizeRoom_notenoughroom
-	takecoins 1500
+	takecoins 2500
 	jump CeladonPrizeRoom_purchased
 
 .psychic

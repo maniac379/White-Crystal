@@ -2369,7 +2369,7 @@ MarillEvosAttacks:
 	db 15, ROLLOUT
 	db 21, BUBBLEBEAM
 	db 28, BODY_SLAM
-	db 33, SWORDS_DANCE
+	db 33, BELLY_DRUM
 	db 36, RAIN_DANCE
 	db 40, WATERFALL
 	db 0 ; no more level-up moves
@@ -2382,7 +2382,7 @@ AzumarillEvosAttacks:
 	db 1, ROLLOUT
 	db 21, BUBBLEBEAM
 	db 28, BODY_SLAM
-	db 33, SWORDS_DANCE
+	db 33, BELLY_DRUM
 	db 36, RAIN_DANCE
 	db 40, WATERFALL
 	db 0 ; no more level-up moves
@@ -2494,6 +2494,7 @@ YanmaEvosAttacks:
 	db 24, WING_ATTACK
 	db 32, BUG_BUZZ
 	db 40, AIR_SLASH
+	db 46, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
 WooperEvosAttacks:
@@ -2648,6 +2649,7 @@ DunsparceEvosAttacks:
 	db 20, PURSUIT
 	db 30, PERISH_SONG
 	db 38, MEAN_LOOK
+	db 44, ANCIENTPOWER
 	db 0 ; no more level-up moves
 
 GligarEvosAttacks:
