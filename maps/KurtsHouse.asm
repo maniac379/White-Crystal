@@ -98,8 +98,6 @@ KurtScript_0x18e178:
 .NoGSBall:
 	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
 	iftrue .CheckApricorns
-	checkevent EVENT_DRAGON_SHRINE_QUESTION_2
-	iftrue .CheckApricorns
 	writetext UnknownText_0x18e6c9
 	waitbutton
 .CheckApricorns:
@@ -119,11 +117,6 @@ KurtScript_0x18e178:
 	iftrue .AskApricorn
 	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
 	iftrue .ThatTurnedOutGreat
-	checkevent EVENT_DRAGON_SHRINE_QUESTION_2
-	iftrue .IMakeBallsFromApricorns
-	closetext
-	end
-
 .IMakeBallsFromApricorns:
 	writetext UnknownText_0x18e6c9
 	waitbutton
@@ -350,6 +343,9 @@ KurtScript_ImCheckingItNow:
 
 KurtsGranddaughter1:
 	faceplayer
+	opentext
+	checkevent EVENT_KURT_GAVE_YOU_LURE_BALL
+	iftrue .DaughterBall
 	checkevent EVENT_GAVE_KURT_APRICORNS
 	iftrue KurtsGranddaughter2Subscript
 	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
@@ -362,11 +358,186 @@ KurtsGranddaughter1:
 	iftrue .SlowpokeBack
 	checkevent EVENT_AZALEA_TOWN_SLOWPOKETAIL_ROCKET
 	iftrue .Lonely
-	opentext
 	writetext KurtsGranddaughterSlowpokeGoneText
 	waitbutton
 	closetext
 	end
+
+.DaughterBall:	
+	checkevent EVENT_GAVE_KURT_APRICORNS
+	iftrue .WaitForApricorns
+	checkevent EVENT_GAVE_KURTDAUGHTER_RED_APRICORN
+	iftrue .GiveRepeatBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_BLU_APRICORN
+	iftrue .GiveNetBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_YLW_APRICORN
+	iftrue .GiveQuickBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_GRN_APRICORN
+	iftrue .GiveNestBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_WHT_APRICORN
+	iftrue .GiveTimerBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_BLK_APRICORN
+	iftrue .GiveDuskBall
+	checkevent EVENT_GAVE_KURTDAUGHTER_PNK_APRICORN
+	iftrue .GiveRepeatBall2
+	writetext KurtDaughterMakeBalls
+	waitbutton
+	checkitem RED_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem BLU_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem YLW_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem GRN_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem WHT_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem BLK_APRICORN
+	iftrue .DaughterAskApricorn
+	checkitem PNK_APRICORN
+	iftrue .DaughterAskApricorn
+	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
+	iftrue .DaughterThatTurnedOutGreat
+	writetext KurtDaughterMakeBalls
+	waitbutton
+	closetext
+	end
+
+.DaughterAskApricorn:
+	writetext KurtDaughterAskApricot
+	buttonsound
+	setevent EVENT_DRAGON_SHRINE_QUESTION_2
+	special Special_SelectApricornForKurt
+	if_equal $0, .Cancel
+	if_equal BLU_APRICORN, .Blu2
+	if_equal YLW_APRICORN, .Ylw2
+	if_equal GRN_APRICORN, .Grn2
+	if_equal WHT_APRICORN, .Wht2
+	if_equal BLK_APRICORN, .Blk2
+	if_equal PNK_APRICORN, .Pnk2
+; .Red
+	setevent EVENT_GAVE_KURTDAUGHTER_RED_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Blu2:
+	setevent EVENT_GAVE_KURTDAUGHTER_BLU_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Ylw2:
+	setevent EVENT_GAVE_KURTDAUGHTER_YLW_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Grn2:
+	setevent EVENT_GAVE_KURTDAUGHTER_GRN_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Wht2:
+	setevent EVENT_GAVE_KURTDAUGHTER_WHT_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Blk2:
+	setevent EVENT_GAVE_KURTDAUGHTER_BLK_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.Pnk2:
+	setevent EVENT_GAVE_KURTDAUGHTER_PNK_APRICORN
+	jump .GaveKurtDaughterApricorns
+
+.GaveKurtDaughterApricorns:
+	setevent EVENT_GAVE_KURT_APRICORNS
+	setflag ENGINE_KURT_MAKING_BALLS
+	
+.WaitForApricorns:
+	writetext UnknownText_0x18e779
+	waitbutton
+	closetext
+	end
+
+.Cancel:
+	writetext UnknownText_0x18e7bc
+	waitbutton
+	closetext
+	end
+
+
+._DaughterThatTurnedOutGreat:
+	setevent EVENT_RECEIVED_BALLS_FROM_KURT
+.DaughterThatTurnedOutGreat:
+	writetext UnknownText_0x18e82a
+	waitbutton
+.NoRoomForBall:
+	closetext
+	end	
+
+.GiveRepeatBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 REPEAT_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_RED_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveNetBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 NET_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_BLU_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveQuickBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 QUICK_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_YLW_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveNestBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 NEST_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_GRN_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveTimerBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 TIMER_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_WHT_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveDuskBall:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 DUSK_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_BLK_APRICORN
+	jump ._DaughterThatTurnedOutGreat
+
+.GiveRepeatBall2:
+	checkflag ENGINE_KURT_MAKING_BALLS
+	iftrue KurtMakingBallsScript
+	writetext UnknownText_0x18e7fb
+	buttonsound
+	verbosegiveitem2 REPEAT_BALL, VAR_KURT_APRICORNS
+	iffalse .NoRoomForBall
+	clearevent EVENT_GAVE_KURTDAUGHTER_PNK_APRICORN
+	jump ._DaughterThatTurnedOutGreat
 
 .SlowpokeBack:
 	opentext
@@ -495,7 +666,7 @@ UnknownText_0x18e473:
 	done
 
 UnknownText_0x18e615:
-	text "KURT: Hi, <PLAYER>!"
+	text "Hi, <PLAYER>!"
 
 	para "You handled your-"
 	line "self like a real"
@@ -514,8 +685,8 @@ UnknownText_0x18e615:
 	done
 
 UnknownText_0x18e6c9:
-	text "KURT: I make BALLS"
-	line "from APRICORNS."
+	text "I make BALLS from"
+	line "APRICORNS."
 
 	para "Collect them from"
 	line "trees and bring"
@@ -525,40 +696,60 @@ UnknownText_0x18e6c9:
 	line "out of them."
 	done
 
+KurtDaughterMakeBalls:
+	text "I've learned so"
+	line "much from grandpa"
+	cont "about crafting!"
+	
+	para "I have some of my"
+	line "own ideas for new"
+	cont "Balls."
+	
+	para "If you give me the"
+	line "APRICORNS, I can"
+	cont "convince grandpa"
+	cont "to make them!"
+	done
+	
 UnknownText_0x18e736:
-	text "KURT: You have an"
+	text "You have an"
 	line "APRICORN for me?"
 
 	para "Fine! I'll turn it"
 	line "into a BALL."
 	done
 
+KurtDaughterAskApricot:
+	text "Did you bring me"
+	line "an APRICORN?"
+	done
+	
 UnknownText_0x18e779:
-	text "KURT: It'll take a"
-	line "day to make you a"
+	text "It'll take a day to"
+	line "make you a BALL."
 
-	para "BALL. Come back"
-	line "for it later."
+	para "Come back for it"
+	line "tomorrow."
 	done
 
 UnknownText_0x18e7bc:
-	text "KURT: Oh…"
+	text "Oh…"
 	line "That's a letdown."
 	done
 
 UnknownText_0x18e7d8:
-	text "KURT: I'm working!"
+	text "I'm working!"
 	line "Don't bother me!"
 	done
 
 UnknownText_0x18e7fb:
-	text "KURT: Ah, <PLAYER>!"
+	text "Ah, <PLAYER>!"
 	line "I just finished"
 	cont "your BALL. Here!"
 	done
 
 UnknownText_0x18e82a:
-	text "KURT: That turned"
+	text "That turned"
 	line "out great."
 
 	para "Try catching"
@@ -566,7 +757,7 @@ UnknownText_0x18e82a:
 	done
 
 UnknownText_0x18e863:
-	text "KURT: Now that my"
+	text "Now that my"
 	line "granddaughter is"
 
 	para "helping me, I can"

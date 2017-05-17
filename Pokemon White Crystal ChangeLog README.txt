@@ -33,7 +33,7 @@ Minor Features
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
 -Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
--Nest/Net/Quick/Dusk/Timer/Repeat Balls Added
+-Nest/Net/Quick/Dusk/Timer/Repeat Balls Added to Azalea Store and Crafted by Kurt's Granddaughter
 -Mahogony Mart sells Evolution Stones
 -Burn/Poison/Paralyze correctly improve catch rate
 -Kurt Poke Balls work as intended
@@ -168,10 +168,10 @@ Version 1.0 ToDo List
 -Add Move Tutor (Counter): Counter, Mirror Coat
 -Add Move Tutor: Return, Frustration
 -Increase size of Ball Pocket
--Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls or have Kurt's Daughter Make
 -Viridian Forest
 -Safari Zone
 -Adjust Growth Rates
+-Check Celebi Event Unlocks Correctly
 
 
 Wish List

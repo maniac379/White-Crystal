@@ -681,7 +681,7 @@ AideScript_Check50Caught:
 
 .AideScript_Give50Reward
 	setevent EVENT_50_CAUGHT_REWARD
-	setevent EVENT_GOT_GS_BALL_FROM_POKECOM_CENTER
+	setevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	writetext AideText_50Reward
 	waitbutton
 	giveitem GS_BALL, 1
