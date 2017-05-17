@@ -195,7 +195,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_IceShard
 	dw BattleAnim_DestinyBond
 	dw BattleAnim_PerishSong
-	dw BattleAnim_IcyWind
+	dw BattleAnim_Hail
 	dw BattleAnim_Detect
 	dw BattleAnim_BoneRush
 	dw BattleAnim_LockOn
@@ -268,6 +268,7 @@ BattleAnimations:: ; c906f
 	dw BattleAnim_Par
 	dw BattleAnim_InLove
 	dw BattleAnim_InSandstorm
+	dw BattleAnim_InHail
 	dw BattleAnim_InNightmare
 	dw BattleAnim_InWhirlpool
 	dw BattleAnim_Miss
@@ -599,6 +600,25 @@ BattleAnim_InSandstorm: ; c9533
 	anim_wait 8
 	anim_ret
 ; c9550
+
+; Hail animation from Pokémon Prism
+BattleAnim_InHail:
+	anim_1gfx ANIM_GFX_POWDER
+	anim_bgeffect ANIM_BG_06, $0, $2, $0
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_obj ANIM_OBJ_HAIL, 11, 0,  0, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL,  9, 0,  0, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL,  7, 0,  0, 0, $2
+.loop
+	anim_sound 0, 1, SFX_SHINE
+	anim_wait 4
+	anim_sound 0, 0, SFX_SHINE
+	anim_wait 4
+	anim_loop 8, .loop
+	anim_wait 8
+	anim_ret
 
 BattleAnim_InNightmare: ; c9550
 	anim_1gfx ANIM_GFX_ANGELS
@@ -3832,31 +3852,23 @@ BattleAnim_PerishSong: ; cb113
 	anim_ret
 ; cb14c
 
-BattleAnim_IcyWind: ; cb14c
-	anim_1gfx ANIM_GFX_SPEED
+; Hail animation from Pokémon Prism
+BattleAnim_Hail:
+	anim_1gfx ANIM_GFX_POWDER
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
-	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
-	anim_playerheadobj
-	anim_sound 0, 0, SFX_PSYCHIC
+	anim_bgeffect ANIM_BG_WHITE_HUES, $0, $8, $0
+	anim_obj ANIM_OBJ_HAIL, 11, 0,  0, 0, $0
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL,  9, 0,  0, 0, $1
+	anim_wait 8
+	anim_obj ANIM_OBJ_HAIL,  7, 0,  0, 0, $2
 .loop
-	anim_wait 8
-	anim_obj ANIM_OBJ_AE,   8, 0,  11, 0, $4
-	anim_wait 8
-	anim_obj ANIM_OBJ_AE,   8, 0,  10, 0, $4
-	anim_wait 8
-	anim_obj ANIM_OBJ_AE,   8, 0,  12, 0, $4
-	anim_wait 8
-	anim_loop 2, .loop
-	anim_wait 16
-	anim_bgeffect ANIM_BG_HEAD_FOLLOW, $0, $1, $0
-	anim_wait 6
-	anim_bgeffect ANIM_BG_NIGHT_SHADE, $0, $0, $8
-	anim_wait 64
-	anim_incbgeffect ANIM_BG_NIGHT_SHADE
-	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_sound 0, 1, SFX_SHINE
 	anim_wait 4
-	anim_incobj  7
-	anim_wait 1
+	anim_sound 0, 0, SFX_SHINE
+	anim_wait 4
+	anim_loop 16, .loop
+	anim_wait 8
 	anim_ret
 ; cb18c
 

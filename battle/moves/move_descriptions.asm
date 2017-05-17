@@ -194,7 +194,7 @@
 	dw IceShardDescription
 	dw DestinyBondDescription
 	dw PerishSongDescription
-	dw IcyWindDescription
+	dw HailDescription
 	dw DetectDescription
 	dw BoneRushDescription
 	dw LockOnDescription
@@ -1044,10 +1044,6 @@ PerishSongDescription:
 	db   "Both user and foe"
 	next "faint in 3 turns.@"
 
-IcyWindDescription:
-	db   "An icy attack that"
-	next "lowers SPEED.@"
-
 DetectDescription:
 	db   "Evades attack that"
 	next "turn. It may fail.@"
@@ -1065,6 +1061,7 @@ OutrageDescription:
 	next "and confuses user.@"
 
 SandstormDescription:
+HailDescription:
 	db   "Inflicts damage"
 	next "every turn.@"
 

@@ -90,6 +90,7 @@ BattleCommandPointers: ; 3fd28
 	dw BattleCommand_Foresight ; 376a0
 	dw BattleCommand_PerishSong ; 376c2
 	dw BattleCommand_StartSandstorm ; 376f8
+	dw BattleCommand_StartHail
 	dw BattleCommand_Endure ; 3766f
 	dw BattleCommand_CheckCurl ; 37718
 	dw BattleCommand_RolloutPower ; 37734

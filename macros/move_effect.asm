@@ -94,6 +94,7 @@ endm
 	command foresight               ; 57
 	command perishsong              ; 58
 	command startsandstorm          ; 59
+	command starthail
 	command endure                  ; 5a
 	command checkcurl               ; 5b
 	command rolloutpower            ; 5c

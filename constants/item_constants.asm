@@ -207,7 +207,7 @@
 	add_tm ENERGY_BALL  ; $CC
 	add_tm BLIZZARD     ; $CD
 	add_tm HYPER_BEAM   ; $CE
-	add_tm ICY_WIND     ; $CF
+	add_tm HAIL         ; $CF
 	add_tm PROTECT      ; $D0
 	add_tm RAIN_DANCE   ; $D1
 	add_tm GIGA_DRAIN   ; $D2

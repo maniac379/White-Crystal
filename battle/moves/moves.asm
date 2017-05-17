@@ -208,7 +208,7 @@ ENDM
  	move ICE_SHARD,    EFFECT_PRIORITY_HIT,       40, ICE,      100, 30,   0, PHYSICAL
  	move DESTINY_BOND, EFFECT_DESTINY_BOND,        0, GHOST,    100,  5,   0, STATUS
  	move PERISH_SONG,  EFFECT_PERISH_SONG,         0, NORMAL,   100,  5,   0, STATUS
- 	move ICY_WIND,     EFFECT_SPEED_DOWN_HIT,     55, ICE,       95, 15, 100, SPECIAL
+ 	move HAIL,	       EFFECT_HAIL,                0, ICE,      100, 10,   0, STATUS
  	move DETECT,       EFFECT_PROTECT,             0, FIGHTING, 100,  5,   0, STATUS
  	move BONE_RUSH,    EFFECT_MULTI_HIT,          25, GROUND,    90, 10,   0, PHYSICAL
  	move LOCK_ON,      EFFECT_LOCK_ON,             0, NORMAL,   100,  5,   0, STATUS

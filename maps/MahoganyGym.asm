@@ -35,7 +35,7 @@ PryceScript_0x199a9e:
 	checkcode VAR_BADGES
 	scall MahoganyGymTriggerRockets
 .FightDone:
-	checkevent EVENT_GOT_TM16_ICY_WIND
+	checkevent EVENT_GOT_TM16_HAIL
 	iftrue UnknownScript_0x199af0
 	setevent EVENT_BEAT_SKIER_ROXANNE
 	setevent EVENT_BEAT_SKIER_CLARISSA
@@ -44,9 +44,9 @@ PryceScript_0x199a9e:
 	setevent EVENT_BEAT_BOARDER_DOUGLAS
 	writetext UnknownText_0x199d55
 	buttonsound
-	verbosegiveitem TM_ICY_WIND
+	verbosegiveitem TM_HAIL
 	iffalse UnknownScript_0x199af4
-	setevent EVENT_GOT_TM16_ICY_WIND
+	setevent EVENT_GOT_TM16_HAIL
 	writetext UnknownText_0x199def
 	waitbutton
 	closetext
@@ -215,10 +215,10 @@ UnknownText_0x199d55:
 
 UnknownText_0x199def:
 	text "That TM contains"
-	line "ICY WIND."
+	line "HAIL."
 
 	para "It inflicts damage"
-	line "and lowers speed."
+	line "over time."
 
 	para "It demonstrates"
 	line "the harshness of"

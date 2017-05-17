@@ -1130,7 +1130,7 @@ SeelEvosAttacks:
 	db 25, ICE_SHARD
 	db 33, SURF
 	db 38, ICE_BEAM
-	db 46, AMNESIA
+	db 46, HAIL
 	db 0 ; no more level-up moves
 
 DewgongEvosAttacks:
@@ -1140,7 +1140,7 @@ DewgongEvosAttacks:
 	db 1, ICE_SHARD
 	db 1, SURF
 	db 38, ICE_BEAM
-	db 46, AMNESIA
+	db 46, HAIL
 	db 0 ; no more level-up moves
 
 GrimerEvosAttacks:
@@ -2762,7 +2762,7 @@ SneaselEvosAttacks:
 	db 1, SCRATCH
 	db 1, LEER
 	db 7, QUICK_ATTACK
-	db 11, ICY_WIND
+	db 11, POWDER_SNOW
 	db 18, AGILITY
 	db 23, FAINT_ATTACK
 	db 29, ICE_SHARD

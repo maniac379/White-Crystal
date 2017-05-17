@@ -1257,22 +1257,6 @@ AI_Smart_SpeedDownHit: ; 38b40
 ; Enemy's HP is higher than 25%.
 ; It's the first turn of player's Pokemon.
 ; Player is faster than enemy.
-
-	ld a, [wEnemyMoveStruct + MOVE_ANIM]
-	cp ICY_WIND
-	ret nz
-	call AICheckEnemyQuarterHP
-	ret nc
-	ld a, [PlayerTurnsTaken]
-	and a
-	ret nz
-	call AICompareSpeed
-	ret c
-	call Random
-	cp 30
-	ret c
-	dec [hl]
-	dec [hl]
 	ret
 ; 38b5c
 

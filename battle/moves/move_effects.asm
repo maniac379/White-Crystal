@@ -676,7 +676,6 @@ DefenseDownHit:
 Bubblebeam:
 Constrict:
 Bubble:
-IcyWind:
 SpeedDownHit:
 	checkobedience
 	usedmovetext
@@ -1725,6 +1724,13 @@ Sandstorm:
 	startsandstorm
 	endmove
 
+Hail:
+	checkobedience
+	usedmovetext
+	doturn
+	starthail
+	endmove
+ 
 Endure:
 	checkobedience
 	usedmovetext

@@ -193,7 +193,7 @@
 	db "ICE SHARD@"
 	db "DESTINY BOND@"
 	db "PERISH SONG@"
-	db "ICY WIND@"
+	db "HAIL@"
 	db "DETECT@"
 	db "BONE RUSH@"
 	db "LOCK-ON@"

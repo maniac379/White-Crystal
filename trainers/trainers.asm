@@ -152,18 +152,18 @@ PryceGroup:
 	db 1 ; moves
 
 	; party
+	
+	db 32, DEWGONG
+		db HAIL
+		db ICE_BEAM
+		db SURF
+		db REST
 
 	db 32, JYNX
 		db PSYCHIC_M
 		db ICE_BEAM
 		db HYPNOSIS
 		db DESTINY_BOND
-
-	db 32, DEWGONG
-		db ICE_SHARD
-		db ICE_BEAM
-		db SURF
-		db REST
 
 	db 35, PILOSWINE
 		db ICE_BEAM
