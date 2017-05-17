@@ -36,22 +36,19 @@ GoldenrodCity_MapScriptHeader:
 	return
 
 .MoveTutor:
-	checkevent EVENT_BEAT_ELITE_FOUR
+	checkevent EVENT_BEAT_PRYCE
 	iffalse .MoveTutorDone
 	checkitem COIN_CASE
 	iffalse .MoveTutorDisappear
-	checkcode VAR_WEEKDAY
-	if_equal WEDNESDAY, .MoveTutorAppear
-	if_equal SATURDAY, .MoveTutorAppear
-.MoveTutorDisappear:
-	disappear GOLDENRODCITY_POKEFAN_M2
-	return
-
-.MoveTutorAppear:
 	checkflag ENGINE_DAILY_MOVE_TUTOR
 	iftrue .MoveTutorDone
 	appear GOLDENRODCITY_POKEFAN_M2
+	
 .MoveTutorDone:
+	return
+	
+.MoveTutorDisappear:
+	disappear GOLDENRODCITY_POKEFAN_M2
 	return
 
 MoveTutor:
@@ -76,21 +73,21 @@ MoveTutor:
 	jump .Incompatible
 
 .Flamethrower:
-	writebyte $1
+	writebyte FLAMETHROWER
 	writetext UnknownText_0x1991cf
 	special Special_MoveTutor
 	if_equal $0, .TeachMove
 	jump .Incompatible
 
 .Thunderbolt:
-	writebyte $2
+	writebyte THUNDERBOLT
 	writetext UnknownText_0x1991cf
 	special Special_MoveTutor
 	if_equal $0, .TeachMove
 	jump .Incompatible
 
 .IceBeam:
-	writebyte $3
+	writebyte ICE_BEAM
 	writetext UnknownText_0x1991cf
 	special Special_MoveTutor
 	if_equal $0, .TeachMove

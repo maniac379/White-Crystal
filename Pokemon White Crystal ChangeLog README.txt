@@ -167,7 +167,6 @@ Version 1.0 ToDo List
 -Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
 -Add Move Tutor (Counter): Counter, Mirror Coat
 -Add Move Tutor: Return, Frustration
--Make Original Move Tutor Always Visible
 -Increase size of Ball Pocket
 -Add 6 Apricots to get Nest, Net, Quick, Dusk, Repeat, and Timer Balls or have Kurt's Daughter Make
 -Viridian Forest
