@@ -39,6 +39,7 @@ Minor Features
 -Base Stats Updated to Gen VII
 -Moves Updated to Gen VII
 -Player badge boost has been removed
+-Stat Boosting Held Items Increase Damage by 20%
 
 
 AI Improvements
@@ -81,6 +82,7 @@ Foresight	-->	Ice Shard (Priority)
 Sweet Scent	-->	Flash Cannon (10%SpDef)
 Beat Up		-->	Energy Ball (10%SpDef)
 Skull Bash	-->	Aerial Ace (NoMiss)
+Icy Wind	-->	Hail
 Waterfall 20% Flinch Chance
 Tackle 100% Accuracy
 Fly 100% Accuracy
@@ -95,6 +97,7 @@ Growth Raises both Attack and Sp Attack
 TM Changes
 -----------
 TM 13	Snore		-->	Energy Ball
+TM 16	Icy Wind	-->	Hail
 
 
 Evolution Changes
@@ -146,7 +149,6 @@ ToDo List
 -Mandatory 'Set' battle style
 -All Goldenrod citizens are always visibile and interactive regardless of day
 -Birds cutscene
--Increase Stat Boosting Held Items
 -Change title screen
 -E4 Rematch
 -Move Reminder
@@ -163,10 +165,8 @@ ToDo List
 -TMs Add to Learnset: Quick Attack, Energy Ball
 -Adjust Moo Moo Farm TM Given
 -Is TM Psych Up Unobtainable?
--Add Hail
 -TMs:
 	//Endure	->	AncientPower
-	//Icy Wind	->	Hail
 	//Sleep Talk	->	Zen Headbutt
 	//Roar		->	Twister
 	//Double Team	->	Substitute
