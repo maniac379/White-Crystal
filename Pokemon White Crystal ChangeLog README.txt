@@ -104,7 +104,7 @@ TM 16	Icy Wind	-->	Hail
 TM 20	Endure		-->	AncientPower
 TM 32	Double Team	-->	Substitute
 TM 35	Sleep Talk	-->	Zen Headbutt
-TM 40	Defense Curl	->	Belly Drum
+TM 40	Defense Curl	-->	Belly Drum
 
 
 Evolution Changes
@@ -154,19 +154,11 @@ Version 1.0 ToDo List
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges/Cut Scene
 -Mandatory 'Set' battle style
--Items of Potential
 -Create 1/3 Recoil effect
--Change Hidden Items to a trade in item reward system/scav hunt w/ clue
--Permanent Cut Trees
--Hatchet to Cut Trees
+-Change Hidden Items to a trade in item reward system/fossils for random Pokemon
 -Berry Pocket
 -Adjust Moo Moo Farm TM Given
 -Is TM Psych Up Unobtainable?
--Add 51+ TMs: 	Earth Power, Dizzy Punch, Megahorn, Dark Pulse, Shadow Claw, Tri Attack
-		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
--Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
--Add Move Tutor (Counter): Counter, Mirror Coat
--Add Move Tutor: Return, Frustration
 -Increase size of Ball Pocket
 -Viridian Forest
 -Safari Zone
@@ -176,6 +168,11 @@ Version 1.0 ToDo List
 
 Wish List
 ----------
+-Add 51+ TMs: 	Earth Power, Dizzy Punch, Megahorn, Dark Pulse, Shadow Claw, Tri Attack
+		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
+-Add Move Tutor (KO): Fissure, Guillotine, Horn Drill
+-Add Move Tutor (Counter): Counter, Mirror Coat
+-Add Move Tutor: Return, Frustration
 -Edit Phoned Rematches
 -E4 Rematch
 -Change title screen
@@ -185,6 +182,9 @@ Wish List
 -AutoChange Full PC Boxes
 -Move Reminder
 -Choice Items
+-Permanent Cut Trees
+-Hatchet to Cut Trees
+-Items of Potential
 
 
 Github Functions
