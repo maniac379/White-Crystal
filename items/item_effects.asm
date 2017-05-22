@@ -38,7 +38,7 @@ ItemEffects: ; e73c
 	dw FireStone
 	dw Thunderstone
 	dw WaterStone
-	dw Item19
+	dw Fossil
 	dw HPUp
 	dw Protein
 	dw Iron
@@ -3028,7 +3028,7 @@ OpenBox: ; f769
 ; 0xf77d
 
 Brightpowder:
-Item19:
+Fossil:
 LuckyPunch:
 MetalPowder:
 Nugget:
