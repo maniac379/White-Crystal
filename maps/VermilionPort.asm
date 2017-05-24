@@ -198,8 +198,8 @@ SuperNerdScript_0x74ee6:
 	closetext
 	end
 
-VermilionPortHiddenIron:
-	dwb EVENT_VERMILION_PORT_HIDDEN_IRON, IRON
+VermilionPortHiddenFossil:
+	dwb EVENT_VERMILION_PORT_HIDDEN_FOSSIL, FOSSIL
 
 
 MovementData_0x74ef1:
@@ -318,7 +318,7 @@ VermilionPort_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 13, 16, SIGNPOST_ITEM, VermilionPortHiddenIron
+	signpost 13, 16, SIGNPOST_ITEM, VermilionPortHiddenFossil
 
 .PersonEvents:
 	db 3

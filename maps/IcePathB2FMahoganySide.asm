@@ -22,8 +22,8 @@ IcePathB2FMahoganySideFullHeal:
 IcePathB2FMahoganySideMaxPotion:
 	itemball MAX_POTION
 
-IcePathB2FMahoganySideHiddenCarbos:
-	dwb EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_HIDDEN_CARBOS, CARBOS
+IcePathB2FMahoganySideHiddenFossil:
+	dwb EVENT_ICE_PATH_B2F_MAHOGANY_SIDE_HIDDEN_FOSSIL, FOSSIL
 
 
 UnknownText_0x7e5ad:
@@ -49,7 +49,7 @@ IcePathB2FMahoganySide_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 17, 0, SIGNPOST_ITEM, IcePathB2FMahoganySideHiddenCarbos
+	signpost 17, 0, SIGNPOST_ITEM, IcePathB2FMahoganySideHiddenFossil
 
 .PersonEvents:
 	db 6

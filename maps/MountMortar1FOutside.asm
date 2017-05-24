@@ -15,8 +15,8 @@ MountMortar1FOutsideEther:
 MountMortar1FOutsideRevive:
 	itemball REVIVE
 
-MountMortar1FOutsideHiddenHyperPotion:
-	dwb EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_HYPER_POTION, HYPER_POTION
+MountMortar1FOutsideHiddenFossil:
+	dwb EVENT_MOUNT_MORTAR_1F_OUTSIDE_HIDDEN_FOSSIL, FOSSIL
 
 
 MountMortar1FOutside_MapEventHeader:
@@ -40,7 +40,7 @@ MountMortar1FOutside_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 22, 25, SIGNPOST_ITEM, MountMortar1FOutsideHiddenHyperPotion
+	signpost 22, 25, SIGNPOST_ITEM, MountMortar1FOutsideHiddenFossil
 
 .PersonEvents:
 	db 2

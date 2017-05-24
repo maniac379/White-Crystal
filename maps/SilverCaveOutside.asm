@@ -18,8 +18,8 @@ MtSilverPokeCenterSign:
 MtSilverSign:
 	jumptext MtSilverSignText
 
-SilverCaveOutsideHiddenFullRestore:
-	dwb EVENT_SILVER_CAVE_OUTSIDE_HIDDEN_FULL_RESTORE, FULL_RESTORE
+SilverCaveOutsideHiddenFossil:
+	dwb EVENT_SILVER_CAVE_OUTSIDE_HIDDEN_FOSSIL, FOSSIL
 
 MtSilverSignText:
 	text "MT.SILVER"
@@ -41,7 +41,7 @@ SilverCaveOutside_MapEventHeader:
 	db 3
 	signpost 19, 24, SIGNPOST_READ, MtSilverPokeCenterSign
 	signpost 13, 17, SIGNPOST_READ, MtSilverSign
-	signpost 25, 9, SIGNPOST_ITEM, SilverCaveOutsideHiddenFullRestore
+	signpost 25, 9, SIGNPOST_ITEM, SilverCaveOutsideHiddenFossil
 
 .PersonEvents:
 	db 0

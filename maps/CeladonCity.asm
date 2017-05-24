@@ -76,8 +76,8 @@ CeladonCityTrainerTips:
 CeladonCityPokeCenterSign:
 	jumpstd pokecentersign
 
-CeladonCityHiddenPpUp:
-	dwb EVENT_CELADON_CITY_HIDDEN_PP_UP, PP_UP
+CeladonCityHiddenFossil:
+	dwb EVENT_CELADON_CITY_HIDDEN_FOSSIL, FOSSIL
 
 UnknownText_0x1a9f7d:
 	text "This POLIWRATH is"
@@ -264,7 +264,7 @@ CeladonCity_MapEventHeader:
 	signpost 21, 19, SIGNPOST_READ, CeladonCityGameCornerSign
 	signpost 21, 29, SIGNPOST_READ, CeladonCityTrainerTips
 	signpost 9, 30, SIGNPOST_READ, CeladonCityPokeCenterSign
-	signpost 21, 37, SIGNPOST_ITEM, CeladonCityHiddenPpUp
+	signpost 21, 37, SIGNPOST_ITEM, CeladonCityHiddenFossil
 
 .PersonEvents:
 	db 9

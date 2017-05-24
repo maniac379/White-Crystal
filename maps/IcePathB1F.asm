@@ -72,8 +72,8 @@ IcePathB1FBoulder:
 IcePathB1FIron:
 	itemball IRON
 
-IcePathB1FHiddenMaxPotion:
-	dwb EVENT_ICE_PATH_B1F_HIDDEN_MAX_POTION, MAX_POTION
+IcePathB1FHiddenFossil:
+	dwb EVENT_ICE_PATH_B1F_HIDDEN_FOSSIL, FOSSIL
 
 
 IcePathBoulderFellThroughText:
@@ -102,7 +102,7 @@ IcePathB1F_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 30, 17, SIGNPOST_ITEM, IcePathB1FHiddenMaxPotion
+	signpost 30, 17, SIGNPOST_ITEM, IcePathB1FHiddenFossil
 
 .PersonEvents:
 	db 5

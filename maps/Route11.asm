@@ -62,8 +62,8 @@ Route11Sign:
 FruitTreeScript_0x68055:
 	fruittree FRUITTREE_ROUTE_11
 
-Route11HiddenRevive:
-	dwb EVENT_ROUTE_11_HIDDEN_REVIVE, REVIVE
+Route11HiddenFossil:
+	dwb EVENT_ROUTE_11_HIDDEN_FOSSIL, FOSSIL
 
 
 YoungsterOwenSeenText:
@@ -159,7 +159,7 @@ Route11_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 7, 3, SIGNPOST_READ, Route11Sign
-	signpost 5, 32, SIGNPOST_ITEM, Route11HiddenRevive
+	signpost 5, 32, SIGNPOST_ITEM, Route11HiddenFossil
 
 .PersonEvents:
 	db 5

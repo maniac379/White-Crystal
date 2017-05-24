@@ -31,16 +31,16 @@ WhirlIslandB1FEscapeRope:
 WhirlIslandB1FBoulder:
 	jumpstd strengthboulder
 
-WhirlIslandB1FHiddenRareCandy:
-	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_RARE_CANDY, RARE_CANDY
+WhirlIslandB1FHiddenFossil:
+	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_FOSSIL, FOSSIL
 
 
-WhirlIslandB1FHiddenUltraBall:
-	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_ULTRA_BALL, ULTRA_BALL
+WhirlIslandB1FHiddenFossil1:
+	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_FOSSIL1, FOSSIL
 
 
-WhirlIslandB1FHiddenFullRestore:
-	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_FULL_RESTORE, FULL_RESTORE
+WhirlIslandB1FHiddenFossil2:
+	dwb EVENT_WHIRL_ISLAND_B1F_HIDDEN_FOSSIL2, FOSSIL
 
 
 WhirlIslandB1F_MapEventHeader:
@@ -64,9 +64,9 @@ WhirlIslandB1F_MapEventHeader:
 
 .Signposts:
 	db 3
-	signpost 4, 30, SIGNPOST_ITEM, WhirlIslandB1FHiddenRareCandy
-	signpost 18, 36, SIGNPOST_ITEM, WhirlIslandB1FHiddenUltraBall
-	signpost 23, 2, SIGNPOST_ITEM, WhirlIslandB1FHiddenFullRestore
+	signpost 4, 30, SIGNPOST_ITEM, WhirlIslandB1FHiddenFossil
+	signpost 18, 36, SIGNPOST_ITEM, WhirlIslandB1FHiddenFossil1
+	signpost 23, 2, SIGNPOST_ITEM, WhirlIslandB1FHiddenFossil2
 
 .PersonEvents:
 	db 6

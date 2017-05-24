@@ -69,8 +69,8 @@ Route12Calcium:
 Route12Nugget:
 	itemball NUGGET
 
-Route12HiddenElixer:
-	dwb EVENT_ROUTE_12_HIDDEN_ELIXER, ELIXER
+Route12HiddenFossil:
+	dwb EVENT_ROUTE_12_HIDDEN_FOSSIL, FOSSIL
 
 
 FisherMartinSeenText:
@@ -182,7 +182,7 @@ Route12_MapEventHeader:
 	db 3
 	signpost 27, 11, SIGNPOST_READ, Route12Sign
 	signpost 9, 13, SIGNPOST_READ, FishingSpotSign
-	signpost 13, 14, SIGNPOST_ITEM, Route12HiddenElixer
+	signpost 13, 14, SIGNPOST_ITEM, Route12HiddenFossil
 
 .PersonEvents:
 	db 6

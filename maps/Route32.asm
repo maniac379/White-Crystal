@@ -502,12 +502,12 @@ Route32UnionCaveSign:
 Route32PokeCenterSign:
 	jumpstd pokecentersign
 
-Route32HiddenGreatBall:
-	dwb EVENT_ROUTE_32_HIDDEN_GREAT_BALL, GREAT_BALL
+Route32HiddenFossil:
+	dwb EVENT_ROUTE_32_HIDDEN_FOSSIL, FOSSIL
 
 
-Route32HiddenSuperPotion:
-	dwb EVENT_ROUTE_32_HIDDEN_SUPER_POTION, SUPER_POTION
+Route32HiddenFossil1:
+	dwb EVENT_ROUTE_32_HIDDEN_FOSSIL1, FOSSIL
 
 
 Movement_Route32CooltrainerMPushesYouBackToViolet:
@@ -949,8 +949,8 @@ Route32_MapEventHeader:
 	signpost  1,  9, SIGNPOST_READ, Route32RuinsSign
 	signpost 84, 10, SIGNPOST_READ, Route32UnionCaveSign
 	signpost 73, 12, SIGNPOST_READ, Route32PokeCenterSign
-	signpost 67, 12, SIGNPOST_ITEM, Route32HiddenGreatBall
-	signpost 40, 11, SIGNPOST_ITEM, Route32HiddenSuperPotion
+	signpost 67, 12, SIGNPOST_ITEM, Route32HiddenFossil
+	signpost 40, 11, SIGNPOST_ITEM, Route32HiddenFossil1
 
 .PersonEvents:
 	db 14

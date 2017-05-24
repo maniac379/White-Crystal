@@ -11,8 +11,8 @@ DiglettsCave_MapScriptHeader:
 PokefanMScript_0x74002:
 	jumptextfaceplayer UnknownText_0x74008
 
-DiglettsCaveHiddenMaxRevive:
-	dwb EVENT_DIGLETTS_CAVE_HIDDEN_MAX_REVIVE, MAX_REVIVE
+DiglettsCaveHiddenFossil:
+	dwb EVENT_DIGLETTS_CAVE_HIDDEN_FOSSIL, FOSSIL
 
 
 UnknownText_0x74008:
@@ -41,7 +41,7 @@ DiglettsCave_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 11, 6, SIGNPOST_ITEM, DiglettsCaveHiddenMaxRevive
+	signpost 11, 6, SIGNPOST_ITEM, DiglettsCaveHiddenFossil
 
 .PersonEvents:
 	db 1

@@ -64,12 +64,12 @@ BikerGlennScript:
 	closetext
 	end
 
-Route17HiddenMaxEther:
-	dwb EVENT_ROUTE_17_HIDDEN_MAX_ETHER, MAX_ETHER
+Route17HiddenFossil:
+	dwb EVENT_ROUTE_17_HIDDEN_FOSSIL, FOSSIL
 
 
-Route17HiddenMaxElixer:
-	dwb EVENT_ROUTE_17_HIDDEN_MAX_ELIXER, MAX_ELIXER
+Route17HiddenFossil1:
+	dwb EVENT_ROUTE_17_HIDDEN_FOSSIL1, FOSSIL
 
 
 BikerRileySeenText:
@@ -151,8 +151,8 @@ Route17_MapEventHeader:
 
 .Signposts:
 	db 2
-	signpost 54, 9, SIGNPOST_ITEM, Route17HiddenMaxEther
-	signpost 77, 8, SIGNPOST_ITEM, Route17HiddenMaxElixer
+	signpost 54, 9, SIGNPOST_ITEM, Route17HiddenFossil
+	signpost 77, 8, SIGNPOST_ITEM, Route17HiddenFossil1
 
 .PersonEvents:
 	db 4

@@ -50,8 +50,8 @@ MtMoonSquareSign:
 Route4HPUp:
 	itemball HP_UP
 
-Route4HiddenUltraBall:
-	dwb EVENT_ROUTE_4_HIDDEN_ULTRA_BALL, ULTRA_BALL
+Route4HiddenFossil:
+	dwb EVENT_ROUTE_4_HIDDEN_FOSSIL, FOSSIL
 
 
 Bird_keeperHankSeenText:
@@ -135,7 +135,7 @@ Route4_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 7, 3, SIGNPOST_READ, MtMoonSquareSign
-	signpost 3, 10, SIGNPOST_ITEM, Route4HiddenUltraBall
+	signpost 3, 10, SIGNPOST_ITEM, Route4HiddenFossil
 
 .PersonEvents:
 	db 4

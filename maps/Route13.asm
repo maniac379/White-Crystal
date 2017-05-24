@@ -76,8 +76,8 @@ Route13Sign:
 Route13DirectionsSign:
 	jumptext Route13DirectionsSignText
 
-Route13HiddenCalcium:
-	dwb EVENT_ROUTE_13_HIDDEN_CALCIUM, CALCIUM
+Route13HiddenFossil:
+	dwb EVENT_ROUTE_13_HIDDEN_FOSSIL, FOSSIL
 
 
 PokefanmAlexSeenText:
@@ -207,7 +207,7 @@ Route13_MapEventHeader:
 	signpost 13, 29, SIGNPOST_READ, Route13TrainerTips
 	signpost 11, 41, SIGNPOST_READ, Route13Sign
 	signpost 13, 17, SIGNPOST_READ, Route13DirectionsSign
-	signpost 13, 30, SIGNPOST_ITEM, Route13HiddenCalcium
+	signpost 13, 30, SIGNPOST_ITEM, Route13HiddenFossil
 
 .PersonEvents:
 	db 5

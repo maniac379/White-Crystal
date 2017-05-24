@@ -99,8 +99,8 @@ VioletCityRareCandy:
 VioletCityFruitTreeScript:
 	fruittree FRUITTREE_VIOLET_CITY
 
-VioletCityHiddenHyperPotion:
-	dwb EVENT_VIOLET_CITY_HIDDEN_HYPER_POTION, HYPER_POTION
+VioletCityHiddenFossil:
+	dwb EVENT_VIOLET_CITY_HIDDEN_FOSSIL, FOSSIL
 
 VioletCityFollowEarl_MovementData:
 	big_step DOWN
@@ -307,7 +307,7 @@ VioletCity_MapEventHeader:
 	signpost 17, 27, SIGNPOST_READ, EarlsPokemonAcademySign
 	signpost 25, 32, SIGNPOST_READ, VioletCityPokeCenterSign
 	signpost 17, 10, SIGNPOST_READ, VioletCityMartSign
-	signpost 14, 37, SIGNPOST_ITEM, VioletCityHiddenHyperPotion
+	signpost 14, 37, SIGNPOST_ITEM, VioletCityHiddenFossil
 
 .PersonEvents:
 	db 8

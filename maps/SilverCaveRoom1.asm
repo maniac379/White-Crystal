@@ -23,12 +23,12 @@ SilverCaveRoom1EscapeRope:
 SilverCaveRoom1UltraBall:
 	itemball ULTRA_BALL
 
-SilverCaveRoom1HiddenDireHit:
-	dwb EVENT_SILVER_CAVE_ROOM_1_HIDDEN_DIRE_HIT, DIRE_HIT
+SilverCaveRoom1HiddenFossil:
+	dwb EVENT_SILVER_CAVE_ROOM_1_HIDDEN_FOSSIL, FOSSIL
 
 
-SilverCaveRoom1HiddenUltraBall:
-	dwb EVENT_SILVER_CAVE_ROOM_1_HIDDEN_ULTRA_BALL, ULTRA_BALL
+SilverCaveRoom1HiddenFossil1:
+	dwb EVENT_SILVER_CAVE_ROOM_1_HIDDEN_FOSSIL1, FOSSIL
 
 
 SilverCaveRoom1_MapEventHeader:
@@ -45,8 +45,8 @@ SilverCaveRoom1_MapEventHeader:
 
 .Signposts:
 	db 2
-	signpost 23, 16, SIGNPOST_ITEM, SilverCaveRoom1HiddenDireHit
-	signpost 12, 17, SIGNPOST_ITEM, SilverCaveRoom1HiddenUltraBall
+	signpost 23, 16, SIGNPOST_ITEM, SilverCaveRoom1HiddenFossil
+	signpost 12, 17, SIGNPOST_ITEM, SilverCaveRoom1HiddenFossil1
 
 .PersonEvents:
 	db 4

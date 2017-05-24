@@ -8,8 +8,8 @@ Route28_MapScriptHeader:
 Route28Sign:
 	jumptext Route28SignText
 
-Route28HiddenRareCandy:
-	dwb EVENT_ROUTE_28_HIDDEN_RARE_CANDY, RARE_CANDY
+Route28HiddenFossil:
+	dwb EVENT_ROUTE_28_HIDDEN_FOSSIL, FOSSIL
 
 
 Route28SignText:
@@ -31,7 +31,7 @@ Route28_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 5, 31, SIGNPOST_READ, Route28Sign
-	signpost 2, 25, SIGNPOST_ITEM, Route28HiddenRareCandy
+	signpost 2, 25, SIGNPOST_ITEM, Route28HiddenFossil
 
 .PersonEvents:
 	db 0

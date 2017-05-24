@@ -108,9 +108,9 @@ FruitTreeScript_0x1a8e0b:
 FruitTreeScript_0x1a8e0d:
 	fruittree FRUITTREE_ROUTE_37_3
 
-Route37HiddenEther:
-	dwb EVENT_ROUTE_37_HIDDEN_ETHER, ETHER
-
+Route37HiddenFossil:
+	dwb EVENT_ROUTE_37_HIDDEN_FOSSIL, FOSSIL
+	
 
 TwinsAnnandanne1SeenText:
 	text "ANN: ANNE and I"
@@ -246,7 +246,7 @@ Route37_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 3, 5, SIGNPOST_READ, Route37Sign
-	signpost 2, 4, SIGNPOST_ITEM, Route37HiddenEther
+	signpost 2, 4, SIGNPOST_ITEM, Route37HiddenFossil
 
 .PersonEvents:
 	db 7

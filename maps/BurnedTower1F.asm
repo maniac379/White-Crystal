@@ -135,12 +135,12 @@ BurnedTower1FMortyScript:
 BurnedTower1FRock:
 	jumpstd smashrock
 
-BurnedTower1FHiddenEther:
-	dwb EVENT_BURNED_TOWER_1F_HIDDEN_ETHER, ETHER
+BurnedTower1FHiddenFossil:
+	dwb EVENT_BURNED_TOWER_1F_HIDDEN_FOSSIL, FOSSIL
 
 
-BurnedTower1FHiddenUltraBall:
-	dwb EVENT_BURNED_TOWER_1F_HIDDEN_ULTRA_BALL, ULTRA_BALL
+BurnedTower1FHiddenFossil1:
+	dwb EVENT_BURNED_TOWER_1F_HIDDEN_FOSSIL1, FOSSIL
 
 
 BurnedTower1FHPUp:
@@ -311,8 +311,8 @@ BurnedTower1F_MapEventHeader:
 
 .Signposts:
 	db 2
-	signpost  7,  8, SIGNPOST_ITEM, BurnedTower1FHiddenEther
-	signpost 11, 13, SIGNPOST_ITEM, BurnedTower1FHiddenUltraBall
+	signpost  7,  8, SIGNPOST_ITEM, BurnedTower1FHiddenFossil
+	signpost 11, 13, SIGNPOST_ITEM, BurnedTower1FHiddenFossil1
 
 .PersonEvents:
 	db 5

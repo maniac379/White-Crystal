@@ -124,8 +124,8 @@ VermilionCityPokeCenterSign:
 VermilionCityMartSign:
 	jumpstd martsign
 
-VermilionCityHiddenFullHeal:
-	dwb EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL, FULL_HEAL
+VermilionCityHiddenFossil:
+	dwb EVENT_VERMILION_CITY_HIDDEN_FOSSIL, FOSSIL
 
 UnknownText_0x1aaa15:
 	text "VERMILION PORT is"
@@ -298,7 +298,7 @@ VermilionCity_MapEventHeader:
 	signpost 15, 27, SIGNPOST_READ, VermilionCityPortSign
 	signpost 5, 10, SIGNPOST_READ, VermilionCityPokeCenterSign
 	signpost 13, 22, SIGNPOST_READ, VermilionCityMartSign
-	signpost 19, 12, SIGNPOST_ITEM, VermilionCityHiddenFullHeal
+	signpost 19, 12, SIGNPOST_ITEM, VermilionCityHiddenFossil
 
 .PersonEvents:
 	db 6

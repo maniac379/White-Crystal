@@ -235,8 +235,8 @@ CooltrainerFScript_0x74a22:
 	spriteface OLIVINEPORT_COOLTRAINER_F, DOWN
 	end
 
-OlivinePortHiddenProtein:
-	dwb EVENT_OLIVINE_PORT_HIDDEN_PROTEIN, PROTEIN
+OlivinePortHiddenFossil:
+	dwb EVENT_OLIVINE_PORT_HIDDEN_FOSSIL, FOSSIL
 
 
 MovementData_0x74a30:
@@ -402,7 +402,7 @@ OlivinePort_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 22, 1, SIGNPOST_ITEM, OlivinePortHiddenProtein
+	signpost 22, 1, SIGNPOST_ITEM, OlivinePortHiddenFossil
 
 .PersonEvents:
 	db 7

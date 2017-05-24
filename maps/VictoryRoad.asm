@@ -113,12 +113,12 @@ VictoryRoadFullHeal:
 VictoryRoadHPUp:
 	itemball HP_UP
 
-VictoryRoadHiddenMaxPotion:
-	dwb EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION, MAX_POTION
+VictoryRoadHiddenFossil:
+	dwb EVENT_VICTORY_ROAD_HIDDEN_FOSSIL, FOSSIL
 
 
-VictoryRoadHiddenFullHeal:
-	dwb EVENT_VICTORY_ROAD_HIDDEN_FULL_HEAL, FULL_HEAL
+VictoryRoadHiddenFossil1:
+	dwb EVENT_VICTORY_ROAD_HIDDEN_FOSSIL1, FOSSIL
 
 
 MovementData_0x74539:
@@ -266,8 +266,8 @@ VictoryRoad_MapEventHeader:
 
 .Signposts:
 	db 2
-	signpost 29, 3, SIGNPOST_ITEM, VictoryRoadHiddenMaxPotion
-	signpost 65, 3, SIGNPOST_ITEM, VictoryRoadHiddenFullHeal
+	signpost 29, 3, SIGNPOST_ITEM, VictoryRoadHiddenFossil
+	signpost 65, 3, SIGNPOST_ITEM, VictoryRoadHiddenFossil1
 
 .PersonEvents:
 	db 6

@@ -114,8 +114,8 @@ NationalParkBugContestParlyzHeal:
 NationalParkBugContestTMDig:
 	itemball TM_DIG
 
-NationalParkBugContestHiddenFullHeal:
-	dwb EVENT_NATIONAL_PARK_HIDDEN_FULL_HEAL, FULL_HEAL
+NationalParkBugContestHiddenFossil:
+	dwb EVENT_NATIONAL_PARK_HIDDEN_FOSSIL, FOSSIL
 
 
 UnknownText_0x5c94c:
@@ -239,7 +239,7 @@ NationalParkBugContest_MapEventHeader:
 	db 4
 	signpost 44, 14, SIGNPOST_READ, MapNationalParkBugContestSignpost0Script
 	signpost 31, 27, SIGNPOST_READ, MapNationalParkBugContestSignpost1Script
-	signpost 47, 6, SIGNPOST_ITEM, NationalParkBugContestHiddenFullHeal
+	signpost 47, 6, SIGNPOST_ITEM, NationalParkBugContestHiddenFossil
 	signpost 4, 12, SIGNPOST_READ, MapNationalParkBugContestSignpost3Script
 
 .PersonEvents:

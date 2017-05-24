@@ -247,8 +247,8 @@ Route30FruitTree1:
 Route30FruitTree2:
 	fruittree FRUITTREE_ROUTE_30_2
 
-Route30HiddenPotion:
-	dwb EVENT_ROUTE_30_HIDDEN_POTION, POTION
+Route30HiddenFossil:
+	dwb EVENT_ROUTE_30_HIDDEN_FOSSIL, FOSSIL
 
 
 Route30_JoeysRattataAttacksMovement:
@@ -425,7 +425,7 @@ Route30_MapEventHeader:
 	signpost 29, 13, SIGNPOST_READ, MrPokemonsHouseDirectionsSign
 	signpost 5, 15, SIGNPOST_READ, MrPokemonsHouseSign
 	signpost 21, 3, SIGNPOST_READ, Route30TrainerTips
-	signpost 9, 14, SIGNPOST_ITEM, Route30HiddenPotion
+	signpost 9, 14, SIGNPOST_ITEM, Route30HiddenFossil
 
 .PersonEvents:
 	db 11

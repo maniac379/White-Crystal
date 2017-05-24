@@ -228,16 +228,16 @@ LakeofRageElixer:
 LakeofRageTMDetect:
 	itemball TM_DETECT
 
-LakeofRageHiddenFullRestore:
-	dwb EVENT_LAKE_OF_RAGE_HIDDEN_FULL_RESTORE, FULL_RESTORE
+LakeofRageHiddenFossil:
+	dwb EVENT_LAKE_OF_RAGE_HIDDEN_FOSSIL, FOSSIL
 
 
-LakeofRageHiddenRareCandy:
-	dwb EVENT_LAKE_OF_RAGE_HIDDEN_RARE_CANDY, RARE_CANDY
+LakeofRageHiddenFossil1:
+	dwb EVENT_LAKE_OF_RAGE_HIDDEN_FOSSIL1, FOSSIL
 
 
-LakeofRageHiddenMaxPotion:
-	dwb EVENT_LAKE_OF_RAGE_HIDDEN_MAX_POTION, MAX_POTION
+LakeofRageHiddenFossil2:
+	dwb EVENT_LAKE_OF_RAGE_HIDDEN_FOSSIL2, FOSSIL
 
 
 MovementData_0x70155:
@@ -509,9 +509,9 @@ LakeofRage_MapEventHeader:
 	db 5
 	signpost 27, 21, SIGNPOST_READ, MapLakeofRageSignpost0Script
 	signpost 31, 25, SIGNPOST_READ, MapLakeofRageSignpost1Script
-	signpost 28, 11, SIGNPOST_ITEM, LakeofRageHiddenFullRestore
-	signpost 4, 4, SIGNPOST_ITEM, LakeofRageHiddenRareCandy
-	signpost 5, 35, SIGNPOST_ITEM, LakeofRageHiddenMaxPotion
+	signpost 28, 11, SIGNPOST_ITEM, LakeofRageHiddenFossil
+	signpost 4, 4, SIGNPOST_ITEM, LakeofRageHiddenFossil1
+	signpost 5, 35, SIGNPOST_ITEM, LakeofRageHiddenFossil2
 
 .PersonEvents:
 	db 12

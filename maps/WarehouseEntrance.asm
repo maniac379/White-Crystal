@@ -413,16 +413,16 @@ WarehouseEntranceCoinCase:
 MapWarehouseEntranceSignpost1Script:
 	jumptext UnknownText_0x7c91a
 
-WarehouseEntranceHiddenParlyzHeal:
-	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_PARLYZ_HEAL, PARLYZ_HEAL
+WarehouseEntranceHiddenFossil:
+	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_FOSSIL, FOSSIL
 
 
-WarehouseEntranceHiddenSuperPotion:
-	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_SUPER_POTION, SUPER_POTION
+WarehouseEntranceHiddenFossil1:
+	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_FOSSIL1, FOSSIL
 
 
-WarehouseEntranceHiddenAntidote:
-	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_ANTIDOTE, ANTIDOTE
+WarehouseEntranceHiddenFossil2:
+	dwb EVENT_WAREHOUSE_ENTRANCE_HIDDEN_FOSSIL2, FOSSIL
 
 
 SupernerdEricSeenText:
@@ -674,9 +674,9 @@ WarehouseEntrance_MapEventHeader:
 	db 5
 	signpost 6, 18, SIGNPOST_READ, BasementDoorScript
 	signpost 6, 19, SIGNPOST_READ, MapWarehouseEntranceSignpost1Script
-	signpost 13, 6, SIGNPOST_ITEM, WarehouseEntranceHiddenParlyzHeal
-	signpost 18, 4, SIGNPOST_ITEM, WarehouseEntranceHiddenSuperPotion
-	signpost 8, 17, SIGNPOST_ITEM, WarehouseEntranceHiddenAntidote
+	signpost 13, 6, SIGNPOST_ITEM, WarehouseEntranceHiddenFossil
+	signpost 18, 4, SIGNPOST_ITEM, WarehouseEntranceHiddenFossil1
+	signpost 8, 17, SIGNPOST_ITEM, WarehouseEntranceHiddenFossil2
 
 .PersonEvents:
 	db 9

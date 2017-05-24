@@ -11,12 +11,12 @@ TinTower5F_MapScriptHeader:
 TinTower5FRareCandy:
 	itemball RARE_CANDY
 
-TinTower5FHiddenFullRestore:
-	dwb EVENT_TIN_TOWER_5F_HIDDEN_FULL_RESTORE, FULL_RESTORE
+TinTower5FHiddenFossil:
+	dwb EVENT_TIN_TOWER_5F_HIDDEN_FOSSIL, FOSSIL
 
 
-TinTower5FHiddenCarbos:
-	dwb EVENT_TIN_TOWER_5F_HIDDEN_CARBOS, CARBOS
+TinTower5FHiddenFossil1:
+	dwb EVENT_TIN_TOWER_5F_HIDDEN_FOSSIL1, FOSSIL
 
 
 TinTower5F_MapEventHeader:
@@ -35,8 +35,8 @@ TinTower5F_MapEventHeader:
 
 .Signposts:
 	db 2
-	signpost 14, 16, SIGNPOST_ITEM, TinTower5FHiddenFullRestore
-	signpost 15, 3, SIGNPOST_ITEM, TinTower5FHiddenCarbos
+	signpost 14, 16, SIGNPOST_ITEM, TinTower5FHiddenFossil
+	signpost 15, 3, SIGNPOST_ITEM, TinTower5FHiddenFossil1
 
 .PersonEvents:
 	db 1

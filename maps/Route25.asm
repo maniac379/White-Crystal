@@ -192,8 +192,8 @@ BillsHouseSign:
 Route25Protein:
 	itemball PROTEIN
 
-Route25HiddenPotion:
-	dwb EVENT_ROUTE_25_HIDDEN_POTION, POTION
+Route25HiddenFossil:
+	dwb EVENT_ROUTE_25_HIDDEN_FOSSIL, FOSSIL
 
 
 MovementData_0x19efe8:
@@ -448,7 +448,7 @@ Route25_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 5, 45, SIGNPOST_READ, BillsHouseSign
-	signpost 5, 4, SIGNPOST_ITEM, Route25HiddenPotion
+	signpost 5, 4, SIGNPOST_ITEM, Route25HiddenFossil
 
 .PersonEvents:
 	db 11

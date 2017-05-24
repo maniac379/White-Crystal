@@ -43,8 +43,8 @@ OlivineLighthouse5FSuperRepel:
 OlivineLighthouse5FTMSwagger:
 	itemball TM_SWAGGER
 
-OlivineLighthouse5FHiddenHyperPotion:
-	dwb EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_HYPER_POTION, HYPER_POTION
+OlivineLighthouse5FHiddenFossil:
+	dwb EVENT_OLIVINE_LIGHTHOUSE_5F_HIDDEN_FOSSIL, FOSSIL
 
 
 SailorErnestSeenText:
@@ -110,7 +110,7 @@ OlivineLighthouse5F_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 13, 3, SIGNPOST_ITEM, OlivineLighthouse5FHiddenHyperPotion
+	signpost 13, 3, SIGNPOST_ITEM, OlivineLighthouse5FHiddenFossil
 
 .PersonEvents:
 	db 5

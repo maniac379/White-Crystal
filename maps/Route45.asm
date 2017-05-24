@@ -311,8 +311,8 @@ Route45Elixer:
 Route45MaxPotion:
 	itemball MAX_POTION
 
-Route45HiddenPpUp:
-	dwb EVENT_ROUTE_45_HIDDEN_PP_UP, PP_UP
+Route45HiddenFossil:
+	dwb EVENT_ROUTE_45_HIDDEN_FOSSIL, FOSSIL
 
 
 HikerErikSeenText:
@@ -546,7 +546,7 @@ Route45_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 4, 10, SIGNPOST_READ, Route45Sign
-	signpost 80, 13, SIGNPOST_ITEM, Route45HiddenPpUp
+	signpost 80, 13, SIGNPOST_ITEM, Route45HiddenFossil
 
 .PersonEvents:
 	db 13

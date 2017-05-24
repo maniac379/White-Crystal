@@ -179,8 +179,8 @@ Route39TrainerTips:
 FruitTreeScript_0x1a5bf4:
 	fruittree FRUITTREE_ROUTE_39
 
-Route39HiddenNugget:
-	dwb EVENT_ROUTE_39_HIDDEN_NUGGET, NUGGET
+Route39HiddenFossil:
+	dwb EVENT_ROUTE_39_HIDDEN_FOSSIL, FOSSIL
 
 
 Route39MiltankText:
@@ -361,7 +361,7 @@ Route39_MapEventHeader:
 	signpost 31, 5, SIGNPOST_READ, Route39TrainerTips
 	signpost 5, 9, SIGNPOST_READ, MoomooFarmSign
 	signpost 7, 15, SIGNPOST_READ, Route39Sign
-	signpost 13, 5, SIGNPOST_ITEM, Route39HiddenNugget
+	signpost 13, 5, SIGNPOST_ITEM, Route39HiddenFossil
 
 .PersonEvents:
 	db 10

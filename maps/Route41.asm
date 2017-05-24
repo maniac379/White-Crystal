@@ -131,8 +131,8 @@ Route41Rock:
 ; unused
 	jumpstd smashrock
 
-Route41HiddenMaxEther:
-	dwb EVENT_ROUTE_41_HIDDEN_MAX_ETHER, MAX_ETHER
+Route41HiddenFossil:
+	dwb EVENT_ROUTE_41_HIDDEN_FOSSIL, FOSSIL
 
 SwimmermCharlieSeenText:
 	text "The water's warm"
@@ -357,7 +357,7 @@ Route41_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 35, 9, SIGNPOST_ITEM, Route41HiddenMaxEther
+	signpost 35, 9, SIGNPOST_ITEM, Route41HiddenFossil
 
 .PersonEvents:
 	db 10

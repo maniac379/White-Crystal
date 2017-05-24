@@ -490,12 +490,12 @@ DayCareSign:
 Route34Nugget:
 	itemball NUGGET
 
-Route34HiddenRareCandy:
-	dwb EVENT_ROUTE_34_HIDDEN_RARE_CANDY, RARE_CANDY
+Route34HiddenFossil:
+	dwb EVENT_ROUTE_34_HIDDEN_FOSSIL, FOSSIL
 
 
-Route34HiddenSuperPotion:
-	dwb EVENT_ROUTE_34_HIDDEN_SUPER_POTION, SUPER_POTION
+Route34HiddenFossil1:
+	dwb EVENT_ROUTE_34_HIDDEN_FOSSIL1, FOSSIL
 
 
 Route34MovementData_DayCareManWalksBackInside:
@@ -785,8 +785,8 @@ Route34_MapEventHeader:
 	signpost 6, 12, SIGNPOST_READ, Route34Sign
 	signpost 33, 13, SIGNPOST_READ, Route34TrainerTips
 	signpost 13, 10, SIGNPOST_READ, DayCareSign
-	signpost 32, 8, SIGNPOST_ITEM, Route34HiddenRareCandy
-	signpost 19, 17, SIGNPOST_ITEM, Route34HiddenSuperPotion
+	signpost 32, 8, SIGNPOST_ITEM, Route34HiddenFossil
+	signpost 19, 17, SIGNPOST_ITEM, Route34HiddenFossil1
 
 .PersonEvents:
 	db 13

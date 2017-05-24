@@ -317,8 +317,8 @@ Route44UltraBall:
 Route44MaxRepel:
 	itemball MAX_REPEL
 
-Route44HiddenElixer:
-	dwb EVENT_ROUTE_44_HIDDEN_ELIXER, ELIXER
+Route44HiddenFossil:
+	dwb EVENT_ROUTE_44_HIDDEN_FOSSIL, FOSSIL
 
 
 FisherWilton1SeenText:
@@ -522,7 +522,7 @@ Route44_MapEventHeader:
 	db 3
 	signpost 7, 53, SIGNPOST_READ, Route44Sign1
 	signpost 10, 6, SIGNPOST_READ, Route44Sign2
-	signpost 9, 32, SIGNPOST_ITEM, Route44HiddenElixer
+	signpost 9, 32, SIGNPOST_ITEM, Route44HiddenFossil
 
 .PersonEvents:
 	db 11

@@ -214,8 +214,8 @@ AzaleaTownMartSign:
 WhiteApricornTree:
 	fruittree FRUITTREE_AZALEA_TOWN
 
-AzaleaTownHiddenFullHeal:
-	dwb EVENT_AZALEA_TOWN_HIDDEN_FULL_HEAL, FULL_HEAL
+AzaleaTownHiddenFossil:
+	dwb EVENT_AZALEA_TOWN_HIDDEN_FOSSIL, FOSSIL
 
 
 AzaleaTownRivalBattleApproachMovement1:
@@ -491,7 +491,7 @@ AzaleaTown_MapEventHeader:
 	signpost 9, 16, SIGNPOST_READ, AzaleaTownPokeCenterSign
 	signpost 5, 22, SIGNPOST_READ, AzaleaTownMartSign
 	signpost 9, 3, SIGNPOST_READ, AzaleaTownIlextForestSign
-	signpost 6, 31, SIGNPOST_ITEM, AzaleaTownHiddenFullHeal
+	signpost 6, 31, SIGNPOST_ITEM, AzaleaTownHiddenFossil
 
 .PersonEvents:
 	db 12

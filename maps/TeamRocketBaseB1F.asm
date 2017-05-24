@@ -544,8 +544,8 @@ TeamRocketBaseB1FNugget:
 TeamRocketBaseB1FGuardSpec:
 	itemball GUARD_SPEC
 
-TeamRocketBaseB1FHiddenRevive:
-	dwb EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_REVIVE, REVIVE
+TeamRocketBaseB1FHiddenFossil:
+	dwb EVENT_TEAM_ROCKET_BASE_B1F_HIDDEN_FOSSIL, FOSSIL
 
 
 SecurityCameraMovement1:
@@ -790,7 +790,7 @@ TeamRocketBaseB1F_MapEventHeader:
 	signpost 5, 24, SIGNPOST_UP, MapTeamRocketBaseB1FSignpost5Script
 	signpost 11, 20, SIGNPOST_READ, MapTeamRocketBaseB1FSignpost7Script
 	signpost 11, 21, SIGNPOST_READ, MapTeamRocketBaseB1FSignpost7Script
-	signpost 11, 3, SIGNPOST_ITEM, TeamRocketBaseB1FHiddenRevive
+	signpost 11, 3, SIGNPOST_ITEM, TeamRocketBaseB1FHiddenFossil
 
 .PersonEvents:
 	db 6

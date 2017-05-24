@@ -82,8 +82,8 @@ HikerSidneyScript:
 Route9Sign:
 	jumptext Route9SignText
 
-Route9HiddenEther:
-	dwb EVENT_ROUTE_9_HIDDEN_ETHER, ETHER
+Route9HiddenFossil:
+	dwb EVENT_ROUTE_9_HIDDEN_FOSSIL, FOSSIL
 
 
 CamperDeanSeenText:
@@ -220,7 +220,7 @@ Route9_MapEventHeader:
 .Signposts:
 	db 2
 	signpost 7, 15, SIGNPOST_READ, Route9Sign
-	signpost 15, 41, SIGNPOST_ITEM, Route9HiddenEther
+	signpost 15, 41, SIGNPOST_ITEM, Route9HiddenFossil
 
 .PersonEvents:
 	db 6

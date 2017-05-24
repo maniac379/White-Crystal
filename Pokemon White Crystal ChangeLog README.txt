@@ -19,6 +19,7 @@ Minor Features
 -New scripts to alert of certain changes
 -Elm's Aide provides rewards every so many caught Pokemon
 -Changed moves to help adjust for the physical/special split
+-Replaced the majority of hidden items with Fossil's (Reviving feature TBD)
 -Shiny Pokemon odds changed to 1/254 based on if all DV's are at least 12
 -Trade/Happiness evolutions changed to level-up/stone evolutions
 -Wild Pokemon encounter chance minimum of 5% for a specific Pokemon
@@ -53,6 +54,7 @@ AI Improvements
 Known Glitches
 ---------------
 -Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
+-Elm's Aides rewards script does not account for a full inventory
 
 
 Special Thanks
@@ -155,7 +157,6 @@ Version 1.0 ToDo List
 -Legendary birds appear after 16 Badges/Cut Scene
 -Mandatory 'Set' battle style
 -Create 1/3 Recoil effect
--Change Hidden Items to a trade in item reward system/fossils for random Pokemon
 -Berry Pocket
 -Adjust Moo Moo Farm TM Given
 -Is TM Psych Up Unobtainable?
@@ -164,10 +165,13 @@ Version 1.0 ToDo List
 -Safari Zone
 -Adjust Growth Rates
 -Check Celebi Event Unlocks Correctly
+-Improve twister tm giver (spin)
+-Sandstorm/Hail stat bonus
 
 
 Wish List
 ----------
+-Fossils can be turned in for a random Pokemon
 -Add 51+ TMs: 	Earth Power, Dizzy Punch, Megahorn, Dark Pulse, Shadow Claw, Tri Attack
 		Dragon Pulse, Outrage, Cross Chop, Dragon Rage, Seismic Toss, Metronome
 -Add Move Tutor (KO): Fissure, Guillotine, Horn Drill

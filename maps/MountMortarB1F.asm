@@ -71,8 +71,8 @@ MountMortarB1FMaxEther:
 MountMortarB1FPPUp:
 	itemball PP_UP
 
-MountMortarB1FHiddenMaxRevive:
-	dwb EVENT_MOUNT_MORTAR_B1F_HIDDEN_MAX_REVIVE, MAX_REVIVE
+MountMortarB1FHiddenFossil:
+	dwb EVENT_MOUNT_MORTAR_B1F_HIDDEN_FOSSIL, FOSSIL
 
 
 UnknownText_0x7e24d:
@@ -149,7 +149,7 @@ MountMortarB1F_MapEventHeader:
 
 .Signposts:
 	db 1
-	signpost 6, 4, SIGNPOST_ITEM, MountMortarB1FHiddenMaxRevive
+	signpost 6, 4, SIGNPOST_ITEM, MountMortarB1FHiddenFossil
 
 .PersonEvents:
 	db 7
