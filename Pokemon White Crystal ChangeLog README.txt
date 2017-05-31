@@ -53,7 +53,6 @@ AI Improvements
 
 Known Glitches
 ---------------
--Incorrect overworld sprites for Butterfree, Poliwrath, Meowth, TBD
 -Elm's Aides rewards script does not account for a full inventory
 
 
@@ -152,7 +151,6 @@ Game Corner Changes
 
 Version 1.0 ToDo List
 ----------------------
--FIX OVERWORLD POKEMON SPRITES
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Legendary birds appear after 16 Badges/Cut Scene
 -Mandatory 'Set' battle style

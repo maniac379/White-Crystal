@@ -1,5 +1,6 @@
 LoadOverworldMonIcon: ; 8e82b
 	ld a, e
+	ld [CurIcon], a
 	call ReadMonMenuIcon
 	ld l, a
 	ld h, 0
@@ -345,10 +346,8 @@ endr
 	ld e, a
 	ld d, [hl]
 	pop hl
-
 	call GetExtendedIconBank
 	call GetGFXUnlessMobile
-
 	pop hl
 	ret
 ; 8ea3f
