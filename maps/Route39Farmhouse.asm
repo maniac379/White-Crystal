@@ -68,7 +68,7 @@ UnknownScript_0x9cf08:
 PokefanFScript_0x9cf0e:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_ENERGY_BALL_FROM_MOOMOO_FARM
+	checkevent EVENT_GOT_TM12_QUICK_ATTACK_FROM_MOOMOO_FARM
 	iftrue UnknownScript_0x9cf2f
 	checkevent EVENT_HEALED_MOOMOO
 	iftrue UnknownScript_0x9cf22
@@ -80,9 +80,9 @@ PokefanFScript_0x9cf0e:
 UnknownScript_0x9cf22:
 	writetext UnknownText_0x9d156
 	buttonsound
-	verbosegiveitem TM_ENERGY_BALL
+	verbosegiveitem TM_QUICK_ATTACK
 	iffalse UnknownScript_0x9cf33
-	setevent EVENT_GOT_TM13_ENERGY_BALL_FROM_MOOMOO_FARM
+	setevent EVENT_GOT_TM12_QUICK_ATTACK_FROM_MOOMOO_FARM
 UnknownScript_0x9cf2f:
 	writetext UnknownText_0x9d1c7
 	waitbutton
@@ -174,16 +174,16 @@ UnknownText_0x9d156:
 
 UnknownText_0x9d1b5:
 	text "<PLAYER> received"
-	line "TM13."
+	line "TM12."
 	done
 
 UnknownText_0x9d1c7:
 	text "That there's"
-	line "ENERGY BALL."
+	line "QUICK ATTACK."
 
-	para "You best think how"
-	line "you ought to use"
-	cont "it, hon."
+	para "For some reason,"
+	line "our MILTANK never"
+	cont "could use it."
 	done
 
 Route39Farmhouse_MapEventHeader:

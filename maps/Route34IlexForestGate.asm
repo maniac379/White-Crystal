@@ -50,13 +50,13 @@ TeacherScript_0x62d63:
 	opentext
 	checkevent EVENT_FOREST_IS_RESTLESS
 	iftrue UnknownScript_0x62d84
-	checkevent EVENT_GOT_TM12_SWEET_SCENT
+	checkevent EVENT_GOT_TM09_PSYCH_UP
 	iftrue UnknownScript_0x62d7e
 	writetext UnknownText_0x62d9d
 	buttonsound
-	verbosegiveitem TM_QUICK_ATTACK
+	verbosegiveitem TM_PSYCH_UP
 	iffalse UnknownScript_0x62d82
-	setevent EVENT_GOT_TM12_SWEET_SCENT
+	setevent EVENT_GOT_TM09_PSYCH_UP
 UnknownScript_0x62d7e:
 	writetext UnknownText_0x62df6
 	waitbutton
@@ -92,24 +92,19 @@ MovementData_0x62d9a:
 	step_end
 
 UnknownText_0x62d9d:
-	text "Oh, honey. You're"
-	line "making a #DEX?"
+	text "Have you found"
+	line "opposing stat"
+	cont "boosts a problem?"
 
-	para "It must be hard if"
-	line "#MON won't"
-
-	para "appear. Try using"
-	line "this TM."
+	para "Try using this TM."
 	done
 
 UnknownText_0x62df6:
-	text "It's SWEET SCENT."
+	text "It's PSYCH UP!"
 
-	para "Use it wherever"
-	line "#MON appear."
-
-	para "#MON will be"
-	line "enticed by it."
+	para "Your #MON will"
+	line "copy all of the"
+	cont "opponents boosts!"
 	done
 
 UnknownText_0x62e41:

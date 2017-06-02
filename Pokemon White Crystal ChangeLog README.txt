@@ -157,14 +157,11 @@ Version 1.0 ToDo List
 -Mandatory 'Set' battle style
 -Create 1/3 Recoil effect
 -Berry Pocket
--Adjust Moo Moo Farm TM Given
--Is TM Psych Up Unobtainable?
 -Increase size of Ball Pocket
 -Viridian Forest
 -Safari Zone
 -Adjust Growth Rates
 -Check Celebi Event Unlocks Correctly
--Improve twister tm giver (spin)
 -Sandstorm/Hail stat bonus
 
 
