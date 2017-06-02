@@ -53,6 +53,7 @@ AI Improvements
 
 Known Glitches
 ---------------
+-Group10 Spriteset needs SPRITE_YOUNGSTER to fit
 -Elm's Aides rewards script does not account for a full inventory
 
 
@@ -152,7 +153,7 @@ Game Corner Changes
 Version 1.0 ToDo List
 ----------------------
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
--Legendary birds appear after 16 Badges/Cut Scene
+-Spawn the 3 birds
 -Mandatory 'Set' battle style
 -Create 1/3 Recoil effect
 -Berry Pocket
@@ -187,6 +188,7 @@ Wish List
 -Permanent Cut Trees
 -Hatchet to Cut Trees
 -Items of Potential
+-Improve Bird Trio Cut Scene
 
 
 Github Functions
@@ -203,6 +205,14 @@ Ctrl + C				//Closes Script
 
 cd /cygdrive/d/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
 cd d:/Games/Program\ Files/Cygwin/home/choud_000/pokecrystal
+
+
+Disassembly Notes
+------------------
+To add triggers to a map that did not already have some, you'd need to:
+(1) Add the map to engine/map_triggers.asm
+(2) Give it a new trigger byte in the "Map Triggers" section of wram.asm 
+	The "ds 49" declares enough free space for 49 more
 
 
 ASM/Binary Functions

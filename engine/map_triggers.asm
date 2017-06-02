@@ -87,8 +87,9 @@ ENDM
 	trigger_def MOUNT_MOON_SQUARE,                      wMountMoonSquareTrigger
 	trigger_def MOBILE_TRADE_ROOM_MOBILE,               wMobileTradeRoomMobileTrigger
 	trigger_def MOBILE_BATTLE_ROOM,                     wMobileBattleRoomTrigger
-	trigger_def VIOLET_GYM,                     wFirstGymBattleWarning1
-	trigger_def VIOLET_GYM,                     wFirstGymBattleWarning2
+	trigger_def VIOLET_GYM,                     		wFirstGymBattleWarning1
+	trigger_def VIOLET_GYM,                     		wFirstGymBattleWarning2
+	trigger_def SILVER_CAVE_OUTSIDE,					wBirdTrioSpawn
 	db -1
 
 ; 4d15b

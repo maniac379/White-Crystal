@@ -2611,10 +2611,11 @@ wFastShipB1FTrigger::                        ds 1 ; d9bd
 wMountMoonSquareTrigger::                    ds 1 ; d9be
 wMobileTradeRoomMobileTrigger::              ds 1 ; d9bf
 wMobileBattleRoomTrigger::                   ds 1 ; d9c0
-wFirstGymBattleWarning1::				  ds 1;
-wFirstGymBattleWarning2::				  ds 1;
+wFirstGymBattleWarning1::				 	 ds 1;
+wFirstGymBattleWarning2::				  	 ds 1;
+wBirdTrioSpawn::							 ds 1;
 
-	ds 47
+	ds 46
 
 
 ;SECTION "Events", WRAMX, BANK [1]
