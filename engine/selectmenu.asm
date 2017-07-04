@@ -34,12 +34,28 @@ CheckRegisteredItem: ; 13345
 
 .Pockets:
 	dw .CheckItem
+	dw .CheckMedicine
 	dw .CheckBall
-	dw .CheckKeyItem
 	dw .CheckTMHM
+	dw .CheckBerry
+	dw .CheckKeyItem
 
 .CheckItem:
 	ld hl, NumItems
+	jr .ContinueCheck
+ 
+.CheckMedicine:
+ 	ld hl, NumMedicine
+ 	jr .ContinueCheck
+ 
+.CheckBall:
+ 	ld hl, NumBalls
+ 	jr .ContinueCheck
+ 
+.CheckBerry:
+	ld hl, NumBerries
+
+.ContinueCheck
 	call .CheckRegisteredNo
 	jr c, .NoRegisteredItem
 	inc hl
@@ -61,19 +77,6 @@ CheckRegisteredItem: ; 13345
 	ld a, [RegisteredItem]
 	ld [CurItem], a
 	and a
-	ret
-
-.CheckBall:
-	ld hl, NumBalls
-	call .CheckRegisteredNo
-	jr nc, .NoRegisteredItem
-	inc hl
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	call .IsSameItem
-	jr c, .NoRegisteredItem
 	ret
 
 .CheckTMHM:
