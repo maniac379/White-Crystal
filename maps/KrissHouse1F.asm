@@ -78,11 +78,11 @@ UnknownScript_0x7a53b:
 UnknownScript_0x7a542:
 	writetext UnknownText_0x7a807
 	buttonsound
+	writetext UnknownText_0x7a850
+	buttonsound
 	jump UnknownScript_0x7a549
 
 UnknownScript_0x7a549:
-	writetext UnknownText_0x7a850
-	waitbutton
 	closetext
 	checkevent EVENT_GAVE_KURT_APRICORNS
 	iftrue UnknownScript_0x7a55d
@@ -267,11 +267,8 @@ UnknownText_0x7a763:
 	done
 
 UnknownText_0x7a7cb:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
+	text "Ok, just checking."
+	line "Be safe!"
 	done
 
 UnknownText_0x7a807:

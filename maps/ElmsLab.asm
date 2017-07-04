@@ -507,7 +507,7 @@ AideScript_GiveYouBalls:
 	buttonsound
 	itemtotext POKE_BALL, $1
 	scall AideScript_ReceiveTheBalls
-	giveitem POKE_BALL, 5
+	giveitem POKE_BALL, 10
 	writetext AideText_ExplainBalls
 	buttonsound
 	itemnotify
@@ -595,7 +595,7 @@ AideScript_NoCheckCaught:
 	
 AideScript_Check5Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 5, .AideScript_Give5Reward
+	if_greater_than 4, .AideScript_Give5Reward
 	writetext AideText_NextReward5
 	waitbutton
 	closetext
@@ -605,7 +605,7 @@ AideScript_Check5Caught:
 	setevent EVENT_5_CAUGHT_REWARD
 	writetext AideText_5Reward
 	waitbutton
-	giveitem POKE_BALL, 5
+	giveitem POKE_BALL, 10
 	itemtotext POKE_BALL, $1
 	scall AideScript_ReceiveTheBalls
 	writetext AideText_NextReward10
@@ -615,7 +615,7 @@ AideScript_Check5Caught:
 
 AideScript_Check10Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 10, .AideScript_Give10Reward
+	if_greater_than 9, .AideScript_Give10Reward
 	writetext AideText_NextReward10
 	waitbutton
 	closetext
@@ -635,7 +635,7 @@ AideScript_Check10Caught:
 
 AideScript_Check20Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 20, .AideScript_Give20Reward
+	if_greater_than 19, .AideScript_Give20Reward
 	writetext AideText_NextReward20
 	waitbutton
 	closetext
@@ -645,16 +645,32 @@ AideScript_Check20Caught:
 	setevent EVENT_20_CAUGHT_REWARD
 	writetext AideText_20Reward
 	waitbutton
-	giveitem SUPER_ROD, 1
-	itemtotext SUPER_ROD, $1
-	scall AideScript_ReceiveTheBalls
-	waitbutton
+	checkitem GOOD_ROD
+	iftrue .AlreadyHaveGoodRod
+	checkitem GOOD_ROD
+	iffalse .CanGiveGoodRod
 	closetext
 	end
+
+.AlreadyHaveGoodRod
+	writetext AideText_20RewardAlternate
+	waitbutton
+	giveitem RARE_CANDY, 5
+	itemtotext RARE_CANDY, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	end
 	
+.CanGiveGoodRod
+	giveitem GOOD_ROD, 1
+	itemtotext GOOD_ROD, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	end
+
 AideScript_Check35Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 35, .AideScript_Give35Reward
+	if_greater_than 34, .AideScript_Give35Reward
 	writetext AideText_NextReward35
 	waitbutton
 	closetext
@@ -673,7 +689,7 @@ AideScript_Check35Caught:
 
 AideScript_Check50Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 50, .AideScript_Give50Reward
+	if_greater_than 49, .AideScript_Give50Reward
 	writetext AideText_NextReward50
 	waitbutton
 	closetext
@@ -693,7 +709,7 @@ AideScript_Check50Caught:
 	
 AideScript_Check75Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 75, .AideScript_Give75Reward
+	if_greater_than 74, .AideScript_Give75Reward
 	writetext AideText_NextReward75
 	waitbutton
 	closetext
@@ -703,16 +719,32 @@ AideScript_Check75Caught:
 	setevent EVENT_75_CAUGHT_REWARD
 	writetext AideText_75Reward
 	waitbutton
+	checkitem SUPER_ROD
+	iftrue .AlreadyHaveSuperRod
+	checkitem SUPER_ROD
+	iffalse .CanGiveSuperRod
+	closetext
+	end
+
+.AlreadyHaveSuperRod
+	writetext AideText_75RewardAlternate
+	waitbutton
+	giveitem RARE_CANDY, 10
+	itemtotext RARE_CANDY, $1
+	scall AideScript_ReceiveTheBalls
+	waitbutton
+	end
+	
+.CanGiveSuperRod
 	giveitem SUPER_ROD, 1
 	itemtotext SUPER_ROD, $1
 	scall AideScript_ReceiveTheBalls
 	waitbutton
-	closetext
 	end
-
+	
 AideScript_Check100Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 100, .AideScript_Give100Reward
+	if_greater_than 99, .AideScript_Give100Reward
 	writetext AideText_NextReward100
 	waitbutton
 	closetext
@@ -731,7 +763,7 @@ AideScript_Check100Caught:
 
 AideScript_Check150Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 150, .AideScript_Give150Reward
+	if_greater_than 149, .AideScript_Give150Reward
 	writetext AideText_NextReward150
 	waitbutton
 	closetext
@@ -750,7 +782,7 @@ AideScript_Check150Caught:
 
 AideScript_Check200Caught:
 	checkcode VAR_DEXCAUGHT
-	if_greater_than 200, .AideScript_Give200Reward
+	if_greater_than 199, .AideScript_Give200Reward
 	writetext AideText_NextReward200
 	waitbutton
 	closetext
@@ -1594,6 +1626,14 @@ AideText_20Reward:
 	cont "even more!"
 	done
 	
+AideText_20RewardAlternate:
+	text "What? You already"
+	line "have one?"
+	
+	para "Maybe these will"
+	line "be of better use!"
+	done
+
 AideText_NextReward20:
 	text "The next reward"
 	line "is for 20 caught"
@@ -1642,6 +1682,14 @@ AideText_75Reward:
 	para "You seem like you"
 	line "could use a better"
 	cont "fishing rod!"
+	done
+
+AideText_75RewardAlternate:
+	text "What? You already"
+	line "have one?"
+	
+	para "Maybe these will"
+	line "be of better use!"
 	done
 	
 AideText_NextReward75:

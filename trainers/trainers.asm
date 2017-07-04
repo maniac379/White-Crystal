@@ -221,19 +221,19 @@ ChuckGroup:
 
 	; party
 
-	db 24, PRIMEAPE
+	db 27, PRIMEAPE
 		db THUNDERPUNCH
 		db THRASH
 		db CROSS_CHOP
 		db SWORDS_DANCE
 
-	db 24, HERACROSS
+	db 26, HERACROSS
 		db MEGAHORN
 		db CROSS_CHOP
 		db EARTHQUAKE
 		db SWORDS_DANCE
 
-	db 27, POLIWRATH
+	db 28, POLIWRATH
 		db HYPNOSIS
 		db CROSS_CHOP
 		db SURF
@@ -8023,9 +8023,9 @@ MysticalmanGroup:
 	db 0 ; normal
 
 	; party
-	db 23, DROWZEE
-	db 23, HAUNTER
-	db 25, ELECTRODE
+	db 27, DROWZEE
+	db 27, HAUNTER
+	db 30, ELECTRODE
 
 	db $ff ; end
 

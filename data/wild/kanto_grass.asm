@@ -138,29 +138,29 @@
 	map TOHJO_FALLS
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 22, GOLBAT
-	db 23, QUAGSIRE
-	db 22, PSYDUCK
-	db 21, MARILL
-	db 20, ONIX
-	db 23, ONIX
-	db 23, ONIX
+	db 32, GOLBAT
+	db 33, QUAGSIRE
+	db 32, PSYDUCK
+	db 31, AZUMARILL
+	db 30, ONIX
+	db 33, GOLDUCK
+	db 33, GOLDUCK
 	; day
-	db 22, GOLBAT
-	db 23, QUAGSIRE
-	db 22, PSYDUCK
-	db 21, MARILL
-	db 20, ONIX
-	db 23, ONIX
-	db 23, ONIX
+	db 32, GOLBAT
+	db 33, QUAGSIRE
+	db 32, PSYDUCK
+	db 31, AZUMARILL
+	db 30, ONIX
+	db 33, GOLDUCK
+	db 33, GOLDUCK
 	; nite
-	db 22, GOLBAT
-	db 23, QUAGSIRE
-	db 22, PSYDUCK
-	db 21, MARILL
-	db 20, ONIX
-	db 23, ONIX
-	db 23, ONIX
+	db 32, GOLBAT
+	db 33, QUAGSIRE
+	db 32, PSYDUCK
+	db 31, AZUMARILL
+	db 30, ONIX
+	db 33, GOLDUCK
+	db 33, GOLDUCK
 
 	map ROUTE_1
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

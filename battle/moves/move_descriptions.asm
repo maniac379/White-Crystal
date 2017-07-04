@@ -726,8 +726,8 @@ ReflectDescription:
 	next "with a barrier.@"
 
 ZenHeadbuttDescription:
-	db   "A focused willpower"
-	next "bash, may flinch.@"
+	db   "A focused bash of"
+	next "will, may flinch.@"
 
 BideDescription:
 	db   "Waits 2-3 turns &"

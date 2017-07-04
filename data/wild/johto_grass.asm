@@ -1380,29 +1380,29 @@
 	map ROUTE_36
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 15, AIPOM
-	db 14, GROWLITHE
-	db 14, STANTLER
-	db 15, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
+	db 7, AIPOM
+	db 8, GROWLITHE
+	db 8, STANTLER
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
 	; day
-	db 15, AIPOM
-	db 14, GROWLITHE
-	db 14, STANTLER
-	db 15, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
+	db 7, AIPOM
+	db 8, GROWLITHE
+	db 8, STANTLER
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
 	; nite
-	db 15, AIPOM
-	db 14, GROWLITHE
-	db 14, STANTLER
-	db 15, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
-	db 14, PHANPY
+	db 7, AIPOM
+	db 8, GROWLITHE
+	db 8, STANTLER
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
+	db 7, PHANPY
 
 	map ROUTE_37
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -1546,7 +1546,7 @@
 	db 30, WEEPINBELL
 	db 29, TANGELA
 	db 28, LICKITUNG
-	db 38, HERACROSS
+	db 28, HERACROSS
 	db 30, LICKITUNG
 	db 30, LICKITUNG
 	; day
@@ -1554,7 +1554,7 @@
 	db 30, WEEPINBELL
 	db 29, TANGELA
 	db 28, LICKITUNG
-	db 38, HERACROSS
+	db 28, HERACROSS
 	db 30, LICKITUNG
 	db 30, LICKITUNG
 	; nite
@@ -1562,7 +1562,7 @@
 	db 30, WEEPINBELL
 	db 29, TANGELA
 	db 28, LICKITUNG
-	db 38, HERACROSS
+	db 28, HERACROSS
 	db 30, LICKITUNG
 	db 30, LICKITUNG
 

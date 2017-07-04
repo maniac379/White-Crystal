@@ -2,9 +2,9 @@
 
 	map TOHJO_FALLS
 	db 4 percent ; encounter rate
-	db 39, SEAKING
-	db 39, SLOWBRO
-	db 39, GOLDUCK
+	db 30, SEAKING
+	db 31, SLOWBRO
+	db 32, GOLDUCK
 
 	map VERMILION_PORT
 	db 2 percent ; encounter rate

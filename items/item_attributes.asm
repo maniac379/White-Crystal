@@ -70,7 +70,7 @@ Item2Attributes:
 	item_attribute   350, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_CURRENT, ITEMMENU_NOUSE
 
 ; MAX ELIXER
-	item_attribute  4500, 0,                -1,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_PARTY
+	item_attribute  4500, 0,                -1,             CANT_SELECT, MEDICINE,     ITEMMENU_PARTY,   ITEMMENU_PARTY
 
 ; FIRE STONE
 	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
