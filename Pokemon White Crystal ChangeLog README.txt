@@ -8,6 +8,7 @@ Major Features
 -The last 4 moves a Pokemon learn, the ones trainers/wild would have, produce a competitive moveset
 -Evolving no longer changes rate of move learning
 -Running Shoes by pressing B
+-Berry/Medicine Pocket
 -Physical/Special Split
 -Pokemon sprites overhauled courtesy of Chamber_ and others
 -Celebi obtainable via Elm's Aide Rewards giving GS Ball
@@ -156,13 +157,57 @@ Version 1.0 ToDo List
 -Spawn the 3 birds
 -Mandatory 'Set' battle style
 -Create 1/3 Recoil effect
--Berry Pocket
--Increase size of Ball Pocket
 -Viridian Forest
 -Safari Zone
 -Adjust Growth Rates
--Check Celebi Event Unlocks Correctly
 -Sandstorm/Hail stat bonus
+
+
+Version 1.0 Notes
+--------------------
+-Adjust default settings
+-Glitch screen when setting day of the week?
+-Old Rod Levels/Catch
+-Give 10 Pokeballs not 5
+-Change Pokegear dialogue
+-Say something after give Old Rod
+-Remember bag position in battle
+-Caught 10 but won't give reward, Gives at 11
+-Grass outside Violet City has high level Pokemon
+-South Goldenrod sprite error
+-National Park sprite error
+-Do level balls always catch?
+-Pockets not in right order if cylcing right? Only in Battle
+	Holding Left:		Holding Right:
+	Balls			Balls
+	Medicine		TMHM
+	Items			Berries
+	KeyItems		Balls
+	Berries
+	TMHM
+-Route 38 sprite error
+-Olivine city sprite error
+-How much Synthesis/Morning Sun/Moonlight heal?
+-Route 40 Sprite error
+-Cianwood City sprite error (suicune to)
+-Battle with Eusine in Cianwood
+-Maybe raise Cianwood gym levels (I had 4 lv28s)
+-Route 42 make evolutions
+-TM names when picked up
+-AI Hail
+-Mahogany script happens before radio tower taken care of
+-Can not deposit items into PC
+-Zen Headbutt description to long
+-Wing Attack flinches?
+-Water Stones in Mahogony (Sun/Moon?)
+-AI uses status moves if already status'd
+-Aide rewards gives Super Rod twice?  Takes up key item space.  Need checks.
+-AI uses ground moves against flying types
+-AI used Mach punch over primeapes stronger fighting move?
+-Tohjo Falls water Pokemon much higher level than ground
+-AI uses stat boosting moves multiple times
+-Max Elixer not marked as Medicine
+-Kurt sprite glitch in Azelea Town
 
 
 Wish List
@@ -186,6 +231,8 @@ Wish List
 -Hatchet to Cut Trees
 -Items of Potential
 -Improve Bird Trio Cut Scene
+-Running Shoes Default Speed
+-Third Rival/Eusine
 
 
 Github Functions
