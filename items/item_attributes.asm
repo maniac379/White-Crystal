@@ -31,7 +31,7 @@ Item2Attributes:
 	item_attribute     0, 0,                 0,               CANT_TOSS, KEY_ITEM, ITEMMENU_CLOSE,   ITEMMENU_NOUSE
 
 ; MOON STONE
-	item_attribute     0, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; ANTIDOTE
 	item_attribute   100, 0,                 0,             CANT_SELECT, MEDICINE,     ITEMMENU_PARTY,   ITEMMENU_PARTY
@@ -73,13 +73,13 @@ Item2Attributes:
 	item_attribute  4500, 0,                -1,             CANT_SELECT, MEDICINE,     ITEMMENU_PARTY,   ITEMMENU_PARTY
 
 ; FIRE STONE
-	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; THUNDERSTONE
-	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; WATER STONE
-	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; FOSSIL
 	item_attribute     0, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
@@ -109,7 +109,7 @@ Item2Attributes:
 	item_attribute   950, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_CLOSE
 
 ; LEAF STONE
-	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; METAL POWDER
 	item_attribute    10, HELD_METAL_POWDER,   10,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE
@@ -514,7 +514,7 @@ Item2Attributes:
 	item_attribute    10, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_CURRENT, ITEMMENU_NOUSE
 
 ; SUN STONE
-	item_attribute  2100, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
+	item_attribute  5000, 0,                 0,             CANT_SELECT, ITEM,     ITEMMENU_PARTY,   ITEMMENU_NOUSE
 
 ; POLKADOT BOW
 	item_attribute   100, HELD_NORMAL_BOOST,   20,             CANT_SELECT, ITEM,     ITEMMENU_NOUSE,   ITEMMENU_NOUSE

@@ -162,12 +162,10 @@ Version 1.0 ToDo List
 
 Version 1.0 Notes
 --------------------
--Adjust default settings
 -Say something after give Old Rod
--Remember bag position in battle
--South Goldenrod sprite error
--National Park sprite error
 -Do level balls always catch?
+-Remember bag position in battle
+-Can not deposit items into PC
 -Pockets not in right order if cylcing right? Only in Battle
 	Holding Left:		Holding Right:
 	Balls			Balls
@@ -176,23 +174,15 @@ Version 1.0 Notes
 	KeyItems		Balls
 	Berries
 	TMHM
--Route 38 sprite error
--Olivine city sprite error
--How much Synthesis/Morning Sun/Moonlight heal?
--Route 40 Sprite error
--Cianwood City sprite error (suicune to)
+-Synthesis/Morning Sun/Moonlight heal 1/3 not 1/2
 -Battle with Eusine in Cianwood
 -TM names when picked up
 -Mahogany script happens before radio tower taken care of
--Can not deposit items into PC
--Wing Attack flinches?
--Water Stones in Mahogony (Sun/Moon?)
 -AI Hail
 -AI uses status moves if already status'd
 -AI uses ground moves against flying types
 -AI used Mach punch over primeapes stronger fighting move?
 -AI uses stat boosting moves multiple times
--Kurt sprite glitch in Azelea Town
 
 
 Wish List

@@ -223,12 +223,14 @@ Mart15: ; 1616a
 ; 16170
 
 Mart16: ; 16170
-	db 9 ; # items
+	db 11 ; # items
 	db RAGECANDYBAR
 	db THUNDERSTONE
 	db FIRE_STONE
 	db LEAF_STONE
 	db WATER_STONE
+	db MOON_STONE
+	db SUN_STONE
 	db GREAT_BALL
 	db HYPER_POTION
 	db SUPER_REPEL

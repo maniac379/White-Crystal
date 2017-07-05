@@ -1000,7 +1000,7 @@ Group8Sprites: ; 1465c
 	db SPRITE_YOUNGSTER
 	db SPRITE_OFFICER
 	db SPRITE_POKEFAN_M
-	db SPRITE_BLACK_BELT
+	db SPRITE_KURT_OUTSIDE ;Replace black belt here
 	db SPRITE_TEACHER
 	db SPRITE_AZALEA_ROCKET
 	db SPRITE_LASS
@@ -1022,7 +1022,7 @@ Group11Sprites: ; 14673
 	db SPRITE_LASS
 	db SPRITE_DAYCARE_MON_2
 	db SPRITE_FRUIT_TREE
-	db SPRITE_SLOWPOKE
+	db SPRITE_POKE_BALL ;Replace Slowpoke
 ; 1468a
 
 Group22Sprites: ; 1468a
@@ -1034,7 +1034,9 @@ Group1Sprites: ; 146a1
 ;OlivineCity
 ;Route38
 ;Route39
-	db SPRITE_OLIVINE_RIVAL
+	db SPRITE_STANDING_YOUNGSTER
+	db SPRITE_SUICUNE
+	db SPRITE_OLIVINE_RIVAL 
 	db SPRITE_POKEFAN_M
 	db SPRITE_LASS
 	db SPRITE_BUENA
@@ -1045,6 +1047,7 @@ Group1Sprites: ; 146a1
 	db SPRITE_MILTANK
 	db SPRITE_FRUIT_TREE
 	db SPRITE_ROCK
+;Extra sprites here, don't know why
 ; 146b8
 
 Group9Sprites: ; 146b8
@@ -1108,6 +1111,7 @@ Group3Sprites: ; 146fd
 ;Underground
 ;RockTunnel
 ;VictoryRoad
+	db SPRITE_GAMEBOY_KID ;Added extra sprite, don't know
 	db SPRITE_LASS
 	db SPRITE_POKEFAN_F
 	db SPRITE_TEACHER
