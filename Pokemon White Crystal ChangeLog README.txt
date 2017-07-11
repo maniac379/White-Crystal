@@ -152,7 +152,6 @@ Version 1.0 ToDo List
 ----------------------
 -Block Saffron city N and E exit, use same bit as trigger for finishing power plant
 -Spawn the 3 birds
--Mandatory 'Set' battle style
 -Create 1/3 Recoil effect
 -Viridian Forest
 -Safari Zone
@@ -208,6 +207,7 @@ Wish List
 -Improve Bird Trio Cut Scene
 -Running Shoes Default Speed
 -Third Rival/Eusine
+-Auto Fast Text Speed
 
 
 Github Functions

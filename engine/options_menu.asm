@@ -256,12 +256,12 @@ Options_BattleStyle: ; e43a0
 
 .ToggleShift:
 	res BATTLE_SHIFT, [hl]
-	ld de, .Shift
+	ld de, .Set
 	jr .Display
 
 .ToggleSet:
 	set BATTLE_SHIFT, [hl]
-	ld de, .Set
+	ld de, .Shift
 
 .Display:
 	hlcoord 11, 7
@@ -270,10 +270,10 @@ Options_BattleStyle: ; e43a0
 	ret
 ; e43d1
 
-.Shift:
-	db "SHIFT@"
 .Set:
 	db "SET  @"
+.Shift:
+	db "SHIFT@"
 ; e43dd
 
 
