@@ -243,6 +243,9 @@ OldRodScript:
 	waitbutton
 	verbosegiveitem OLD_ROD
 	setevent EVENT_GOT_OLD_ROD
+	writetext FishOldRod
+	buttonsound
+	waitbutton
 	closetext
 	spriteface CHERRYGROVECITY_OLDRODFISHER, LEFT
 	end
@@ -582,6 +585,12 @@ TakeThisOldRod:
 	text "Take this!"
 	done
 
+FishOldRod:
+	text "You can catch all"
+	line "the finest 'Karp"
+	cont "with that!"
+	done
+	
 NoOldRod:
 	text "Oh..."
 	

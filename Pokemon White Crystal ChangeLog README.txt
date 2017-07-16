@@ -161,18 +161,9 @@ Version 1.0 ToDo List
 
 Version 1.0 Notes
 --------------------
--Say something after give Old Rod
 -Do level balls always catch?
 -Remember bag position in battle
 -Can not deposit items into PC
--Pockets not in right order if cylcing right? Only in Battle
-	Holding Left:		Holding Right:
-	Balls			Balls
-	Medicine		TMHM
-	Items			Berries
-	KeyItems		Balls
-	Berries
-	TMHM
 -Synthesis/Morning Sun/Moonlight heal 1/3 not 1/2
 -Battle with Eusine in Cianwood
 -TM names when picked up

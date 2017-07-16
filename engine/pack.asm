@@ -830,7 +830,7 @@ BattlePack: ; 10493
 	ld a, [wMenuCursorY]
 	ld [wMedicinePocketCursor], a
 	ld b, $1 ; Items
-	ld c, $7 ; Balls
+	ld c, $5 ; Balls
 	call Pack_InterpretJoypad
 	ret c
 	call ItemSubmenu
@@ -909,7 +909,7 @@ BattlePack: ; 10493
 	ld a, [wMenuCursorY]
 	ld [wBerriesPocketCursor], a
 	ld b, $7 ; TMHM
-	ld c, $5 ; Key Items
+	ld c, $b ; Key Items
 	call Pack_InterpretJoypad
 	ret c
 	call ItemSubmenu

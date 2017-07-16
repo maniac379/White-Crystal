@@ -11,7 +11,7 @@ OlivineGoodRodHouse_MapScriptHeader:
 GoodRodGuru:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_GOOD_ROD
+	checkitem GOOD_ROD
 	iftrue .AlreadyGotItem
 	writetext OfferGoodRodText
 	yesorno
