@@ -1968,3 +1968,5 @@ TextJump_YouCantUseItInABattle: ; 0x10b11
 
 PackMenuGFX:
 INCBIN "gfx/misc/pack_menu.2bpp"
+PackLeftColumnGFX:
+INCBIN "gfx/misc/pack_left_column.2bpp"

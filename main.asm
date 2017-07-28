@@ -653,6 +653,25 @@ StringBufferPointers:: ; 24000
 
 INCLUDE "engine/menu.asm"
 
+UpdateItemDescriptionAndBagQuantity:
+	hlcoord 0, 0
+	lb bc, 3, 10
+	call ClearBox
+	ld a, [MenuSelection]
+	cp -1
+	jr z, UpdateItemDescription
+	hlcoord 0, 0
+	lb bc, 1, 8
+	call TextBox
+	hlcoord 1, 1
+	ld de, BagXString
+	call PlaceString
+	ld a, [MenuSelection]
+	call GetQuantityInBag
+	hlcoord 6, 1
+	ld de, Buffer1
+	lb bc, 2, 3
+	call PrintNum
 UpdateItemDescription: ; 0x244c3
 	ld a, [MenuSelection]
 	ld [CurSpecies], a
@@ -667,6 +686,18 @@ UpdateItemDescription: ; 0x244c3
 	callba PrintItemDescription
 	ret
 
+BagXString:
+	db "Bag ×@"
+
+GetQuantityInBag:
+	ld a, [CurItem]
+	push af
+	ld a, [MenuSelection]
+	ld [CurItem], a
+	call CountItem
+	pop af
+	ret
+ 
 INCLUDE "engine/pokepic.asm"
 
 LoadObjectMasks: ; 2454f

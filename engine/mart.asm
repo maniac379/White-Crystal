@@ -23,6 +23,7 @@ OpenMartDialog:: ; 15a45
 	dw BargainShop
 	dw Pharmacist
 	dw RooftopSale
+	dw TMMart
 ; 15a61
 
 MartDialog: ; 15a61
@@ -66,6 +67,16 @@ BargainShop: ; 15a84
 	call MartTextBox
 	ret
 ; 15aae
+
+BargainShopData: ; 15c51
+	db 5
+	dbw NUGGET,     4500
+	dbw PEARL,       650
+	dbw BIG_PEARL,  3500
+	dbw STARDUST,    900
+	dbw STAR_PIECE, 4600
+	db -1
+; 15c62
 
 Pharmacist: ; 15aae
 	call FarReadMart
@@ -116,6 +127,15 @@ RooftopSaleData2: ; 15aff
 	dbw PROTEIN,      7800
 	db -1
 ; 15b10
+
+TMMart:
+	call FarReadTMMart
+	call LoadStandardMenuDataHeader
+	ld hl, Text_Mart_HowMayIHelpYou
+	call MartTextBox
+	call BuyTMMenu
+	ld hl, Text_Mart_ComeAgain
+	jp MartTextBox
 
 LoadMartPointer: ; 15b10
 	ld a, b
@@ -264,6 +284,61 @@ FarReadMart: ; 15bbb
 	ret
 ; 15be5
 
+; FarReadTMMart needs to use GetFarByte from MartPointerBank.
+; ReadMart could just load from hl directly.
+; But their structures are identical, so here they both use GetFarByte.
+FarReadTMMart:
+ReadMart: ; 15c25
+; Load the mart pointer.  Mart data is local (no need for bank).
+	ld hl, MartPointer
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	push hl
+; set hl to the first item
+	inc hl
+	ld bc, wMartItem1BCD
+	ld de, CurMart + 1
+.loop
+; copy the item to CurMart + (ItemIndex)
+	ld a, [MartPointerBank]
+	call GetFarByte
+	inc hl
+	ld [de], a
+	inc de
+; -1 is the terminator
+	cp -1
+	jr z, .done
+
+	push de
+; copy the price to de
+	ld a, [MartPointerBank]
+	call GetFarByte
+	inc hl
+	ld e, a
+	ld a, [MartPointerBank]
+	call GetFarByte
+	inc hl
+	ld d, a
+; convert the price to 3-byte BCD at [bc]
+	push hl
+	ld h, b
+	ld l, c
+	call GetMartPrice
+	ld b, h
+	ld c, l
+	pop hl
+
+	pop de
+	jr .loop
+
+.done
+	pop hl
+	ld a, [MartPointerBank]
+	call GetFarByte
+	ld [CurMart], a
+	ret
+	
 GetMartItemPrice: ; 15be5
 ; Return the price of item a in BCD at hl and in tiles at StringBuffer1.
 	push hl
@@ -310,76 +385,92 @@ GetMartPrice: ; 15bf0
 	ret
 ; 15c25
 
-ReadMart: ; 15c25
-; Load the mart pointer.  Mart data is local (no need for bank).
-	ld hl, MartPointer
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	push hl
-; set hl to the first item
-	inc hl
-	ld bc, wMartItem1BCD
-	ld de, CurMart + 1
-.loop
-; copy the item to CurMart + (ItemIndex)
-	ld a, [hli]
-	ld [de], a
-	inc de
-; -1 is the terminator
-	cp -1
-	jr z, .done
-
-	push de
-; copy the price to de
-	ld a, [hli]
-	ld e, a
-	ld a, [hli]
-	ld d, a
-; convert the price to 3-byte BCD at [bc]
-	push hl
-	ld h, b
-	ld l, c
-	call GetMartPrice
-	ld b, h
-	ld c, l
-	pop hl
-
-	pop de
-	jr .loop
-
-.done
-	pop hl
-	ld a, [hl]
-	ld [CurMart], a
-	ret
-; 15c51
-
-BargainShopData: ; 15c51
-	db 5
-	dbw NUGGET,     4500
-	dbw PEARL,       650
-	dbw BIG_PEARL,  3500
-	dbw STARDUST,    900
-	dbw STAR_PIECE, 4600
-	db -1
-; 15c62
-
-
 BuyMenu: ; 15c62
-	call FadeToMenu
-	callba BlankScreen
+	call BuyMenu_InitGFX
+.loop
+	call BuyMenuLoop ; menu loop
+	jr nc, .loop
+BuyMenu_Finish:
+	call ReturnToMapWithSpeechTextbox
+	and a
+	ret
+; 15c7d
+
+BuyTMMenu:
+	call BuyMenu_InitGFX
+	;farcall LoadTMHMIcon ;seems like for graphics
+.loop
+	call BuyTMMenuLoop ; menu loop
+	jr nc, .loop
+	jr BuyMenu_Finish
+
+BuyMenu_InitGFX:
+	xor a
+	ld [hBGMapMode], a
+	farcall FadeOutPalettes
+	call ClearBGPalettes
+	call ClearTileMap
+	call ClearSprites
+	call DisableSpriteUpdates
+	call DisableLCD
+	ld hl, PackLeftColumnGFX
+	ld de, VTiles2 tile $0e
+	ld bc, 18 tiles
+	ld a, BANK(PackLeftColumnGFX)
+	call FarCopyBytes
+; This is where the items themselves will be listed.
+;	hlcoord 5, 3
+;	lb bc, 9, 15
+;	call ClearBox
+; Place the text box for bag quantity
+	hlcoord 0, 0
+	lb bc, 1, 8
+	call TextBox
+; Place the left column
+	hlcoord 0, 3
+	ld de, .BuyLeftColumnTilemapString
+	ld bc, SCREEN_WIDTH - 5
+.loop
+	ld a, [de]
+	and a
+	jr nz, .continue
+	add hl, bc
+	jr .next
+.continue
+	cp $ff
+	jr z, .ok
+	ld [hli], a
+.next
+	inc de
+	jr .loop
+.ok
+; Place the textbox for displaying the item description
+;	hlcoord 0, SCREEN_HEIGHT - 4 - 2
+;	lb bc, 4, SCREEN_WIDTH - 2
+;	call TextBox
+	call EnableLCD
+	call WaitBGMap
+	ld b, SCGB_BUYMENU_PALS
+	call GetSGBLayout
+	call SetPalettes
+; Not graphics-related, but common to all BuyMenu_InitGFX callers
 	xor a
 	ld [wd045 + 1], a
 	ld a, 1
 	ld [wd045], a
-.loop
-	call BuyMenuLoop ; menu loop
-	jr nc, .loop
-	call CloseSubmenu
-	ret
-; 15c7d
+	jp DelayFrame
 
+.BuyLeftColumnTilemapString:
+	db $0e, $0e, $0e, $0e, $0e, $00
+	db $0e, $0e, $0e, $0e, $0e, $00
+	db $0e, $0e, $0e, $0e, $0e, $00
+	db $0e, $0e, $0e, $0e, $0e, $00
+	db $0f, $10, $10, $10, $11, $00
+	db $12, $17, $18, $19, $13, $00
+	db $12, $1a, $1b, $1c, $13, $00
+	db $12, $1d, $1e, $1f, $13, $00
+	db $14, $15, $15, $15, $16, $ff
+	
 LoadBuyMenuText: ; 15c7d
 ; load text from a nested table
 ; which table is in EngineBuffer1
@@ -430,6 +521,7 @@ GetMartDialogGroup: ; 15ca3
 	dwb .BargainShopPointers, 1
 	dwb .PharmacyPointers, 0
 	dwb .StandardMartPointers, 2
+	dwb .TMMartPointers, 0
 ; 15cbf
 
 .StandardMartPointers: ; 15cbf
@@ -465,6 +557,13 @@ GetMartDialogGroup: ; 15ca3
 	dw BuyMenuLoop
 ; 15cef
 
+.TMMartPointers:
+	dw Text_Mart_HowMany
+	dw Text_TMMart_CostsThisMuch
+	dw Text_Mart_InsufficientFunds
+	dw Text_Mart_BagFull
+	dw Text_Mart_HereYouGo
+	dw BuyTMMenuLoop
 
 BuyMenuLoop: ; 15cef
 	callba PlaceMoneyTopRight
@@ -538,6 +637,65 @@ BuyMenuLoop: ; 15cef
 	ret
 ; 15d83
 
+BuyTMMenuLoop:
+	farcall PlaceMoneyTopRight
+	call UpdateSprites
+	ld hl, TMMenuDataHeader_Buy
+	call CopyMenuDataHeader
+	call DoMartScrollingMenu
+	call SpeechTextBox
+	ld a, [wMenuJoypad]
+	cp B_BUTTON
+	jp z, MartMenuLoop_SetCarry
+	call TMMartAskPurchaseQuantity
+	jr c, .cancel
+	call TMMartConfirmPurchase
+	jr c, .cancel
+	ld de, Money
+	ld bc, hMoneyTemp
+	call CompareMoney
+	jp c, MartMenuLoop_InsufficientFunds
+	call ReceiveTMHM
+	call PlayTransactionSound
+	ld de, Money
+	ld bc, hMoneyTemp
+	call TakeMoney
+	ld a, MARTTEXT_HERE_YOU_GO
+	call LoadBuyMenuText
+	call JoyWaitAorB
+.cancel
+	call SpeechTextBox
+	and a
+	ret
+
+DoMartScrollingMenu:
+	ld a, [wd045]
+	ld [wMenuCursorBuffer], a
+	ld a, [wd045 + 1]
+	ld [wMenuScrollPosition], a
+	call ScrollingMenu
+	ld a, [wMenuScrollPosition]
+	ld [wd045 + 1], a
+	ld a, [wMenuCursorY]
+	ld [wd045], a
+	ret
+
+MartMenuLoop_InsufficientBagSpace:
+	ld a, MARTTEXT_BAG_FULL
+	jr MartMenuLoop_Continue
+
+MartMenuLoop_InsufficientFunds:
+	ld a, MARTTEXT_NOT_ENOUGH_MONEY
+MartMenuLoop_Continue:
+	call LoadBuyMenuText
+	call JoyWaitAorB
+	and a
+	ret
+
+MartMenuLoop_SetCarry:
+	scf
+	ret
+	
 StandardMartAskPurchaseQuantity:
 	ld a, 99
 	ld [wItemQuantityBuffer], a
@@ -556,6 +714,26 @@ MartConfirmPurchase: ; 15d97
 	ret
 ; 15da5
 
+TMMartConfirmPurchase:
+	ld a, [wCurTMHM]	;maybe can use wCurTMHM otherwise need to add to wram
+	ld [wd265], a
+	call GetTMHMName
+	call CopyName1
+
+	; off by one error?
+	ld a, [wd265]
+	inc a
+	ld [wd265], a
+
+	predef GetTMHMMove
+	ld a, [wd265]
+	ld [wPutativeTMHMMove], a
+	call GetMoveName
+
+	ld a, MARTTEXT_COSTS_THIS_MUCH
+	call LoadBuyMenuText
+	jp YesNoBox
+	
 BargainShopAskPurchaseQuantity:
 	ld a, 1
 	ld [wItemQuantityChangeBuffer], a
@@ -627,6 +805,44 @@ RooftopSaleAskPurchaseQuantity:
 	ret
 ; 15e0e
 
+TMMartAskPurchaseQuantity:
+	ld a, [wCurTMHM]		;Missing?
+	call CheckTMHM
+	jr c, .AlreadyHaveTM
+
+	ld a, 1
+	ld [wItemQuantityChangeBuffer], a
+	ld a, [wMartItemID]
+	ld e, a
+	ld d, $0
+	ld hl, MartPointer
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	inc hl
+rept 3
+	add hl, de
+endr
+	inc hl
+	ld a, [hli]
+	ld [hMoneyTemp + 2], a
+	ld a, [hl]
+	ld [hMoneyTemp + 1], a
+	xor a
+	ld [hMoneyTemp], a
+	and a
+	ret
+
+.AlreadyHaveTM
+	ld hl, .AlreadyHaveTMText
+	call PrintText
+	call JoyWaitAorB
+	scf
+	ret
+
+.AlreadyHaveTMText
+	text_jump AlreadyHaveTMText
+	db "@"
 
 Text_Mart_HowMany: ; 0x15e0e
 	; How many?
@@ -654,27 +870,45 @@ MenuDataHeader_Buy: ; 0x15e18
 	db 1 ; horizontal spacing
 	dbw 0, CurMart
 	dba PlaceMenuItemName
-	dba .PrintBCDPrices
+	dba MartMenu_PrintBCDPrices
 	dba UpdateItemDescription
 ; 15e30
 
-.PrintBCDPrices: ; 15e30
+TMMenuDataHeader_Buy:
+	db $40 ; flags
+	db 03, 06 ; start coords
+	db 11, 19 ; end coords
+	dw .menudata2
+	db 1 ; default option
+; 0x15e20
+
+.menudata2 ; 0x15e20
+	db $30 ; pointers
+	db 4, 8 ; rows, columns
+	db 1 ; horizontal spacing
+	dbw 0, CurMart
+	dba PlaceMenuItemName
+	;dba PlaceMenuTMHMNAME
+	dba MartMenu_PrintBCDPrices
+	dba UpdateItemDescription
+; 15e30
+
+MartMenu_PrintBCDPrices: ; 15e30
 	ld a, [wScrollingMenuCursorPosition]
 	ld c, a
 	ld b, 0
 	ld hl, wMartItem1BCD
+rept 3
 	add hl, bc
-	add hl, bc
-	add hl, bc
+endr
 	push de
 	ld d, h
 	ld e, l
 	pop hl
-	ld bc, SCREEN_WIDTH
+	ld bc, SCREEN_WIDTH - 4
 	add hl, bc
 	ld c, PRINTNUM_LEADINGZEROS | PRINTNUM_MONEY | 3
-	call PrintBCDNumber
-	ret
+	jp PrintBCDNumber
 ; 15e4a (5:5e4a)
 
 Text_HerbShop_Intro: ; 0x15e4a
@@ -803,6 +1037,10 @@ Text_Pharmacist_ComeAgain: ; 0x15eae
 	db "@"
 ; 0x15eb3
 
+Text_TMMart_CostsThisMuch:
+	; @  @  will be ¥@ .
+	text_jump TMMartCostsThisMuchText
+	db "@"
 
 SellMenu: ; 15eb3
 	call DisableSpriteUpdates

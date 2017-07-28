@@ -34,6 +34,7 @@ Minor Features
 -Gain experience for catching pokemon like in Gen VI
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
+-Mart will now show current bag quantity in menu
 -Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
 -Nest/Net/Quick/Dusk/Timer/Repeat Balls Added to Azalea Store and Crafted by Kurt's Granddaughter
 -Mahogony Mart sells Evolution Stones
@@ -56,6 +57,7 @@ Known Glitches
 ---------------
 -Group10 Spriteset needs SPRITE_YOUNGSTER to fit
 -Elm's Aides rewards script does not account for a full inventory
+-Can not deposit items into PC
 
 
 Special Thanks
@@ -157,13 +159,8 @@ Version 1.0 ToDo List
 -Safari Zone
 -Adjust Growth Rates
 -Sandstorm/Hail stat bonus
-
-
-Version 1.0 Notes
---------------------
 -Do level balls always catch?
 -Remember bag position in battle
--Can not deposit items into PC
 -Synthesis/Morning Sun/Moonlight heal 1/3 not 1/2
 -Battle with Eusine in Cianwood
 -TM names when picked up

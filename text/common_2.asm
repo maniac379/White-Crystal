@@ -307,3 +307,19 @@ UnknownText_0x1c0609::
 	line "lights the area!@"
 	text_waitbutton
 	db "@@"
+
+AlreadyHaveTMText::
+	text "You already have"
+	line "that TM."
+	done	
+	
+TMMartCostsThisMuchText::
+	text "@"
+	text_from_ram StringBuffer2
+	text " @"
+	text_from_ram StringBuffer1
+	text ""
+	line "will be ¥@"
+	deciram hMoneyTemp, 3, 7
+	text "."
+	done	

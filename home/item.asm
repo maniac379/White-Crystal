@@ -73,3 +73,26 @@ CheckItem:: ; 2f79
 	pop hl
 	ret
 ; 2f8c
+
+CountItem::
+	push bc
+	ld a, [hROMBank]
+	push af
+	ld a, BANK(_CountItem)
+	rst Bankswitch
+	push hl
+	push de
+
+	call _CountItem
+	ld a, b
+	ld [Buffer1], a
+	ld a, c
+	ld [Buffer2], a
+
+	pop de
+	pop hl
+	pop bc
+	ld a, b
+	rst Bankswitch
+	pop bc
+	ret
