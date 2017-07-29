@@ -386,90 +386,30 @@ GetMartPrice: ; 15bf0
 ; 15c25
 
 BuyMenu: ; 15c62
-	call BuyMenu_InitGFX
-.loop
-	call BuyMenuLoop ; menu loop
-	jr nc, .loop
-BuyMenu_Finish:
-	call ReturnToMapWithSpeechTextbox
-	and a
-	ret
-; 15c7d
-
-BuyTMMenu:
-	call BuyMenu_InitGFX
-	;farcall LoadTMHMIcon ;seems like for graphics
-.loop
-	call BuyTMMenuLoop ; menu loop
-	jr nc, .loop
-	jr BuyMenu_Finish
-
-BuyMenu_InitGFX:
-	xor a
-	ld [hBGMapMode], a
-	farcall FadeOutPalettes
-	call ClearBGPalettes
-	call ClearTileMap
-	call ClearSprites
-	call DisableSpriteUpdates
-	call DisableLCD
-	ld hl, PackLeftColumnGFX
-	ld de, VTiles2 tile $0e
-	ld bc, 18 tiles
-	ld a, BANK(PackLeftColumnGFX)
-	call FarCopyBytes
-; This is where the items themselves will be listed.
-;	hlcoord 5, 3
-;	lb bc, 9, 15
-;	call ClearBox
-; Place the text box for bag quantity
-	hlcoord 0, 0
-	lb bc, 1, 8
-	call TextBox
-; Place the left column
-	hlcoord 0, 3
-	ld de, .BuyLeftColumnTilemapString
-	ld bc, SCREEN_WIDTH - 5
-.loop
-	ld a, [de]
-	and a
-	jr nz, .continue
-	add hl, bc
-	jr .next
-.continue
-	cp $ff
-	jr z, .ok
-	ld [hli], a
-.next
-	inc de
-	jr .loop
-.ok
-; Place the textbox for displaying the item description
-;	hlcoord 0, SCREEN_HEIGHT - 4 - 2
-;	lb bc, 4, SCREEN_WIDTH - 2
-;	call TextBox
-	call EnableLCD
-	call WaitBGMap
-	ld b, SCGB_BUYMENU_PALS
-	call GetSGBLayout
-	call SetPalettes
-; Not graphics-related, but common to all BuyMenu_InitGFX callers
+	call FadeToMenu
+	callba BlankScreen
 	xor a
 	ld [wd045 + 1], a
 	ld a, 1
 	ld [wd045], a
-	jp DelayFrame
+.loop
+	call BuyMenuLoop ; menu loop
+	jr nc, .loop
+	call CloseSubmenu
+	ret; 15c7d
 
-.BuyLeftColumnTilemapString:
-	db $0e, $0e, $0e, $0e, $0e, $00
-	db $0e, $0e, $0e, $0e, $0e, $00
-	db $0e, $0e, $0e, $0e, $0e, $00
-	db $0e, $0e, $0e, $0e, $0e, $00
-	db $0f, $10, $10, $10, $11, $00
-	db $12, $17, $18, $19, $13, $00
-	db $12, $1a, $1b, $1c, $13, $00
-	db $12, $1d, $1e, $1f, $13, $00
-	db $14, $15, $15, $15, $16, $ff
+BuyTMMenu:
+	call FadeToMenu
+	callba BlankScreen
+	xor a
+	ld [wd045 + 1], a
+	ld a, 1
+	ld [wd045], a
+.loop
+	call BuyTMMenuLoop ; menu loop
+	jr nc, .loop
+	call CloseSubmenu
+	ret; 15c7d
 	
 LoadBuyMenuText: ; 15c7d
 ; load text from a nested table
@@ -871,7 +811,7 @@ MenuDataHeader_Buy: ; 0x15e18
 	dbw 0, CurMart
 	dba PlaceMenuItemName
 	dba MartMenu_PrintBCDPrices
-	dba UpdateItemDescription
+	dba UpdateItemDescriptionAndBagQuantity
 ; 15e30
 
 TMMenuDataHeader_Buy:
@@ -890,7 +830,7 @@ TMMenuDataHeader_Buy:
 	dba PlaceMenuItemName
 	;dba PlaceMenuTMHMNAME
 	dba MartMenu_PrintBCDPrices
-	dba UpdateItemDescription
+	dba UpdateItemDescriptionAndBagQuantity
 ; 15e30
 
 MartMenu_PrintBCDPrices: ; 15e30
