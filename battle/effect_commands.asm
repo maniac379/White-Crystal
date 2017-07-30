@@ -5063,6 +5063,8 @@ BattleCommand_PoisonTarget: ; 35eee
 	ret z
 	call CheckIfTargetIsPoisonType
 	ret z
+	call CheckIfTargetIsSteelType
+	ret z
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_POISON
@@ -5098,6 +5100,9 @@ BattleCommand_Poison: ; 35f2c
 	call CheckIfTargetIsPoisonType
 	jp z, .failed
 
+	call CheckIfTargetIsSteelType
+	jp z, .failed
+	
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	ld b, a
@@ -5217,9 +5222,37 @@ CheckIfTargetIsPoisonType: ; 35fe1
 	ld a, [de]
 	cp POISON
 	ret
-
 ; 35ff5
 
+CheckIfTargetIsElectricType:
+	ld de, EnemyMonType1
+	ld a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, BattleMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp ELECTRIC
+	ret z
+	ld a, [de]
+	cp ELECTRIC
+	ret
+
+CheckIfTargetIsSteelType:
+	ld de, EnemyMonType1
+	ld a, [hBattleTurn]
+	and a
+	jr z, .ok
+	ld de, BattleMonType1
+.ok
+	ld a, [de]
+	inc de
+	cp STEEL
+	ret z
+	ld a, [de]
+	cp STEEL
+	ret
 
 PoisonOpponent: ; 35ff5
 	ld a, BATTLE_VARS_STATUS_OPP
@@ -5472,6 +5505,8 @@ BattleCommand_ParalyzeTarget: ; 36165
 	ret nz
 	ld a, [TypeModifier]
 	and $7f
+	ret z
+	call CheckIfTargetIsElectricType
 	ret z
 	call GetOpponentItem
 	ld a, b
@@ -7672,14 +7707,16 @@ BattleCommand_Paralyze: ; 36dc7
 	ld a, BATTLE_VARS_STATUS_OPP
 	call GetBattleVar
 	bit PAR, a
-	jr nz, .paralyzed
+	jp nz, .paralyzed
 	ld a, [TypeModifier]
 	and $7f
-	jr z, .didnt_affect
+	jp z, .didnt_affect
+	call CheckIfTargetIsElectricType
+	jp z, .didnt_affect
 	call GetOpponentItem
 	ld a, b
 	cp HELD_PREVENT_PARALYZE
-	jr nz, .no_item_protection
+	jp nz, .no_item_protection
 	ld a, [hl]
 	ld [wNamedObjectIndexBuffer], a
 	call GetItemName

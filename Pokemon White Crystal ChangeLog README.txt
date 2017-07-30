@@ -31,7 +31,9 @@ Minor Features
 -Extra berries from trees
 -TMs are Reusable
 -Heal from Poison at 1 HP in Overworld
--Gain experience for catching pokemon like in Gen VI
+-Steel types are immune to poison (aka Twineedle)
+-Electric types are immune to paralysis
+-Gain experience for catching pokemon like
 -Days of the Week Siblings are always visibile and interactive regardless of day
 -Increased Capture Rates
 -Azalea Town sells Heavy/Level/Lure/Fast/Friend/Moon Balls @ $400 ea
@@ -56,6 +58,7 @@ Known Glitches
 ---------------
 -Group10 Spriteset needs SPRITE_YOUNGSTER to fit
 -Elm's Aides rewards script does not account for a full inventory
+-Can not deposit items into PC
 
 
 Special Thanks
@@ -157,13 +160,8 @@ Version 1.0 ToDo List
 -Safari Zone
 -Adjust Growth Rates
 -Sandstorm/Hail stat bonus
-
-
-Version 1.0 Notes
---------------------
 -Do level balls always catch?
 -Remember bag position in battle
--Can not deposit items into PC
 -Synthesis/Morning Sun/Moonlight heal 1/3 not 1/2
 -Battle with Eusine in Cianwood
 -TM names when picked up
@@ -199,6 +197,8 @@ Wish List
 -Running Shoes Default Speed
 -Third Rival/Eusine
 -Auto Fast Text Speed
+-Frozen status thawed by any fire type move
+-Grass types immune to status powders and spore
 
 
 Github Functions
