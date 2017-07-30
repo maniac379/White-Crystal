@@ -107,6 +107,16 @@ CheckPartyMove: ; c742
 	scf
 	ret
 
+FieldMovePokepicScript:
+	copybytetovar Buffer6
+	refreshscreen $0
+	pokepic 0
+	cry 0
+	waitsfx
+	closepokepic
+	reloadmappart
+	end
+	
 FieldMoveFailed: ; c779
 	ld hl, .CantUseHere
 	call MenuTextBoxBackup
@@ -212,9 +222,10 @@ Script_CutFromMenu: ; c7fe
 	special UpdateTimePals
 
 Script_Cut: ; 0xc802
-	callasm GetPartyNick
+	callasm PrepareOverworldMove
 	writetext Text_UsedCut
-	reloadmappart
+	closetext
+	scall FieldMovePokepicScript
 	callasm CutDownTreeOrGrass
 	closetext
 	end
@@ -455,12 +466,13 @@ SurfFromMenuScript: ; c983
 	special UpdateTimePals
 
 UsedSurfScript: ; c986
+	callasm PrepareOverworldMove
 	writetext UsedSurfText ; "used SURF!"
 	waitbutton
 	closetext
 
-	callasm .empty_fn ; empty function
-
+	scall FieldMovePokepicScript
+	
 	copybytetovar Buffer2
 	writevarcode VAR_MOVEMENT
 
@@ -666,6 +678,8 @@ FlyFunction: ; ca3b
 	reloadmappart
 	callasm HideSprites
 	special UpdateTimePals
+	callasm PrepareOverworldMove
+	scall FieldMovePokepicScript
 	callasm FlyFromAnim
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
@@ -728,10 +742,11 @@ Script_WaterfallFromMenu: ; 0xcb1c
 	special UpdateTimePals
 
 Script_UsedWaterfall: ; 0xcb20
-	callasm GetPartyNick
+	callasm PrepareOverworldMove
 	writetext .Text_UsedWaterfall
 	waitbutton
 	closetext
+	scall FieldMovePokepicScript
 	playsound SFX_BUBBLEBEAM
 .loop
 	applymovement PLAYER, .WaterfallStep
@@ -908,7 +923,11 @@ dig_incave
 .UsedDigScript: ; 0xcc35
 	reloadmappart
 	special UpdateTimePals
+	callasm PrepareOverworldMove
 	writetext .Text_UsedDig
+	waitbutton
+	closetext
+	scall FieldMovePokepicScript
 
 .UsedDigOrEscapeRopeScript: ; 0xcc3c
 	waitbutton
@@ -1054,6 +1073,7 @@ StrengthFunction: ; cce5
 SetStrengthFlag: ; cd12
 	ld hl, BikeFlags
 	set 0, [hl]
+PrepareOverworldMove:	
 	ld a, [CurPartyMon]
 	ld e, a
 	ld d, 0
@@ -1071,9 +1091,10 @@ Script_StrengthFromMenu: ; 0xcd29
 Script_UsedStrength: ; 0xcd2d
 	callasm SetStrengthFlag
 	writetext .UsedStrength
-	copybytetovar Buffer6
-	cry 0
-	pause 3
+	waitbutton
+	closetext
+	scall FieldMovePokepicScript
+	opentext
 	writetext .StrengthAllowedItToMoveBoulders
 	closetext
 	end
@@ -1231,29 +1252,51 @@ Script_WhirlpoolFromMenu: ; 0xce0b
 	special UpdateTimePals
 
 Script_UsedWhirlpool: ; 0xce0f
-	callasm GetPartyNick
+	callasm PrepareOverworldMove
 	writetext Text_UsedWhirlpool
-	reloadmappart
-	callasm DisappearWhirlpool
 	closetext
+	scall FieldMovePokepicScript
+	
+	waitsfx
+	playsound SFX_SURF
+	checkcode VAR_FACING
+	if_equal UP, .Up
+	if_equal DOWN, .Down
+	if_equal RIGHT, .Right
+	applymovement PLAYER, .LeftMovementData	
 	end
 
-DisappearWhirlpool: ; ce1d
-	ld hl, Buffer3
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld a, [Buffer5]
-	ld [hl], a
-	xor a
-	ld [hBGMapMode], a
-	call OverworldTextModeSwitch
-	ld a, [Buffer6]
-	ld e, a
-	callba PlayWhirlpoolSound
-	call BufferScreen
-	call GetMovementPermissions
-	ret
+.Up:
+	applymovement PLAYER, .UpMovementData
+	end
+
+.Right:
+	applymovement PLAYER, .RightMovementData
+	end
+
+.Down:
+	applymovement PLAYER, .DownMovementData
+	end
+
+.UpMovementData:
+	step UP
+	step UP
+	step_end
+
+.RightMovementData:
+	step RIGHT
+	step RIGHT
+	step_end
+
+.DownMovementData:
+	step DOWN
+	step DOWN
+	step_end
+
+.LeftMovementData:
+	step LEFT
+	step LEFT
+	step_end
 
 TryWhirlpoolOW:: ; ce3e
 	ld d, WHIRLPOOL
@@ -1332,21 +1375,22 @@ HeadbuttFromMenuScript: ; 0xcea7
 	special UpdateTimePals
 
 HeadbuttScript: ; 0xceab
-	callasm GetPartyNick
+	callasm PrepareOverworldMove
 	writetext UnknownText_0xce9d
-
-	reloadmappart
+	closetext
+	
+	scall FieldMovePokepicScript
 	callasm ShakeHeadbuttTree
 
 	callasm TreeMonEncounter
 	iffalse .no_battle
-	closetext
 	randomwildmon
 	startbattle
 	reloadmapafterbattle
 	end
 
 .no_battle
+	opentext
 	writetext UnknownText_0xcea2
 	waitbutton
 	closetext
@@ -1430,10 +1474,11 @@ RockSmashFromMenuScript: ; 0xcf2e
 	special UpdateTimePals
 
 RockSmashScript: ; cf32
-	callasm GetPartyNick
+	callasm PrepareOverworldMove
 	writetext UnknownText_0xcf58
 	closetext
 	special WaitSFX
+	scall FieldMovePokepicScript
 	playsound SFX_STRENGTH
 	earthquake 84
 	applymovement2 MovementData_0xcf55

@@ -45,6 +45,8 @@ Minor Features
 -Moves Updated to Gen VII
 -Player badge boost has been removed
 -Stat Boosting Held Items Increase Damage by 20%
+-Whirlpools are Crossed rather than Disappeared
+-Pokemon Pictures appear when using HM Abilities
 
 
 AI Improvements
